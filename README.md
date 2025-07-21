@@ -69,6 +69,25 @@ Avec ce rythme, je vise une date de fin pour le **30 août 2025**, incluant les 
 
 Pour mieux visualiser l'avançement du projet dans le temps, cliquez sur ce lien pour accéder au planning du projet : [en cours de réalisation].
 
+## 🗂️ Index du projet Master Your Network
+Ce projet est organisé autour de 7 grands objectifs de progression.
+
+Dans cet index, vous trouverez :
+- Chaque objectif avec un lien direct vers son dossier dans le dépôt.
+- Son **statut** (✔️ Terminé / ⏳ En cours / 📌 À faire)
+- Des **annotations** (⛔ Bloqué / ⚪ Aucune remarque)
+- Si l’objectif est terminé : durée, date de fin et avis personnel
+
+| Objectif       | Dossier associé                                     | Statut | Annotation | Durée | Date de fin | Avis |
+| -------------- | --------------------------------------------------- | ------ | ---------- | ----- | ----------- | ---- |
+| **Objectif 1** | [Préparation et planification]                      | ⏳      | ⚪          | 3 heures     | ?           | ?    |
+| **Objectif 2** | [ Mise en place de l'infrastructure réseau de base] | 📌     | ⚪          | ?     | ?           | ?    |
+| **Objectif 3** | [Finalisation des services réseaux critiques]       | 📌     | ⚪          | ?     | ?           | ?    |
+| **Objectif 4** | [Sécurisation de l’infrastructure réseau]           | 📌     | ⚪          | ?     | ?           | ?    |
+| **Objectif 5** | [Supervision, journalisation et sauvegarde]         | 📌     | ⚪          | ?     | ?           | ?    |
+| **Objectif 6** | [Portail d’accès et gestion IT]                     | 📌     | ⚪          | ?     | ?           | ?    |
+| **Objectif 7** | [Tests et validation]                               | 📌     | ⚪          | ?     | ?           | ?    |
+
 ## 🖥️ Spécificités de l'ordinateur hôte
 Ce projet solo est réalisé sur mon ordinateur personnel, dont voici les caractéristiques principales :
 - **Processeur (CPU)** : AMD Ryzen 7 5800X, 8 cœurs / 16 threads, fréquence de base 3,8 GHz
@@ -96,3 +115,12 @@ Cette configuration me permet d’héberger plusieurs machines virtuelles simult
 
 ---
 
+# ⚠️ Disclaimer
+Ce projet est un **projet personnel à visée pédagogique**, réalisé dans un environnement virtualisé et contrôlé, sur mon ordinateur personnel.
+Il est destiné à renforcer mes compétences en administration système, réseau et cybersécurité, dans un cadre **strictement légal**.
+
+**Si vous décidez de reproduire ce projet**, vous le faites **à vos propres risques** :
+- Certaines configurations ou manipulations peuvent varier selon votre matériel ou environnement.
+- Je ne pourrai être tenue responsable des éventuels dommages matériels, pertes de données, ou failles de sécurité survenant dans d'autres contextes.
+
+En aucun cas ce projet ne vise à encourager ou faciliter une activité illégale.
