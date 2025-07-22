@@ -9,9 +9,9 @@ Ci-dessous un tableau de suivi de cette première phase avec comme légende :
 - Son **statut** (✔️ Terminé / ⏳ En cours / 📌 À faire)
 - Des **annotations** (⛔ Bloqué / ⚪ Aucune remarque)
 
-| Objectif                                                       | Dossier associé                       | Statut | Annotation | Avis |
-| -------------------------------------------------------------- | ------------------------------------- | ------ | ---------- | ---- |
-| 🧾 Inventaire des machines nécessaires (réseau et système)     | [Lien](./01-inventaire_machines.md)   | ⏳      | ⚪          |      |
-| 🏷️ Nomenclature détaillée des machines et plan d’adressage IP | [Lien](./02-nomenclature.md)          | 📌     | ⚪          |      |
-| 🗺️ Arborescence et schéma global de l’infrastructure          | [Lien](./03-arborescence_schemaIT.md) | 📌     | ⚪          |      |
-| 🗓️ Élaboration du planning détaillé du projet                 | [Lien](./04-planning.md)              | ⏳      | ⚪          |      |
+| Objectif                                                       | Dossier associé                       | Statut | Annotation |
+| -------------------------------------------------------------- | ------------------------------------- | ------ | ---------- |
+| 🧾 Inventaire des machines nécessaires (réseau et système)     | [Lien](./01-inventaire_machines.md)   | ⏳      | ⚪          |
+| 🏷️ Nomenclature détaillée des machines et plan d’adressage IP | [Lien](./02-nomenclature.md)          | 📌     | ⚪          |
+| 🗺️ Arborescence et schéma global de l’infrastructure          | [Lien](./03-arborescence_schemaIT.md) | 📌     | ⚪          |
+| 🗓️ Élaboration du planning détaillé du projet                 | [Lien](./04-planning.md)              | ⏳      | ⚪          |
