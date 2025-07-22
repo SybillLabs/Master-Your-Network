@@ -73,20 +73,20 @@ Pour mieux visualiser l'avançement du projet dans le temps, cliquez sur ce lien
 Ce projet est organisé autour de 7 grands objectifs de progression.
 
 Dans cet index, vous trouverez :
-- Chaque objectif avec un lien direct vers son dossier dans le dépôt.
+- Chaque objectif avec un lien direct vers son fichier dans le dépôt.
 - Son **statut** (✔️ Terminé / ⏳ En cours / 📌 À faire)
 - Des **annotations** (⛔ Bloqué / ⚪ Aucune remarque)
 - Si l’objectif est terminé : durée, date de fin et avis personnel
 
-| Objectif       | Dossier associé                                     | Statut | Annotation | Durée | Date de fin | Avis |
-| -------------- | --------------------------------------------------- | ------ | ---------- | ----- | ----------- | ---- |
-| **Objectif 1** | [Préparation et planification]                      | ⏳      | ⚪          | 3 heures     | ?           | ?    |
-| **Objectif 2** | [ Mise en place de l'infrastructure réseau de base] | 📌     | ⚪          | ?     | ?           | ?    |
-| **Objectif 3** | [Finalisation des services réseaux critiques]       | 📌     | ⚪          | ?     | ?           | ?    |
-| **Objectif 4** | [Sécurisation de l’infrastructure réseau]           | 📌     | ⚪          | ?     | ?           | ?    |
-| **Objectif 5** | [Supervision, journalisation et sauvegarde]         | 📌     | ⚪          | ?     | ?           | ?    |
-| **Objectif 6** | [Portail d’accès et gestion IT]                     | 📌     | ⚪          | ?     | ?           | ?    |
-| **Objectif 7** | [Tests et validation]                               | 📌     | ⚪          | ?     | ?           | ?    |
+| Objectif       | Dossier associé                                                              | Statut | Annotation | Durée (h) | Date de fin | Avis |
+| -------------- | ---------------------------------------------------------------------------- | ------ | ---------- | --------- | ----------- | ---- |
+| **Objectif 1** | [Préparation et planification](./Objectif_1/00-preparation&planification.md) | ⏳      | ⚪          | 5         |             |      |
+| **Objectif 2** | [ Mise en place de l'infrastructure réseau de base]                          | 📌     | ⚪          |           |             |      |
+| **Objectif 3** | [Finalisation des services réseaux critiques]                                | 📌     | ⚪          |           |             |      |
+| **Objectif 4** | [Sécurisation de l’infrastructure réseau]                                    | 📌     | ⚪          |           |             |      |
+| **Objectif 5** | [Supervision, journalisation et sauvegarde]                                  | 📌     | ⚪          |           |             |      |
+| **Objectif 6** | [Portail d’accès et gestion IT]                                              | 📌     | ⚪          |           |             |      |
+| **Objectif 7** | [Tests et validation]                                                        | 📌     | ⚪          |           |             |      |
 
 ## 🖥️ Spécificités de l'ordinateur hôte
 Ce projet solo est réalisé sur mon ordinateur personnel, dont voici les caractéristiques principales :
