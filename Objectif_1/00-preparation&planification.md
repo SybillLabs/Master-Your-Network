@@ -8,7 +8,6 @@ Ci-dessous un tableau de suivi de cette première phase avec comme légende :
 - Chaque objectif avec un lien direct vers son dossier dans le dépôt.
 - Son **statut** (✔️ Terminé / ⏳ En cours / 📌 À faire)
 - Des **annotations** (⛔ Bloqué / ⚪ Aucune remarque)
-- Si l’objectif est terminé : durée, date de fin et avis personnel
 
 | Objectif                                                       | Dossier associé                       | Statut | Annotation | Avis |
 | -------------------------------------------------------------- | ------------------------------------- | ------ | ---------- | ---- |
