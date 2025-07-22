@@ -7,10 +7,10 @@ Ce projet simule un réseau d’entreprise modulaire, structuré et supervisé, 
 - 🔐 Routeur sécurisé : configuration d’un routeur virtuel avec pare-feu intégré (pfSense).
 - 🌐 Switchs & VLANs : segmentation du réseau via VLANs pour isoler logiquement les machines.
 - 📦 Services réseau : déploiement de serveurs DHCP et DNS sur Linux pour la gestion des adresses et des noms.
-- 🪟 Services Windows : intégration d’un Active Directory, WSUS et GPO sur une machine Windows Server.
+- 🪟 Services Windows : intégration d’un Active Directory, WSUS, GPO et mise en place d’un système de partage de fichiers via les dossiers réseau Windows.
 - 📊 Supervision : installation et configuration de Zabbix (ou équivalent) pour surveiller l’état de l’infrastructure.
 - 📜 Journalisation : centralisation et analyse des logs système avec Syslog et Systemd journal.
-- 💾 Stockage & Sauvegarde : mise en place d’un système de stockage sécurisé combinant RAID, LVM et Bareos.
+- 💾 Stockage & Sauvegarde : mise en place d’un système de stockage sécurisé combinant un NAS, RAID et Bareos.
 - 🌐 Portail web & services IT : création d’un serveur web centralisant l’accès aux outils (GLPI, Zabbix, iRedMail...).
 
 L’ensemble du projet est déployé dans un environnement virtualisé principalement sous Linux (Debian/Ubuntu), intégrant également des machines Windows pour une simulation complète et réaliste d’une infrastructure réseau d’entreprise.
@@ -31,7 +31,7 @@ L’objectif est d’acquérir une maîtrise pratique des fondamentaux de l’ad
 - 🧬 Configuration du switch et des VLANs
 - 🐧 Déploiement du serveur Linux (services DHCP & DNS)
 - 🪟 Déploiement du serveur Windows (Active Directory, WSUS, GPO)
-- 💻 Mise en place d’une machine cliente Windows et d’une machine cliente Linux, intégrées au réseau
+- 💻 Mise en place d’une machine cliente Windows et d’une machine administrateur Linux, intégrées au réseau
 
 ## 🔧 Objectif 3 : Finalisation des services réseaux critiques
 - ✅ Affinement et tests du serveur DHCP
@@ -44,14 +44,16 @@ L’objectif est d’acquérir une maîtrise pratique des fondamentaux de l’ad
 - 🛡️ Création et déploiement des GPO de sécurité et GPO standard
 
 ## 📡 Objectif 5 : Supervision, journalisation et sauvegarde
-- 📊 Mise en place du système de supervision (Zabbix ou PRTG)
+- 📊 Mise en place du système de supervision Zabbix
 - 📜 Implémentation de la centralisation des logs (journalisation)
-- 💾 Installation et configuration du système de sauvegarde et stockage (Bareos, RAID, LVM)
+- 💾 Installation et configuration du système de sauvegarde et stockage (Bareos, RAID, NAS)
+- 📁 Mise en place du partage de fichiers via les dossiers réseau Windows (intégré à l’Active Directory)
 
 ## 🌐 Objectif 6 : Portail d’accès et gestion IT
 - 🧭 Mise en place d’un serveur Web portail (dashboard d’accès aux systèmes)
 - 📧 Déploiement d’une solution mail complète (iRedMail)
 - 🧰 Installation et configuration de GLPI (gestion de parc & helpdesk)
+- ⏰ Mise en place d’un serveur de temps NTP
 
 ## ✅ Objectif 7 : Tests et validation
 - 📶 Vérification de la connectivité et de l’isolation réseau (ping, DNS, accès VLAN)
@@ -67,26 +69,7 @@ Ce projet est un projet solo, non réalisé en groupe. Je prévois de travailler
 
 Avec ce rythme, je vise une date de fin pour le **30 août 2025**, incluant les phases de tests et de validation.
 
-Pour mieux visualiser l'avançement du projet dans le temps, cliquez sur ce lien pour accéder au planning du projet : [en cours de réalisation].
-
-## 🗂️ Index du projet Master Your Network
-Ce projet est organisé autour de 7 grands objectifs de progression.
-
-Dans cet index, vous trouverez :
-- Chaque objectif avec un lien direct vers son fichier dans le dépôt.
-- Son **statut** (✔️ Terminé / ⏳ En cours / 📌 À faire)
-- Des **annotations** (⛔ Bloqué / ⚪ Aucune remarque)
-- Si l’objectif est terminé : durée, date de fin et avis personnel
-
-| Objectif       | Dossier associé                                                              | Statut | Annotation | Durée (h) | Date de fin | Avis |
-| -------------- | ---------------------------------------------------------------------------- | ------ | ---------- | --------- | ----------- | ---- |
-| **Objectif 1** | [Préparation et planification](./Objectif_1/00-preparation&planification.md) | ⏳      | ⚪          | 5         |             |      |
-| **Objectif 2** | [ Mise en place de l'infrastructure réseau de base]                          | 📌     | ⚪          |           |             |      |
-| **Objectif 3** | [Finalisation des services réseaux critiques]                                | 📌     | ⚪          |           |             |      |
-| **Objectif 4** | [Sécurisation de l’infrastructure réseau]                                    | 📌     | ⚪          |           |             |      |
-| **Objectif 5** | [Supervision, journalisation et sauvegarde]                                  | 📌     | ⚪          |           |             |      |
-| **Objectif 6** | [Portail d’accès et gestion IT]                                              | 📌     | ⚪          |           |             |      |
-| **Objectif 7** | [Tests et validation]                                                        | 📌     | ⚪          |           |             |      |
+Pour mieux visualiser l'avançement du projet dans le temps, cliquez sur ce lien pour accéder au planning du projet : [Planning_GoogleSheets](https://docs.google.com/spreadsheets/d/1zhlR8zkiVm_Ano6SkIDbGHE1j4LoGr4-Lp43iBQBKpQ/edit?usp=sharing).
 
 ## 🖥️ Spécificités de l'ordinateur hôte
 Ce projet solo est réalisé sur mon ordinateur personnel, dont voici les caractéristiques principales :
