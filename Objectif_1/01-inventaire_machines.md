@@ -29,7 +29,6 @@ C’est pourquoi il est possible d’allouer jusqu’à 12 threads aux machines 
 En termes de mémoire vive, j’alloue 24 Go aux VMs, ce qui me laisse 8 Go pour l’hôte et ses programmes, garantissant ainsi une bonne fluidité et réactivité globale.
 
 ---
-
 # F.A.Q
 ## Le routeur, c'est quoi ?
 Un _routeur_ est un outil de couche 3 dans le modèle *TCP/IP (Couche Internet)*  qui permet de diriger le trafic internet entre le _réseau local_ (LAN) d'une entreprise et le _réseau global_ (WAN) qui correspond à **Internet**. Il est aussi possible de rajouter une carte réseau à notre routeur, pour ajouter le _réseau DMZ_ d'une entreprise.
@@ -78,3 +77,7 @@ Il repose généralement sur trois piliers :
     Réalisée avec des outils comme **Bareos**, elle consiste à **copier régulièrement les données** afin de pouvoir les restaurer en cas de suppression accidentelle, de corruption ou d’incident grave (attaque, panne…).
 
 **Dans un environnement pédagogique comme le mien**, même si les volumes de données sont faibles, la mise en place de ce système montre ma capacité à **gérer un environnement de production réaliste**, en intégrant **les bonnes pratiques de sécurité et de continuité de service.**
+
+---
+
+*[Retour au fichier README.md](./../README)*
