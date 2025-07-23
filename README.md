@@ -21,10 +21,10 @@ L’objectif est d’acquérir une maîtrise pratique des fondamentaux de l’ad
 # 🎯 Les objectifs du projet
 
 ## 🗂️ Objectif 1 : Préparation et planification
-- 🧾 Inventaire des machines nécessaires (réseau et système)
-- 🏷️ Nomenclature détaillée des machines et plan d’adressage IP
-- 🗺️ Arborescence et schéma global de l’infrastructure
-- 🗓️ Élaboration du planning détaillé du projet
+- 🧾 [Inventaire des machines nécessaires (réseau et système)](./Objectif_1/01-inventaire_machines.md)
+- 🏷️ [Nomenclature détaillée des machines et plan d’adressage IP](./Objectif_1/02-nomenclature.md)
+- 🗺️ [Arborescence et schéma global de l’infrastructure](./Objectif_1/03-arborescence_schemaIT.md)
+- 🗓️ [Élaboration du planning détaillé du projet](./Objectif_1/04-planning.md)
 
 ## 🛠️ Objectif 2 : Mise en place de l'infrastructure réseau de base
 - 🔐 Installation et configuration du routeur pfSense
