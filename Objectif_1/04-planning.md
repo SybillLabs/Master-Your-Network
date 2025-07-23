@@ -21,8 +21,8 @@ Le tableau comprend les colonnes suivantes :
 
 ## 📊 Avancement global au 23/07/2025
 - Objectifs terminés : 3
-- Objectifs en cours : 1
-- Objectifs restants : 25
+- Objectifs en cours : 2
+- Objectifs restants : 24
 
 ---
 
