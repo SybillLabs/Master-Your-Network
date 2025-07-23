@@ -20,18 +20,18 @@ Le tableau comprend les colonnes suivantes :
 - **Commentaires** : Zone libre pour noter les obstacles rencontrés, les décisions prises ou tout autre élément pertinent.
 
 ## 📊 Avancement global au 23/07/2025
-- Objectifs terminés : 2
-- Objectifs en cours : 2
+- Objectifs terminés : 3
+- Objectifs en cours : 1
 - Objectifs restants : 25
 
 ---
 
 ### 🗂️ Objectif 1 : Préparation et planification
-- 🔄 Présentation de l'entreprise
+- ✅ Présentation de l'entreprise
 - ✅ Inventaire des machines nécessaires (réseau et système)  
-- ✅ Élaboration du planning détaillé du projet  
 - 🔄 Nomenclature détaillée des machines et plan d'adressage IP  
-- ❌ Arborescence et schéma de l'infrastructure  
+- 🔄 Arborescence et schéma de l'infrastructure  
+- ✅ Élaboration du planning détaillé du projet  
 
 ### 🛠️ Objectif 2 : Mise en place de l'infrastructure réseau de base
 - ❌ Installation et configuration du routeur pfSense  
