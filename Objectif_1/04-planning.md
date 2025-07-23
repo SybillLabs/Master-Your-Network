@@ -72,4 +72,4 @@ Le tableau comprend les colonnes suivantes :
 
 ## 🔗 Lien vers le planning en ligne
 
-👉 [Consulter le planning Google Sheets (lecture seule)](https://docs.google.com/spreadsheets/d/1zh1R8zkivm_Ano6SkIDbGHE1j4LoGr4-Lp43iBQBkpQ/edit)
+👉 [Consulter le planning Google Sheets (lecture seule)](https://docs.google.com/spreadsheets/d/1zhlR8zkiVm_Ano6SkIDbGHE1j4LoGr4-Lp43iBQBKpQ/edit?usp=sharing)
