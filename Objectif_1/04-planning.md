@@ -21,12 +21,13 @@ Le tableau comprend les colonnes suivantes :
 
 ## 📊 Avancement global au 23/07/2025
 - Objectifs terminés : 2
-- Objectifs en cours : 1
+- Objectifs en cours : 2
 - Objectifs restants : 25
 
 ---
 
 ### 🗂️ Objectif 1 : Préparation et planification
+- 🔄 Présentation de l'entreprise
 - ✅ Inventaire des machines nécessaires (réseau et système)  
 - ✅ Élaboration du planning détaillé du projet  
 - 🔄 Nomenclature détaillée des machines et plan d'adressage IP  
