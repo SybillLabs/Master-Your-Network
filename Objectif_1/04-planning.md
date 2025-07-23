@@ -73,3 +73,7 @@ Le tableau comprend les colonnes suivantes :
 ## 🔗 Lien vers le planning en ligne
 
 👉 [Consulter le planning Google Sheets (lecture seule)](https://docs.google.com/spreadsheets/d/1zhlR8zkiVm_Ano6SkIDbGHE1j4LoGr4-Lp43iBQBKpQ/edit?usp=sharing)
+
+---
+
+*[Retour au fichier README.md](./../README.md)*
