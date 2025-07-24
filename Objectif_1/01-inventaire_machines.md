@@ -80,4 +80,4 @@ Il repose généralement sur trois piliers :
 
 ---
 
-*[Retour au fichier README.md](./../README.md)*
+*[Retour au fichier README.md](/README.md)*
