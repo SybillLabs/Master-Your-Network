@@ -35,18 +35,17 @@ Son infrastructure IT repose sur une architecture **hybride (cloud + on-premise)
 > 💡 _NB : ce rôle est fictif, je ne suis pas RSSI dans la réalité, cela fait partie du scénario de simulation._
 
 ## 🗂️ Structure hiérarchique (résumée)
-|Direction / Pôle|Abréviation|Effectif|
-|---|---|---|
-|Direction Générale|DG|2|
-|DSI (IT, sécurité, réseau)|DSI|8|
-|Production Audiovisuelle|PROD|10|
-|Création / Design / Script|CREA|8|
-|Marketing & Communication|MKT|6|
-|Juridique / RH / Admin|JURH|6|
-|Support Technique / Helpdesk|SUPP|4|
-|Invités & Freelances|EXT|6|
-|**Total**|—|**50**|
-
+| Direction / Pôle             | Abréviation | Effectif |
+| ---------------------------- | ----------- | -------- |
+| Direction Générale           | DG          | 2        |
+| DSI (IT, sécurité, réseau)   | DSI         | 8        |
+| Production Audiovisuelle     | PROD        | 10       |
+| Création / Design / Script   | CREA        | 8        |
+| Marketing & Communication    | MKT         | 6        |
+| Juridique / RH / Admin       | JURH        | 6        |
+| Support Technique / Helpdesk | SUPP        | 4        |
+| Invités & Freelances         | EXT         | 6        |
+| **Total**                    | —           | **50**   |
 ## 👥 Liste des employés de NovaStream Studios
 |Prénom|Nom|Poste|Département|
 |---|---|---|---|
@@ -103,4 +102,4 @@ Son infrastructure IT repose sur une architecture **hybride (cloud + on-premise)
 
 ---
 
-*[Retour au fichier README.md](./../README.md)*
+*[Retour au fichier README.md](/README.md)*
