@@ -19,9 +19,9 @@ Le tableau comprend les colonnes suivantes :
 - **Date de fin** : Jour estimé ou réel de fin de la tâche.
 - **Commentaires** : Zone libre pour noter les obstacles rencontrés, les décisions prises ou tout autre élément pertinent.
 
-## 📊 Avancement global au 23/07/2025
-- Objectifs terminés : 3
-- Objectifs en cours : 2
+## 📊 Avancement global au 24/07/2025
+- Objectifs terminés : 4
+- Objectifs en cours : 1
 - Objectifs restants : 24
 
 ---
@@ -29,7 +29,7 @@ Le tableau comprend les colonnes suivantes :
 ### 🗂️ Objectif 1 : Préparation et planification
 - ✅ Présentation de l'entreprise
 - ✅ Inventaire des machines nécessaires (réseau et système)  
-- 🔄 Nomenclature détaillée des machines et plan d'adressage IP  
+- ✅ Nomenclature détaillée des machines et plan d'adressage IP  
 - 🔄 Arborescence et schéma de l'infrastructure  
 - ✅ Élaboration du planning détaillé du projet  
 
@@ -77,4 +77,4 @@ Le tableau comprend les colonnes suivantes :
 
 ---
 
-*[Retour au fichier README.md](./../README.md)*
+*[Retour au fichier README.md](/README.md)*
