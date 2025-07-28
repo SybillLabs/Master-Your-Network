@@ -1,20 +1,20 @@
 # 🧠 Master Your Network
-*Master Your Network* est un projet personnel de virtualisation réalisé sous Linux, visant à concevoir, configurer et superviser une infrastructure réseau sécurisée complète et fonctionnelle, dans un but d'apprentissage pratique des métiers de l'administration système et réseau.
+_Master Your Network_ est un projet personnel de virtualisation que je réalise sous Linux. L’idée, c’est de concevoir, configurer et superviser une infrastructure réseau complète, sécurisée et fonctionnelle, pour apprendre concrètement les bases des métiers liés à l’administration système et réseau.
 
-Ce projet simule un réseau d’entreprise modulaire, structuré et supervisé, intégralement virtualisé via VirtualBox, afin de reproduire un environnement réaliste et pédagogique et entièrement maîtrisable.
+Ce projet reproduit un réseau d’entreprise modulaire, structuré et surveillé, entièrement virtualisé via VirtualBox. L’objectif, c’est d’avoir un environnement réaliste, pédagogique et surtout totalement maîtrisable.
 
-## 🔧 Objectifs finals du projet :
-- 🔐 Routeur sécurisé : configuration d’un routeur virtuel avec pare-feu intégré (pfSense).
-- 🌐 Switchs & VLANs : segmentation du réseau via VLANs pour isoler logiquement les machines.
-- 📦 Services réseau : déploiement de serveurs DHCP et DNS sur Linux pour la gestion des adresses et des noms.
-- 🪟 Services Windows : intégration d’un Active Directory, WSUS, GPO et mise en place d’un système de partage de fichiers via les dossiers réseau Windows.
-- 📊 Supervision : installation et configuration de Zabbix (ou équivalent) pour surveiller l’état de l’infrastructure.
-- 📜 Journalisation : centralisation et analyse des logs système avec Syslog et Systemd journal.
-- 💾 Stockage & Sauvegarde : mise en place d’un système de stockage sécurisé combinant un NAS, RAID et Bareos.
-- 🌐 Portail web & services IT : création d’un serveur web centralisant l’accès aux outils (GLPI, Zabbix, iRedMail...).
+## 🔧 Objectifs finaux du projet :
 
-L’ensemble du projet est déployé dans un environnement virtualisé principalement sous Linux (Debian/Ubuntu), intégrant également des machines Windows pour une simulation complète et réaliste d’une infrastructure réseau d’entreprise.
-L’objectif est d’acquérir une maîtrise pratique des fondamentaux de l’administration d’infrastructures sécurisées hybrides.
+- 🔐 **Routeur sécurisé** : configuration d’un routeur virtuel avec un pare-feu intégré (pfSense).
+- 🌐 **Switchs & VLANs** : segmentation logique du réseau avec des VLANs pour isoler les différentes machines.
+- 📦 **Services réseau** : déploiement de serveurs DHCP et DNS sous Linux pour gérer les adresses IP et les noms de domaine.
+- 🪟 **Services Windows** : mise en place d’un Active Directory, WSUS, GPO, et configuration d’un système de partage de fichiers via les dossiers réseau.
+- 📊 **Supervision** : installation et configuration de Zabbix (ou équivalent) pour garder un œil sur l’état de toute l’infra.
+- 📜 **Journalisation** : centralisation et analyse des logs avec Syslog et Systemd journal.
+- 💾 **Stockage & sauvegarde** : solution de stockage sécurisée combinant NAS, RAID et Bareos.
+- 🌐 **Portail web & outils IT** : création d’un serveur web pour centraliser l’accès aux outils comme GLPI, Zabbix, iRedMail, etc.
+
+L’environnement est principalement basé sur Linux (Debian/Ubuntu), avec aussi des machines Windows pour simuler au mieux une vraie infrastructure d’entreprise hybride. Le but, c’est de développer une vraie maîtrise terrain de la gestion d’un réseau sécurisé.
 
 ---
 
@@ -22,89 +22,98 @@ L’objectif est d’acquérir une maîtrise pratique des fondamentaux de l’ad
 
 ## 🗂️ Objectif 1 : Préparation et planification
 - 🏢 [Présentation de l'entreprise](/Objectif_1/00-presentation-entreprise.md)
-- 🧾 [Inventaire des machines nécessaires (réseau et système)](/Objectif_1/01-inventaire_machines.md)
-- 🏷️ [Nomenclature détaillée des machines et plan d’adressage IP avec schéma](/Objectif_1/02-nomenclature.md)
+- 🧾 [Inventaire des machines nécessaires)](/Objectif_1/01-inventaire_machines.md)
+- 🏷️ [Nomenclature + plan d’adressage IP avec schéma](/Objectif_1/02-nomenclature.md)
 - 🗺️ [Arborescence de l’infrastructure](/Objectif_1/03-arborescence.md)
-- 🗓️ [Élaboration du planning détaillé du projet](/Objectif_1/04-planning.md)
+- 🗓️ [Planning détaillé du projet](/Objectif_1/04-planning.md)
 
-## 🛠️ Objectif 2 : Mise en place de l'infrastructure réseau de base
-- 🔐 Installation et configuration du routeur pfSense
-- 🧬 Configuration du switch et des VLANs
-- 🐧 Déploiement du serveur Linux (services DHCP & DNS)
-- 🪟 Déploiement du serveur Windows (Active Directory, WSUS, GPO)
-- 💻 Mise en place d’une machine cliente Windows et d’une machine administrateur Linux, intégrées au réseau
+## 🛠️ Objectif 2 : Mise en place de l’infrastructure réseau de base
 
-## 🔧 Objectif 3 : Finalisation des services réseaux critiques
-- ✅ Affinement et tests du serveur DHCP
-- 🧠 Affinement et tests du serveur DNS
-- 🗃️ Configuration avancée d’Active Directory
-- 📥 Configuration et gestion de WSUS
+- 🔐 Installation et configuration de pfSense
+- 🧬 Configuration du switch + VLANs
+- 🐧 Déploiement d’un serveur Linux (DHCP + DNS)
+- 🪟 Déploiement du serveur Windows (AD, WSUS, GPO)
+- 💻 Ajout d’un poste client Windows + machine d’admin Linux intégrées au réseau
 
-## 🔐 Objectif 4 : Sécurisation de l’infrastructure réseau
-- 🧱 Mise en place des règles firewall sur le routeur pfSense
-- 🛡️ Création et déploiement des GPO de sécurité et GPO standard
+## 🔧 Objectif 3 : Finalisation des services réseau critiques
 
-## 📡 Objectif 5 : Supervision, journalisation et sauvegarde
-- 📊 Mise en place du système de supervision Zabbix
-- 📜 Implémentation de la centralisation des logs (journalisation)
-- 💾 Installation et configuration du système de sauvegarde et stockage (Bareos, RAID, NAS)
-- 📁 Mise en place du partage de fichiers via les dossiers réseau Windows (intégré à l’Active Directory)
+- ✅ Tests et ajustements du DHCP
+- 🧠 Ajustements du DNS
+- 🗃️ Config avancée d’Active Directory
+- 📥 Mise en place + gestion de WSUS
 
-## 🌐 Objectif 6 : Portail d’accès et gestion IT
-- 🧭 Mise en place d’un serveur Web portail (dashboard d’accès aux systèmes)
-- 📧 Déploiement d’une solution mail complète (iRedMail)
-- 🧰 Installation et configuration de GLPI (gestion de parc & helpdesk)
-- ⏰ Mise en place d’un serveur de temps NTP
+## 🔐 Objectif 4 : Sécurisation du réseau
+
+- 🧱 Règles firewall sur pfSense
+- 🛡️ Déploiement des GPO de sécurité et de base
+
+## 📡 Objectif 5 : Supervision, journalisation, sauvegarde
+
+- 📊 Installation de Zabbix
+- 📜 Mise en place de la journalisation centralisée
+- 💾 Configuration de Bareos, RAID, NAS
+- 📁 Partage de fichiers via les dossiers réseau Windows (intégrés à l’AD)
+
+## 🌐 Objectif 6 : Portail web + outils IT
+
+- 🧭 Création d’un portail d’accès centralisé (dashboard web)
+- 📧 Installation de iRedMail
+- 🧰 Configuration de GLPI (gestion de parc et helpdesk)
+- ⏰ Serveur de temps NTP
 
 ## ✅ Objectif 7 : Tests et validation
-- 📶 Vérification de la connectivité et de l’isolation réseau (ping, DNS, accès VLAN)
-- 🔒 Tests de sécurité (règles firewall, GPO, accès restreints)
-- ⚙️ Tests fonctionnels de tous les services installés (Zabbix, GLPI, Bareos, Webmail…)
-- 📈 Tests de performance (bande passante, charge CPU/RAM des serveurs)
-- 🗃️ Documentation des résultats et création d’une checklist de validation finale
+
+- 📶 Vérif connectivité, DNS, VLAN
+- 🔒 Tests de sécurité (firewall, GPO, accès restreints)
+- ⚙️ Tests de tous les services installés
+- 📈 Tests de performance (bande passante, charge des serveurs)
+- 🗃️ Documentation + checklist de validation
 
 ---
 # 🏗️ Cadre et contexte du projet
-## 🗓️ Durée et rythme de réalisation
-Ce projet est un projet solo, non réalisé en groupe. Je prévois de travailler dessus du *lundi* au *samedi*, avec une moyenne de *4 heures par jour*.
+## 🗓️ Durée et rythme de travail
+Ce projet est 100 % solo. Je bosse dessus du *lundi au vendredi*, à raison d’environ de *4 heures par jour*.
 
 Avec ce rythme, je vise une date de fin pour le **30 août 2025**, incluant les phases de tests et de validation.
 
-Pour mieux visualiser l'avançement du projet dans le temps, cliquez sur ce lien pour accéder au planning du projet : [Planning_GoogleSheets](https://docs.google.com/spreadsheets/d/1zhlR8zkiVm_Ano6SkIDbGHE1j4LoGr4-Lp43iBQBKpQ/edit?usp=sharing).
+Pour suivre l’avancement, voici le lien vers le planning du projet : [Planning GoogleSheets](https://docs.google.com/spreadsheets/d/1zhlR8zkiVm_Ano6SkIDbGHE1j4LoGr4-Lp43iBQBKpQ/edit?usp=sharing).
 
-## 🖥️ Spécificités de l'ordinateur hôte
-Ce projet solo est réalisé sur mon ordinateur personnel, dont voici les caractéristiques principales :
-- **Processeur (CPU)** : AMD Ryzen 7 5800X, 8 cœurs / 16 threads, fréquence de base 3,8 GHz
-- **Mémoire vive (RAM)** : 32 Go DDR4 3200 MHz
-- **Carte graphique (GPU)** : ASUS TUF GeForce RTX 3070 avec 8 Go de mémoire dédiée
-- **Système d'exploitation hôte** : Kubuntu 22.04 (Linux)
-- **Stockage** : SSD de 250 Go dédié au système hôte, plus un disque dur HDD de 1 To pour les données
-- **Logiciels de virtualisation utilisés** : VirtualBox
-- **Connexion réseau** : WiFi
-- **Périphériques** : écran multiple, clavier et souris
+## 🖥️ Matériel utilisé (ordinateur hôte)
+Ce projet est fait sur ma machine personnelle, avec cette config :
 
-Cette configuration me permet d’héberger plusieurs machines virtuelles simultanément, avec des performances stables pour la configuration, le test et la supervision des différents services réseau du projet.
+- **CPU** : AMD Ryzen 7 5800X – 8 cœurs / 16 threads à 3,8 GHz
+- **RAM** : 32 Go DDR4 3200 MHz
+- **GPU** : ASUS TUF GeForce RTX 3070 – 8 Go dédiés
+- **OS hôte** : Kubuntu 22.04
+- **Stockage** : SSD 250 Go pour le système + HDD 1 To pour les données
+- **Virtualisation** : VirtualBox
+- **Réseau** : Wi-Fi
+- **Périphériques** : setup multi-écrans, clavier, souris
 
-## ⚖️Contraintes et avantages du projet
+Cette configuration me permet de faire tourner plusieurs VM sans trop galérer, même en pleine supervision ou config lourde.
 
-| ⚠️ Contraintes potentielles                                                                                                                                                                     | ✅ Avantages du projet                                                                                                                                          |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Temps limité quotidien** : 4 heures par jour, ce qui est un rythme soutenu mais limite les longues sessions de travail intensif ou imprévus.                                                  | **Configuration matérielle puissante** : CPU Ryzen 7 5800X avec 16 threads et 32 Go de RAM, largement suffisant pour plusieurs VMs et charges réseau modérées. |
-| **Travail en solo** : absence d’aide directe, donc toute difficulté technique ou bug doit être résolue seule, ce qui peut rallonger les délais.                                                 | **Environnement Linux stable** : Kubuntu 22.04 comme système hôte, réputé pour sa stabilité et performance dans la virtualisation.                             |
-| **Connexion WiFi** : peut parfois être instable ou moins performante qu’une connexion filaire, impactant les tests réseau et téléchargements.                                                   | **Virtualisation légère** : VirtualBox est simple à configurer et à utiliser, facilitant la gestion quotidienne des machines virtuelles.                       |
-| **Ressources matérielles partagées** : l’ordinateur personnel est utilisé à la fois pour la virtualisation et d’autres tâches, ce qui peut réduire les ressources disponibles selon les usages. | **Contrôle total** : projet personnel et solo, donc pleine liberté pour planifier, ajuster et expérimenter sans contraintes externes.                          |
-| **Virtualisation sur un seul hôte** : limite le nombre et la complexité des machines virtuelles que tu peux faire tourner en même temps, impactant certains scénarios ou tests.                 | **Multi-écrans** : facilite le multitâche, la supervision et le suivi simultané de plusieurs consoles ou interfaces.                                           |
-| **Dépendance logicielle** : usage exclusif de VirtualBox, qui peut avoir certaines limitations ou bugs propres comparé à d’autres solutions comme VMware ou Proxmox.                            | **Accès à une large palette de technologies** : Linux, Windows, pfSense, Zabbix, GLPI, etc. pour une expérience complète et diversifiée.                       |
-| **Multitâche et interruptions** : gérer projet et vie personnelle sur le même poste peut entraîner des interruptions ou des baisses de concentration.                                           | **Rythme régulier** : travail du lundi au samedi, ce qui assure une progression continue et une bonne dynamique d’avancement.                                  |
+## ⚖️ Contraintes et points forts
+
+| ⚠️ Contraintes potentielles                                                                                                                                                                         | ✅ Avantages du projet                                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ⏱️ **Temps limité quotidien** : 4 heures par jour, ce qui est un rythme soutenu mais limite les longues sessions de travail intensif ou imprévus.                                                   | 💪 **Configuration matérielle puissante** : CPU Ryzen 7 5800X avec 16 threads et 32 Go de RAM, largement suffisant pour plusieurs VMs et charges réseau modérées. |
+| 🧍‍♀️ **Travail en solo** : absence d’aide directe, donc toute difficulté technique ou bug doit être résolue seule, ce qui peut rallonger les délais.                                               | 🐧 **Environnement Linux stable** : Kubuntu 22.04 comme système hôte, réputé pour sa stabilité et performance dans la virtualisation.                             |
+| 🌐 **Connexion WiFi** : peut parfois être instable ou moins performante qu’une connexion filaire, impactant les tests réseau et téléchargements.                                                    | 📦 **Virtualisation légère** : VirtualBox est simple à configurer et à utiliser, facilitant la gestion quotidienne des machines virtuelles.                       |
+| 🖥️ **Ressources matérielles partagées** : l’ordinateur personnel est utilisé à la fois pour la virtualisation et d’autres tâches, ce qui peut réduire les ressources disponibles selon les usages. | 🎛️ **Contrôle total** : projet personnel et solo, donc pleine liberté pour planifier, ajuster et expérimenter sans contraintes externes.                         |
+| 🔒 **Virtualisation sur un seul hôte** : limite le nombre et la complexité des machines virtuelles que tu peux faire tourner en même temps, impactant certains scénarios ou tests.                  | 🖥️ **Multi-écrans** : facilite le multitâche, la supervision et le suivi simultané de plusieurs consoles ou interfaces.                                          |
+| 📦 **Dépendance logicielle** : usage exclusif de VirtualBox, qui peut avoir certaines limitations ou bugs propres comparé à d’autres solutions comme VMware ou Proxmox.                             | 🛠️ **Accès à une large palette de technologies** : Linux, Windows, pfSense, Zabbix, GLPI, etc. pour une expérience complète et diversifiée.                      |
+| 🔄 **Multitâche et interruptions** : gérer projet et vie personnelle sur le même poste peut entraîner des interruptions ou des baisses de concentration.                                            | 📆 **Rythme régulier** : travail du lundi au samedi, ce qui assure une progression continue et une bonne dynamique d’avancement.                                  |
 
 ---
 
-# ⚠️ Disclaimer
-Ce projet est un **projet personnel à visée pédagogique**, réalisé dans un environnement virtualisé et contrôlé, sur mon ordinateur personnel.
-Il est destiné à renforcer mes compétences en administration système, réseau et cybersécurité, dans un cadre **strictement légal**.
+## ⚠️ Disclaimer
+Ce projet est **purement pédagogique**, réalisé sur mon PC personnel dans un environnement virtualisé et sécurisé.  
+Il me permet de progresser dans mes compétences en administration système, réseau et cybersécurité, **dans un cadre 100 % légal**.
 
-**Si vous décidez de reproduire ce projet**, vous le faites **à vos propres risques** :
-- Certaines configurations ou manipulations peuvent varier selon votre matériel ou environnement.
-- Je ne pourrai être tenue responsable des éventuels dommages matériels, pertes de données, ou failles de sécurité survenant dans d'autres contextes.
+📌 **Si vous reprenez ce projet**, vous le faites **à vos risques** :
 
-En aucun cas ce projet ne vise à encourager ou faciliter une activité illégale.
+- Chaque environnement matériel est différent.
+- Certaines configs peuvent causer des problèmes si elles sont mal adaptées.
+- Je ne pourrai pas être tenue responsable en cas de perte de données ou mauvaise utilisation.
+
+Aucune partie de ce projet n’est destinée à des fins illégales ou malveillantes.
