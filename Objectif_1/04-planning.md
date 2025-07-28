@@ -20,8 +20,8 @@ Les colonnes permettent une lecture rapide de l’état de chaque jalon :
 
 |État|Nombre d’objectifs|
 |---|---|
-|✅ Terminés|4|
-|🔄 En cours|1|
+|✅ Terminés|5|
+|🔄 En cours|0|
 |⏳ Restants|24|
 
 ---
@@ -33,7 +33,7 @@ Les colonnes permettent une lecture rapide de l’état de chaque jalon :
 |Présentation de l’entreprise|✅ Terminé|
 |Inventaire des machines nécessaires (réseau & système)|✅ Terminé|
 |Nomenclature détaillée des machines & plan d’adressage IP|✅ Terminé|
-|Arborescence et schéma de l’infrastructure|🔄 En cours|
+|Arborescence et schéma de l’infrastructure|✅ Terminé|
 |Élaboration du planning détaillé du projet|✅ Terminé|
 
 ### 🛠️ Objectif 2 : Mise en place de l'infrastructure réseau de base
