@@ -22,7 +22,7 @@ L’environnement est principalement basé sur Linux (Debian/Ubuntu), avec aussi
 
 ## 🗂️ Objectif 1 : Préparation et planification
 - 🏢 [Présentation de l'entreprise](/Objectif_1/00-presentation-entreprise.md)
-- 🧾 [Inventaire des machines nécessaires)](/Objectif_1/01-inventaire_machines.md)
+- 🧾 [Inventaire des machines nécessaires](/Objectif_1/01-inventaire_machines.md)
 - 🏷️ [Nomenclature + plan d’adressage IP avec schéma](/Objectif_1/02-nomenclature.md)
 - 🗺️ [Arborescence de l’infrastructure](/Objectif_1/03-arborescence.md)
 - 🗓️ [Planning détaillé du projet](/Objectif_1/04-planning.md)
