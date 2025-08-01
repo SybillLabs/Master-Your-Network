@@ -14,8 +14,6 @@
 | VM   | `mail-core`    | Serveur de messagerie iRedMail                                  | `kaisel` | Monture volante (rapide, communication)                                                               | `DMZ`                   |
 | VM   | `datavault`    | Serveur de sauvegarde et de stockage                            | `greed`  | Gardien du trésor, stockage sans fin                                                                  | `LAN`                   |
 
----
-
 ## 🌐 Plan d’adressage IP
 
 ### 🗂️ Les réseaux
@@ -39,8 +37,6 @@
 Lors de ma première tentative de mise en place de VLANs via pfSense, j'ai appris que je ne pouvais pas créer des VLANs liés à l'interface LAN tout en utilisant son ancienne plage d'adresses IP : **192.168.1.0/24**.
 
 J'ai donc décidé de diviser le réseau 192.168.0.0/24 en deux, l'un pour la DMZ et l'autre pour le LAN.
-
----
 
 ### 🔖 Les VLANs
 
@@ -69,8 +65,6 @@ J’ai divisé mon réseau local en trois sous-réseaux logiques, chacun corresp
 
 Comme dit précédemment, le découpage de VLANs que j'avais établi n'était pas le bon car cela rentrait en conflit avec l'ancien réseau LAN. J'ai donc décidé de modifier le réseau LAN, et pour les VLANs, j'ai fait comme suit dans le tableau ci-dessous.
 
----
-
 ### 📊 Tableau récapitulatif des VLANs
 
 *Tableau à ne plus tenir compte*
@@ -90,12 +84,10 @@ Comme dit précédemment, le découpage de VLANs que j'avais établi n'était pa
 | 20      | **DSI Users**   | 192.168.2.0       | 192.168.2.255        | /24              | 192.168.2.254 | 253                                              |
 | 30      | **DSI Servers** | 192.168.3.0       | 192.168.3.255        | /24              | 192.168.3.254 | 253                                              |
 
----
-
 ## 🖧 Schéma réseau de l'entreprise
 
 ![schemareseau](/Objectif_1/Ressources/schema_reseau.png)
 
-
 ---
+
 📁 *[Retour au fichier README.md](/README.md)*
