@@ -1,7 +1,7 @@
 # 🧠 Master Your Network
 _Master Your Network_ est un projet personnel de virtualisation que je réalise sous Linux. L’idée, c’est de concevoir, configurer et superviser une infrastructure réseau complète, sécurisée et fonctionnelle, pour apprendre concrètement les bases des métiers liés à l’administration système et réseau.
 
-Ce projet reproduit un réseau d’entreprise modulaire, structuré et surveillé, entièrement virtualisé via VirtualBox. L’objectif, c’est d’avoir un environnement réaliste, pédagogique et surtout totalement maîtrisable.
+Ce projet reproduit un réseau d’entreprise modulaire, structuré et surveillé, entièrement virtualisé via ~~VirtualBox~~ **VMware Workstation Pro**. L’objectif, c’est d’avoir un environnement réaliste, pédagogique et surtout totalement maîtrisable.
 
 ## 🔧 Objectifs finaux du projet :
 
@@ -29,8 +29,8 @@ L’environnement est principalement basé sur Linux (Debian/Ubuntu), avec aussi
 
 ## 🛠️ Objectif 2 : Mise en place de l’infrastructure réseau de base
 
-- 🔐 Installation et configuration de pfSense
-- 🧬 Configuration du switch + VLANs
+- 🔐 [Installation et configuration de pfSense](/Objectif_2/00-firewall.md)
+- 🧬 [Configuration du switch VLANs](/Objectif_2/01_VLANs.md)
 - 🐧 Déploiement d’un serveur Linux (DHCP + DNS)
 - 🪟 Déploiement du serveur Windows (AD, WSUS, GPO)
 - 💻 Ajout d’un poste client Windows + machine d’admin Linux intégrées au réseau
@@ -64,7 +64,7 @@ L’environnement est principalement basé sur Linux (Debian/Ubuntu), avec aussi
 ## ✅ Objectif 7 : Tests et validation
 
 - 📶 Vérif connectivité, DNS, VLAN
-- 🔒 Tests de sécurité (firewall, GPO, accès restreints)
+- 🔒 Audit de sécurité du routeur, du serveur linux et du serveur Windows
 - ⚙️ Tests de tous les services installés
 - 📈 Tests de performance (bande passante, charge des serveurs)
 - 🗃️ Documentation + checklist de validation
@@ -86,11 +86,11 @@ Ce projet est fait sur ma machine personnelle, avec cette config :
 - **GPU** : ASUS TUF GeForce RTX 3070 – 8 Go dédiés
 - **OS hôte** : Kubuntu 22.04
 - **Stockage** : SSD 250 Go pour le système + HDD 1 To pour les données
-- **Virtualisation** : VirtualBox
+- **Virtualisation** : ~~VirtualBox~~ VMware Workstation Pro
 - **Réseau** : Wi-Fi
 - **Périphériques** : setup multi-écrans, clavier, souris
 
-Cette configuration me permet de faire tourner plusieurs VM sans trop galérer, même en pleine supervision ou config lourde.
+Cette configuration me permet de faire tourner plusieurs VM sans trop galérer, même en pleine supervision ou configuration lourde.
 
 ## ⚖️ Contraintes et points forts
 
@@ -98,11 +98,14 @@ Cette configuration me permet de faire tourner plusieurs VM sans trop galérer, 
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ⏱️ **Temps limité quotidien** : 4 heures par jour, ce qui est un rythme soutenu mais limite les longues sessions de travail intensif ou imprévus.                                                   | 💪 **Configuration matérielle puissante** : CPU Ryzen 7 5800X avec 16 threads et 32 Go de RAM, largement suffisant pour plusieurs VMs et charges réseau modérées. |
 | 🧍‍♀️ **Travail en solo** : absence d’aide directe, donc toute difficulté technique ou bug doit être résolue seule, ce qui peut rallonger les délais.                                               | 🐧 **Environnement Linux stable** : Kubuntu 22.04 comme système hôte, réputé pour sa stabilité et performance dans la virtualisation.                             |
-| 🌐 **Connexion WiFi** : peut parfois être instable ou moins performante qu’une connexion filaire, impactant les tests réseau et téléchargements.                                                    | 📦 **Virtualisation légère** : VirtualBox est simple à configurer et à utiliser, facilitant la gestion quotidienne des machines virtuelles.                       |
+| 🌐 **Connexion WiFi** : peut parfois être instable ou moins performante qu’une connexion filaire, impactant les tests réseau et téléchargements.                                                    | 📦 ~~**Virtualisation légère** : VirtualBox est simple à configurer et à utiliser, facilitant la gestion quotidienne des machines virtuelles.~~                   |
 | 🖥️ **Ressources matérielles partagées** : l’ordinateur personnel est utilisé à la fois pour la virtualisation et d’autres tâches, ce qui peut réduire les ressources disponibles selon les usages. | 🎛️ **Contrôle total** : projet personnel et solo, donc pleine liberté pour planifier, ajuster et expérimenter sans contraintes externes.                         |
 | 🔒 **Virtualisation sur un seul hôte** : limite le nombre et la complexité des machines virtuelles que tu peux faire tourner en même temps, impactant certains scénarios ou tests.                  | 🖥️ **Multi-écrans** : facilite le multitâche, la supervision et le suivi simultané de plusieurs consoles ou interfaces.                                          |
-| 📦 **Dépendance logicielle** : usage exclusif de VirtualBox, qui peut avoir certaines limitations ou bugs propres comparé à d’autres solutions comme VMware ou Proxmox.                             | 🛠️ **Accès à une large palette de technologies** : Linux, Windows, pfSense, Zabbix, GLPI, etc. pour une expérience complète et diversifiée.                      |
+| 📦 ~~**Dépendance logicielle** : usage exclusif de VirtualBox, qui peut avoir certaines limitations ou bugs propres comparé à d’autres solutions comme VMware ou Proxmox.~~                         | 🛠️ **Accès à une large palette de technologies** : Linux, Windows, pfSense, Zabbix, GLPI, etc. pour une expérience complète et diversifiée.                      |
 | 🔄 **Multitâche et interruptions** : gérer projet et vie personnelle sur le même poste peut entraîner des interruptions ou des baisses de concentration.                                            | 📆 **Rythme régulier** : travail du lundi au samedi, ce qui assure une progression continue et une bonne dynamique d’avancement.                                  |
+🔧 **Mise à jour** : J’ai finalement remplacé VirtualBox par **VMware Workstation Pro (version gratuite)**.  
+VirtualBox s’est révélé trop limité pour la complexité de mon infrastructure : problèmes de performance, gestion réseau plus rigide, et moins de flexibilité sur certains scénarios de test.
+
 
 ---
 
@@ -111,7 +114,6 @@ Ce projet est **purement pédagogique**, réalisé sur mon PC personnel dans un 
 Il me permet de progresser dans mes compétences en administration système, réseau et cybersécurité, **dans un cadre 100 % légal**.
 
 📌 **Si vous reprenez ce projet**, vous le faites **à vos risques** :
-
 - Chaque environnement matériel est différent.
 - Certaines configs peuvent causer des problèmes si elles sont mal adaptées.
 - Je ne pourrai pas être tenue responsable en cas de perte de données ou mauvaise utilisation.
