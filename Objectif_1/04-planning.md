@@ -18,11 +18,11 @@ Les colonnes permettent une lecture rapide de l’état de chaque jalon :
 
 ## 📊 Bilan au 24/07/2025
 
-|État|Nombre d’objectifs|
-|---|---|
-|✅ Terminés|5|
-|🔄 En cours|0|
-|⏳ Restants|24|
+| État        | Nombre d’objectifs |
+| ----------- | ------------------ |
+| ✅ Terminés  | 5                  |
+| 🔄 En cours | 2                  |
+| ⏳ Restants  | 22                 |
 
 ---
 
@@ -38,13 +38,13 @@ Les colonnes permettent une lecture rapide de l’état de chaque jalon :
 
 ### 🛠️ Objectif 2 : Mise en place de l'infrastructure réseau de base
 
-|Tâche|État|
-|---|---|
-|Installation & configuration du routeur pfSense|❌ Non-Fait|
-|Configuration du switch & des VLANs|❌ Non-Fait|
-|Déploiement du serveur Linux|❌ Non-Fait|
-|Déploiement du serveur Windows|❌ Non-Fait|
-|Mise en place des postes client (Linux admin + Windows client)|❌ Non-Fait|
+| Tâche                                                          | État        |
+| -------------------------------------------------------------- | ----------- |
+| Installation & configuration du routeur pfSense                | 🔄 En cours |
+| Configuration du switch & des VLANs                            | ❌ Non-Fait  |
+| Déploiement du serveur Linux                                   | ❌ Non-Fait  |
+| Déploiement du serveur Windows                                 | ❌ Non-Fait  |
+| Mise en place des postes client (Linux admin + Windows client) | 🔄 En cours |
 
 ### 🔧 Objectif 3 : Finalisation des services réseaux critiques
 
