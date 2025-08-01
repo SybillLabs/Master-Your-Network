@@ -16,32 +16,32 @@ Les colonnes permettent une lecture rapide de l’état de chaque jalon :
 |`Date de fin`|Date estimée ou réelle de fin|
 |`Commentaires`|Observations, problèmes rencontrés, décisions, etc.|
 
-## 📊 Bilan au 24/07/2025
+## 📊 Bilan au 01/08/2025
 
 | État        | Nombre d’objectifs |
 | ----------- | ------------------ |
-| ✅ Terminés  | 5                  |
+| ✅ Terminés  | 6                  |
 | 🔄 En cours | 2                  |
-| ⏳ Restants  | 22                 |
+| ⏳ Restants  | 21                 |
 
 ---
 
 ### 🗂️ Objectif 1 : Préparation et planification
 
-|Tâche|État|
-|---|---|
-|Présentation de l’entreprise|✅ Terminé|
-|Inventaire des machines nécessaires (réseau & système)|✅ Terminé|
-|Nomenclature détaillée des machines & plan d’adressage IP|✅ Terminé|
-|Arborescence et schéma de l’infrastructure|✅ Terminé|
-|Élaboration du planning détaillé du projet|✅ Terminé|
+| Tâche                                                     | État      |
+| --------------------------------------------------------- | --------- |
+| Présentation de l’entreprise                              | ✅ Terminé |
+| Inventaire des machines nécessaires (réseau & système)    | ✅ Terminé |
+| Nomenclature détaillée des machines & plan d’adressage IP | ✅ Terminé |
+| Arborescence et schéma de l’infrastructure                | ✅ Terminé |
+| Élaboration du planning détaillé du projet                | ✅ Terminé |
 
 ### 🛠️ Objectif 2 : Mise en place de l'infrastructure réseau de base
 
 | Tâche                                                          | État        |
 | -------------------------------------------------------------- | ----------- |
-| Installation & configuration du routeur pfSense                | 🔄 En cours |
-| Configuration du switch & des VLANs                            | ❌ Non-Fait  |
+| Installation & configuration du routeur pfSense                | ✅ Terminé   |
+| Configuration du switch & des VLANs                            | 🔄 En cours |
 | Déploiement du serveur Linux                                   | ❌ Non-Fait  |
 | Déploiement du serveur Windows                                 | ❌ Non-Fait  |
 | Mise en place des postes client (Linux admin + Windows client) | 🔄 En cours |
