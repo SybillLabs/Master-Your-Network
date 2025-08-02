@@ -31,8 +31,8 @@
 | Réseau | Adresse de réseau | Masque de réseau | Adresse de broadcast | Passerelle    | Nombre d’adresses utilisables (sans la passerelle) |
 | ------ | ----------------- | ---------------- | -------------------- | ------------- | -------------------------------------------------- |
 | WAN    | DHCP              | -                | -                    | -             | -                                                  |
-| LAN    | 192.168.0.0       | /25              | 192.168.0.127        | 192.168.0.126 | 125                                                |
-| DMZ    | 192.168.0.128     | /25              | 192.168.0.255        | 192.168.0.254 | 125                                                |
+| LAN    | 192.168.0.0       | /24              | 192.168.0.255        | 192.168.0.254 | 253                                                |
+| DMZ    | 192.168.1.0       | /24              | 192.168.1.255        | 192.168.1.254 | 253                                                |
 
 Lors de ma première tentative de mise en place de VLANs via pfSense, j'ai appris que je ne pouvais pas créer des VLANs liés à l'interface LAN tout en utilisant son ancienne plage d'adresses IP : **192.168.1.0/24**.
 
@@ -80,9 +80,9 @@ Comme dit précédemment, le découpage de VLANs que j'avais établi n'était pa
 
 | VLAN ID | Nom             | Adresse de réseau | Adresse de broadcast | Masque de réseau | Passerelle    | Nombre d'adresse disponible (sans la passerelle) |
 | ------- | --------------- | ----------------- | -------------------- | ---------------- | ------------- | ------------------------------------------------ |
-| 10      | **Users**       | 192.168.1.0       | 192.168.1.255        | /24              | 192.168.1.254 | 253                                              |
-| 20      | **DSI Users**   | 192.168.2.0       | 192.168.2.255        | /24              | 192.168.2.254 | 253                                              |
-| 30      | **DSI Servers** | 192.168.3.0       | 192.168.3.255        | /24              | 192.168.3.254 | 253                                              |
+| 10      | **Users**       | 192.168.10.0      | 192.168.1.255        | /24              | 192.168.1.254 | 253                                              |
+| 20      | **DSI Users**   | 192.168.20.0      | 192.168.2.255        | /24              | 192.168.2.254 | 253                                              |
+| 30      | **DSI Servers** | 192.168.30.0      | 192.168.3.255        | /24              | 192.168.3.254 | 253                                              |
 
 ## 🖧 Schéma réseau de l'entreprise
 
