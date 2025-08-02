@@ -2,17 +2,17 @@
 
 ## 🖥️ Nomenclature détaillée des machines
 
-| Type | Nom            | Fonction & Rôle                                                 | Hostname | Justification                                                                                         | Réseaux                 |
-| ---- | -------------- | --------------------------------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------- | ----------------------- |
-| VM   | `firewall`     | Routeur / Pare-feu                                              | `beru`   | Fidèle, gardien protecteur                                                                            | `WAN`<br>`LAN`<br>`DMZ` |
-| VM   | `switchVLANs`  | Switch VLANs (VLAN10, 20, 30)                                   | `tank`   | Ombre massive et stable, Tank structure les flux comme un switch : solide, silencieux, indispensable. | `LAN`                   |
-| VM   | `linux-core`   | Serveur Linux (DHCP & DNS)                                      | `igrit`  | Le 1er shadow loyal, stoïque, base solide du système                                                  | `LAN`                   |
-| VM   | `windows-core` | Serveur Windows (AD, WSUS, GPO, Partage de fichiers)            | `tusk`   | Mage stratège (GPO/AD = stratégie et magie)                                                           | `LAN`                   |
-| VM   | `pc-admin`     | PC administrateur sous Linux                                    | `jinwoo` | Maître du réseau                                                                                      | `LAN`                   |
-| VM   | `pc-client`    | PC client sous Windows                                          | `jinah`  | Sœur du maître du réseau, connectée au cœur du monde                                                  | `LAN`                   |
-| VM   | `gestionIT`    | Serveur de gestion IT : GLPI, Dashboard, Zabbix, Journalisation | `kamish` | Dragon mythique : pouvoir + surveillance                                                              | `LAN`                   |
-| VM   | `mail-core`    | Serveur de messagerie iRedMail                                  | `kaisel` | Monture volante (rapide, communication)                                                               | `DMZ`                   |
-| VM   | `datavault`    | Serveur de sauvegarde et de stockage                            | `greed`  | Gardien du trésor, stockage sans fin                                                                  | `LAN`                   |
+| Type | Nom            | Fonction & Rôle                                                                  | Hostname | Justification                                                                                         | Réseaux                 |
+| ---- | -------------- | -------------------------------------------------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------- | ----------------------- |
+| VM   | `fw-router`    | Routeur / Pare-feu                                                               | `beru`   | Fidèle, gardien protecteur                                                                            | `WAN`<br>`LAN`<br>`DMZ` |
+| VM   | `switch-VLANs` | Switch VLANs (VLAN10, 20, 30)                                                    | `tank`   | Ombre massive et stable, Tank structure les flux comme un switch : solide, silencieux, indispensable. | `LAN`                   |
+| VM   | `linux-core`   | Serveur Linux (DHCP & DNS)                                                       | `igrit`  | Le 1er shadow loyal, stoïque, base solide du système                                                  | `LAN`                   |
+| VM   | `windows-core` | Serveur Windows (AD, WSUS, GPO, Partage de fichiers)                             | `tusk`   | Mage stratège (GPO/AD = stratégie et magie)                                                           | `LAN`                   |
+| VM   | `pc-admin`     | PC administrateur sous Linux                                                     | `jinwoo` | Maître du réseau                                                                                      | `LAN`                   |
+| VM   | `pc-client`    | PC client sous Windows                                                           | `jinah`  | Sœur du maître du réseau, connectée au cœur du monde                                                  | `LAN`                   |
+| VM   | `gestion-IT`   | Serveur de gestion IT : GLPI, Dashboard, Zabbix, Journalisation                  | `kamish` | Dragon mythique : pouvoir + surveillance                                                              | `LAN`                   |
+| VM   | `com-core`     | Serveur de messagerie iRedMail, de transfert de fichier FTP, et de connexion VPN | `kaisel` | Monture volante (rapide, communication)                                                               | `DMZ`                   |
+| VM   | `data-vault`   | Serveur de sauvegarde et de stockage                                             | `greed`  | Gardien du trésor, stockage sans fin                                                                  | `LAN`                   |
 
 ## 🌐 Plan d’adressage IP
 
