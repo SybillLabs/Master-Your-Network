@@ -78,11 +78,11 @@ Comme dit précédemment, le découpage de VLANs que j'avais établi n'était pa
 
 **Voici le nouveau tableau** :
 
-| VLAN ID | Nom             | Adresse de réseau | Adresse de broadcast | Masque de réseau | Passerelle    | Nombre d'adresse disponible (sans la passerelle) |
-| ------- | --------------- | ----------------- | -------------------- | ---------------- | ------------- | ------------------------------------------------ |
-| 10      | **Users**       | 192.168.10.0      | 192.168.10.255        | /24              | 192.168.10.254 | 253                                              |
-| 20      | **DSI Users**   | 192.168.20.0      | 192.168.20.255        | /24              | 192.168.20.254 | 253                                              |
-| 30      | **DSI Servers** | 192.168.30.0      | 192.168.30.255        | /24              | 192.168.30.254 | 253                                              |
+| VLAN ID | Nom             | Adresse de réseau | Adresse de broadcast | Masque de réseau | Passerelle     | Nombre d'adresse disponible (sans la passerelle) | Statique / Dynammique |
+| ------- | --------------- | ----------------- | -------------------- | ---------------- | -------------- | ------------------------------------------------ | --------------------- |
+| 10      | **Users**       | 192.168.10.0      | 192.168.10.255       | /24              | 192.168.10.254 | 253                                              | Dynamique             |
+| 20      | **DSI Users**   | 192.168.20.0      | 192.168.20.255       | /24              | 192.168.20.254 | 253                                              | Dynamique             |
+| 30      | **DSI Servers** | 192.168.30.0      | 192.168.30.255       | /24              | 192.168.30.254 | 253                                              | Statique              |
 
 ## 🖧 Schéma réseau de l'entreprise
 
