@@ -1,7 +1,7 @@
 # 🧠 Master Your Network
 _Master Your Network_ est un projet personnel de virtualisation que je réalise sous Linux. L’idée, c’est de concevoir, configurer et superviser une infrastructure réseau complète, sécurisée et fonctionnelle, pour apprendre concrètement les bases des métiers liés à l’administration système et réseau.
 
-Ce projet reproduit un réseau d’entreprise modulaire, structuré et surveillé, entièrement virtualisé via ~~VirtualBox~~ **VMware Workstation Pro**. L’objectif, c’est d’avoir un environnement réaliste, pédagogique et surtout totalement maîtrisable.
+Ce projet reproduit un réseau d’entreprise modulaire, structuré et surveillé, entièrement virtualisé via ~~VirtualBox~~ -> **VMware Workstation Pro**. L’objectif, c’est d’avoir un environnement réaliste, pédagogique et surtout totalement maîtrisable.
 
 ## 🔧 Objectifs finaux du projet :
 
@@ -11,7 +11,7 @@ Ce projet reproduit un réseau d’entreprise modulaire, structuré et surveill�
 - 🪟 **Services Windows** : mise en place d’un Active Directory, WSUS, GPO, et configuration d’un système de partage de fichiers via les dossiers réseau.
 - 📊 **Supervision** : installation et configuration de Zabbix (ou équivalent) pour garder un œil sur l’état de toute l’infra.
 - 📜 **Journalisation** : centralisation et analyse des logs avec Syslog et Systemd journal.
-- 💾 **Stockage & sauvegarde** : solution de stockage sécurisée combinant NAS, RAID et Bareos.
+- 💾 **Stockage & sauvegarde** : solution de stockage sécurisée combinant, RAID et Bareos. Pour résumé, c'est le coffre-fort de l'entreprise.
 - 🌐 **Portail web & outils IT** : création d’un serveur web pour centraliser l’accès aux outils comme GLPI, Zabbix, iRedMail, etc.
 
 L’environnement est principalement basé sur Linux (Debian/Ubuntu), avec aussi des machines Windows pour simuler au mieux une vraie infrastructure d’entreprise hybride. Le but, c’est de développer une vraie maîtrise terrain de la gestion d’un réseau sécurisé.
