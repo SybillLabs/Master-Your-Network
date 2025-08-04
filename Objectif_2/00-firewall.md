@@ -54,9 +54,7 @@ sudo modprobe -r kvm_amd kvm
 - **Système d’exploitation** : FreeBSD 64-bit
 - **Mémoire vive** : 2048 Mo (2 Go)
 - **Processeurs** : 2 cœurs
-- **Stockage** :
-    - IDE Primary Device : Disque dur 20 Go
-    - IDE Secondary Device : Lecteur ISO de pfSense
+- **Stockage** : Disque dur 20 Go
 - 🌐 **Réseau :**
 	- **Adapter 1** : NAT (accès Internet via IP dynamique ~~`10.0.2.15/24`~~ -> `172.16.104.128/24`
 	- **Adapter 2** : Internal Network (`LAN`)
