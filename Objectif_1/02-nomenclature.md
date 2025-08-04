@@ -31,12 +31,12 @@
 | Réseau | Adresse de réseau | Masque de réseau | Adresse de broadcast | Passerelle    | Nombre d’adresses utilisables (sans la passerelle) |
 | ------ | ----------------- | ---------------- | -------------------- | ------------- | -------------------------------------------------- |
 | WAN    | DHCP              | -                | -                    | -             | -                                                  |
-| LAN    | 192.168.1.0       | /24              | 192.168.1.255        | 192.168.1.254 | 253                                                |
-| DMZ    | 192.168.0.0       | /24              | 192.168.0.255        | 192.168.0.254 | 253                                                |
+| LAN    | 192.168.0.0       | /24              | 192.168.0.255        | 192.168.0.254 | 253                                                |
+| DMZ    | 192.168.1.0       | /24              | 192.168.1.255        | 192.168.1.254 | 253                                                |
 
 Lors de ma première tentative de mise en place de VLANs via pfSense, j'ai appris que je ne pouvais pas créer des VLANs liés à l'interface LAN tout en utilisant son ancienne plage d'adresses IP : **192.168.1.0/24**.
 
-J'ai donc décidé d'attribuer le réseau 192.168.0.0/24 pour la **DMZ**, le réseau 192.168.1.0/24 pour le **LAN**, et pour les VLANs, voir ci-dessous.
+J'ai donc décidé d'attribuer le réseau 192.168.0.0/24 pour la **LAN**, le réseau 192.168.1.0/24 pour le **DMZ**, et pour les VLANs, voir ci-dessous.
 
 ### 🔖 Les VLANs
 
