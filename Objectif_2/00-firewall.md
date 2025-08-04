@@ -5,7 +5,12 @@ Pour l'installation et la configuration de pfSense, je me suis appuyée sur le t
 ---
 
 ## ⚠️ Problèmes de démarrage de la VM
-💻 Projet réalisé sur un PC hôte **Kubuntu** (variante d'Ubuntu) avec **VirtualBox**.
+💻 Projet réalisé sur un PC hôte **Kubuntu** (variante d'Ubuntu) avec ~~**VirtualBox**~~ remplacé ensuite par VMware WorkStation Pro.
+
+>📝 **Remarque importante** :
+Bien que ces erreurs aient été rencontrées lors de l'utilisation de VirtualBox, elles sont **liées à la configuration de l'hôte** (le PC) et **auraient également pu survenir avec VMware Workstation Pro**.  
+Ces problèmes ne sont donc **pas spécifiques au logiciel de virtualisation** utilisé.
+
 ### 🐛 Erreur n°1 – Virtualisation non activée
 
 ![erreur1](/Objectif_2/Ressources/erreurVM_SVM_Mode.png)
@@ -39,7 +44,7 @@ sudo update-initramfs -u
 sudo modprobe -r kvm_amd kvm
 ```
 
-✅ Une fois cela fait, la VM démarre correctement.
+✅ Une fois cela fait, la VM démarre correctement, que ce soit avec VirtualBox ou VMware Workstation.
 
 ---
 ## 🛠️ Installation de la VM `firewall`
@@ -53,11 +58,11 @@ sudo modprobe -r kvm_amd kvm
     - IDE Primary Device : Disque dur 20 Go
     - IDE Secondary Device : Lecteur ISO de pfSense
 - 🌐 **Réseau :**
-	- **Adapter 1** : NAT (accès Internet via IP dynamique `10.0.2.15/24`)
+	- **Adapter 1** : NAT (accès Internet via IP dynamique ~~`10.0.2.15/24`~~ -> `172.16.104.128/24)
 	- **Adapter 2** : Internal Network (`LAN`)
-	    - IP statique : `192.168.1.254`
+	    - IP statique : ~~`192.168.1.254`~~ -> `192.168.0.254/24`
 	- **Adapter 3** : Internal Network (`DMZ`)
-	    - IP statique : `192.168.0.254`
+	    - IP statique : ~~`192.168.0.254`~~ -> `192.168.1.254/24`
 
 ### ▶️ Étapes d’installation
 Voici le déroulement de l’installation de pfSense :
@@ -78,15 +83,22 @@ Voici le déroulement de l’installation de pfSense :
 1. **Interface WAN** : IP attribuée automatiquement par le DHCP
 2. **Interface LAN** :
     - Aller dans le menu **2) Set interface(s) IP address**
-    - Définir : `192.168.1.254/24`  
+    - Définir : ~~`192.168.1.254/24`~~ -> `192.168.0.254/24`
 
 ![LAN_IPadress](/Objectif_2/Ressources/LAN_IPadress.png)
 
 3. **Interface DMZ** :
     - Aller dans **1) Assign Interfaces** → nommée temporairement `OPT1`
-    - Puis aller dans **2) Set interface(s) IP address** → `192.168.0.254`  
+    - Puis aller dans **2) Set interface(s) IP address** → ~~`192.168.0.254`~~ -> `192.168.1.254/24`
 
 ![DMZ_IPadress](/Objectif_2/Ressources/DMZ_IPadress.png)
+
+### ⚠️ Modification suite au changement de découpage réseau et de logiciel
+
+Suite au changement de découpage réseau et de logiciel de virtualisation, voici la nouvelle configuration sur mon routeur pfSense.
+
+![new_reseau](/Objectif_2/Ressources/new_reseau.png)
+
 ## 🌐 Accès Web à pfSense
 
 ### 🖥️ VM Administrateur `pc-admin`
@@ -101,7 +113,7 @@ Pour accéder à l’interface web de pfSense, création d’une VM graphique su
 - **Réseau** :
     - En NAT pour l’installation
     - Puis `Internal Network` → _LAN_  
-        (IP temporaire : `192.168.1.253`, DNS publics utilisés)
+        (IP temporaire : ~~`192.168.1.253`~~ -> `192.168.0.1/24`, DNS publics utilisés)
 
 #### 🧩 Configuration utilisateur :
 - Langue système : **anglais**
@@ -114,7 +126,7 @@ Pour accéder à l’interface web de pfSense, création d’une VM graphique su
 
 ## ⚙️ Configuration initiale via interface web
 
-Accès via : `http://192.168.1.254/`
+Accès via : ~~`http://192.168.1.254/`~~ -> `http://192.168.0.254`
 - **Identifiants par défaut** :
     - Utilisateur : `admin`
     - Mot de passe : `pfsense`
@@ -123,7 +135,7 @@ Accès via : `http://192.168.1.254/`
 1. **Welcome** → `Next`
 2. **Support Netgate** → `Next`
 3. **Informations générales** :
-    - Hostname : `firewall`
+    - Hostname : ~~`firewall`~~ -> `beru`
     - Domaine : `novastream.lan`
     - DNS primaire : `1.1.1.1`
     - DNS secondaire : `8.8.8.8`
@@ -162,7 +174,7 @@ Les **restrictions** viendront plus tard via les règles de pare-feu.
 
 #### Interface DMZ
 - ❌ Aucune règle encore  
-    ➡️ À configurer plus tard lors de la mise en place de la VM `mail-core`
+    ➡️ À configurer plus tard lors de la mise en place de la VM ~~`mail-core`~~ -> `com-core`
 
 🔐 Les vraies règles de sécurité seront établies lors de l’**Objectif 4 – Sécurisation du réseau**.
 
