@@ -58,7 +58,7 @@ sudo modprobe -r kvm_amd kvm
     - IDE Primary Device : Disque dur 20 Go
     - IDE Secondary Device : Lecteur ISO de pfSense
 - 🌐 **Réseau :**
-	- **Adapter 1** : NAT (accès Internet via IP dynamique ~~`10.0.2.15/24`~~ -> `172.16.104.128/24)
+	- **Adapter 1** : NAT (accès Internet via IP dynamique ~~`10.0.2.15/24`~~ -> `172.16.104.128/24`
 	- **Adapter 2** : Internal Network (`LAN`)
 	    - IP statique : ~~`192.168.1.254`~~ -> `192.168.0.254/24`
 	- **Adapter 3** : Internal Network (`DMZ`)
