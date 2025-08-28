@@ -71,12 +71,13 @@ L’environnement est principalement basé sur Linux (Debian/Ubuntu), avec aussi
 
 ---
 # 🏗️ Cadre et contexte du projet
-## 🗓️ Durée et rythme de travail
-Ce projet est 100 % solo. Je bosse dessus du *lundi au vendredi*, à raison d’environ de *4 heures par jour*.
+## 🗓️ Rythme et contexte de travail
+Ce projet est entièrement réalisé par mes soins, en autonomie, avec pour principaux appuis **Internet** et les **IA**.
+Même si l’avancement peut varier selon les périodes, je reste déterminé à aller jusqu’au bout afin de mener ce projet à terme et d’ouvrir la voie aux suivants.
 
-Avec ce rythme, je vise une date de fin pour le **30 août 2025**, incluant les phases de tests et de validation.
+J’organise mon travail sur un rythme du lundi au vendredi, avec la flexibilité nécessaire pour prendre du recul lorsque certaines étapes demandent plus de réflexion. Cette approche me permet de revenir sur le projet avec un regard neuf et de continuer à progresser de manière durable.
 
-Pour suivre l’avancement, voici le lien vers le planning du projet : [Planning GoogleSheets](https://docs.google.com/spreadsheets/d/1zhlR8zkiVm_Ano6SkIDbGHE1j4LoGr4-Lp43iBQBKpQ/edit?usp=sharing).
+Pour suivre l’évolution, voici le lien vers le planning du projet :[Planning Trello](https://trello.com/b/GfEDKtpd/master-your-network).
 
 ## 🖥️ Matériel utilisé (ordinateur hôte)
 Ce projet est fait sur ma machine personnelle, avec cette config :
