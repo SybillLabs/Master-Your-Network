@@ -1,20 +1,17 @@
 # 🗓️ Planning détaillé du projet
 
-Afin de structurer efficacement le projet **"Master your Network"**, j’ai mis en place un tableau de planification hébergé sur **Google Sheets**, accessible en lecture seule.  
-Il me permet de suivre précisément l’avancement de chaque tâche.
+Pour organiser efficacement le projet "**Master your Network**", j’ai créé un tableau de suivi et de planification sur **Trello**.
+Celui-ci est en **accès public**: tout le monde peut le consulter, mais je suis le seul à pouvoir le modifier.
 
-## 📐 Structure du tableau de suivi
-Chaque ligne du tableau correspond à un objectif bien défini.  
-Les colonnes permettent une lecture rapide de l’état de chaque jalon :
+## 📐 Structure du tableau
 
-|Colonne|Description|
-|---|---|
-|`Objectif du projet`|Référence numérotée (ex. N°01, N°02…)|
-|`Objectif`|Description synthétique de l’action à réaliser|
-|`Statut`|Avancement de la tâche : Non-Fait / En cours (25, 50, 75%) / Terminé|
-|`Date de début`|Date réelle du démarrage|
-|`Date de fin`|Date estimée ou réelle de fin|
-|`Commentaires`|Observations, problèmes rencontrés, décisions, etc.|
+Le tableau est organisé de la manière suivante :
+- Une liste par objectif
+- Des cartes pour chaque sous-objectif au sein de chaque liste
+- Chaque carte contient :
+  - une ou plusieurs étiquettes (Terminé, Non fait, Difficulté rencontrée, Difficulté non rencontrée, Bloqué, En cours)
+  - une description détaillée
+  - une checklist
 
 ## 📊 Bilan au 01/08/2025
 
@@ -92,7 +89,7 @@ Les colonnes permettent une lecture rapide de l’état de chaque jalon :
 
 ## 🔗 Lien vers le planning en ligne
 
-👉 [🗒️ Planning Google Sheets – Lecture seule](https://docs.google.com/spreadsheets/d/1zhlR8zkiVm_Ano6SkIDbGHE1j4LoGr4-Lp43iBQBKpQ/edit?usp=sharing)
+👉 [🗒️ Tableau de suivi Trello - Visibilité Publique](https://trello.com/b/GfEDKtpd/master-your-network)
 
 ---
 
