@@ -18,16 +18,6 @@
 
 ### 🗂️ Les réseaux
 
-*Tableau à ne plus tenir compte*
-
-| Réseau | Plage d'adresse | Masque de réseau      | Adresse de réseau | Adresse de broadcast | Passerelle              | Nombre d’adresses utilisables |
-| ------ | --------------- | --------------------- | ----------------- | -------------------- | ----------------------- | ----------------------------- |
-| WAN    | NAT (externe)   | Fourni par l’hôte/FAI | x                 | x                    | Fourni par l’hôte/FAI   | x                             |
-| LAN    | 192.168.1.0     | 255.255.255.0 (/24)   | 192.168.1.0       | 192.168.1.255        | Voir chaque sous-réseau | 254 (de .1 à .254)            |
-| DMZ    | 192.168.0.0     | 255.255.255.0 (/24)   | 192.168.0.0       | 192.168.0.255        | 192.168.0.254           | 254 (de .1 à .254)            |
-
-**Voici le nouveau tableau** :
-
 | Réseau | Adresse de réseau | Masque de réseau | Adresse de broadcast | Passerelle    | Nombre d’adresses utilisables (sans la passerelle) |
 | ------ | ----------------- | ---------------- | -------------------- | ------------- | -------------------------------------------------- |
 | WAN    | DHCP              | -                | -                    | -             | -                                                  |
@@ -66,17 +56,6 @@ J’ai divisé mon réseau local en trois sous-réseaux logiques, chacun corresp
 Comme dit précédemment, le découpage de VLANs que j'avais établi n'était pas le bon car cela rentrait en conflit avec l'ancien réseau LAN. J'ai donc décidé de modifier le réseau LAN, et pour les VLANs, j'ai fait comme suit dans le tableau ci-dessous.
 
 ### 📊 Tableau récapitulatif des VLANs
-
-*Tableau à ne plus tenir compte*
-
-| VLAN ID | Nom                  | Adresse de réseau | Masque                | Broadcast     | Passerelle    | Plage d’adresses              | Nb adresses |
-| ------- | -------------------- | ----------------- | --------------------- | ------------- | ------------- | ----------------------------- | ----------- |
-| 10      | **Users**            | 192.168.1.0       | 255.255.255.128 (/25) | 192.168.1.127 | 192.168.1.126 | 192.168.1.1 → 192.168.1.126   | 126         |
-| 20      | **DSI Users**        | 192.168.1.128     | 255.255.255.224 (/27) | 192.168.1.159 | 192.168.1.158 | 192.168.1.129 → 192.168.1.158 | 30          |
-| 30      | **DSI Servers**      | 192.168.1.160     | 255.255.255.224 (/27) | 192.168.1.191 | 192.168.1.190 | 192.168.1.161 → 192.168.1.190 | 30          |
-| x       | **(Réserve future)** | 192.168.1.192     | 255.255.255.192 (/26) | 192.168.1.255 | 192.168.1.254 | 192.168.1.193 → 192.168.1.254 | 62          |
-
-**Voici le nouveau tableau** :
 
 | VLAN ID | Nom             | Adresse de réseau | Adresse de broadcast | Masque de réseau | Passerelle     | Nombre d'adresse disponible (sans la passerelle) | Statique / Dynammique |
 | ------- | --------------- | ----------------- | -------------------- | ---------------- | -------------- | ------------------------------------------------ | --------------------- |
