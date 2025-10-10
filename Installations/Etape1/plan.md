@@ -110,7 +110,7 @@ Dans mon projet, je vais avoir 3 cas :
 
 ---
 
-👉 Retour à la [page index de l'étape](/Etape1/index.md).  
+👉 Retour à la [page index de l'étape](/Installations/Etape1/index.md).   
 👉 Retour à la [page principale du projet](/README.md).  
 
 
