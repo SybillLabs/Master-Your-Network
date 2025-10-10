@@ -80,49 +80,49 @@ L’environnement est basé sur une infrastructure hybride Linux/Windows :
 - 🛡️ **Audit de l’infrastructure** : validation de la sécurité, de la disponibilité et des performances de l'ensemble du réseau
 
 ## 🎯 Les étapes de conception
-### 🗂️ [Étape 1 : Préparation et planification](/Installations/Etape1/index.md)
+### 🗂️ [Étape 1 : Préparation et planification](/Installations/Etape1/0-index.md)
 - 🏢 **Présentation de l'entreprise** : Définir le contexte, le secteur, les besoins métier et les enjeux IT.
 - 🧾 **Inventaire et nomenclature de l'infrastructure** : Lister les serveurs, postes, équipements réseau et services attendus ; traduire en machines virtuelles selon les ressources disponibles avec un nommage clair et logique.
 - 💽 **La virtualisation avec VMware Workstation** : Caractrériques des VMs, création des VMs par rapport aux étapes de conception et création d'une VM avec VMware Workstation
 - 🗺️ **Arborescence Windows de l'infrastructure** : Organisation de l’Active Directory (OU, groupes, GPO).
 - 🌐 **Plan réseau de l'infrastructure** : Définir les VLANs, LAN/DMZ et le plan d’interconnexion global.
 
-### 🌐 [Étape 2 : Configuration du réseau et de la sécurité](/Installations/Etape2/index.md)
+### 🌐 [Étape 2 : Configuration du réseau et de la sécurité](/Installations/Etape2/0-index.md)
 - 🚦 **Configuration du routeur VyOS** : Interfaces, VLANs, routage, NAT, pare-feu de base.
 - 🔐 **Mise en place des VLANs et interconnexions** : Attribution des sous-réseaux et tests de communication inter-VLANs.
 - 🧱 **Mise en place de la DMZ et filtrage** : Isolation du réseau externe et définition des règles d’accès.
 - 🧭 **Mise en place du serveur NTP (Chrony)** : Synchronisation temporelle des serveurs.
 - 🧪 **Tests de connectivité et de sécurité réseau de base** : Ping, traceroute, pare-feu, contrôle des flux LAN/DMZ.
 
-### 🖥️ [Étape 3 : Services d’infrastructure de base](/Installations/Etape3/index.md)
+### 🖥️ [Étape 3 : Services d’infrastructure de base](/Installations/Etape3/0-index.md)
 - 🧾 **Installation du serveur DHCP/DNS (Linux)** : Attribution dynamique et résolution interne.
 - 🪟 **Installation du serveur Windows AD/DC** : Configuration du domaine, GPO, utilisateurs et groupes.
 - 💾 **Partage SMB et gestion des permissions** : Mise en place des dossiers partagés pour les services internes.
 - 🧩 **Mise en place du serveur WSUS** : Gestion des mises à jour internes.
 - 🧪 **Tests de jointure au domaine et de résolution DNS** : Vérification des services fondamentaux.
 
-### 🔒 [Étape 4 : Services de sécurité et supervision](/Installations/Etape4/index.md)
+### 🔒 [Étape 4 : Services de sécurité et supervision](/Installations/Etape4/0-index.md)
 - 🧠 **Installation du serveur Vaultwarden** : Gestion centralisée et sécurisée des mots de passe.
 - 📜 **Serveur Logs (Syslog + LogAnalyzer)** : Centralisation et analyse des journaux systèmes.
 - 🧍‍♂️ **Mise en place du serveur Audit (PingCastle + Lynis)** : Installation, première analyse intermédiaire et rapport de mi-parcours.
 - 📈 **Installation du serveur Monitoring (Zabbix)** : Suivi des performances et alertes.
 - 🔎 **Tests de supervision complète** : Vérification des alertes et du bon reporting.
 
-### 🧰 [Étape 5 : Services applicatifs et utilisateurs](/Installations/Etape5/index.md)
+### 🧰 [Étape 5 : Services applicatifs et utilisateurs](/Installations/Etape5/0-index.md)
 - 🌐 **Serveur WebExterne (Nextcloud + Nginx)** : Mise à disposition d’un cloud et d’un extranet.
 - 📞 **Serveur VoIP (3CX)** : Installation et configuration du système téléphonique interne.
 - 💌 **Serveur Mail (iRedMail)** : Gestion du courrier électronique interne/externe.
 - 🧾 **Serveur IT (GLPI + Intranet)** : Gestion de parc et portail interne.
 - 👥 **Création des postes clients et du poste Tech DSI** : Configuration des environnements utilisateurs.
 
-### 💽 [Étape 6 : Sauvegarde, restauration et validation](/Installations/Etape6/index.md)
+### 💽 [Étape 6 : Sauvegarde, restauration et validation](/Installations/Etape6/0-index.md)
 - 🗄️ **Installation du serveur Backup (Bareos + NAS/RAID)** : Configuration des stratégies de sauvegarde.
 - 🧰 **Sauvegarde et restauration de test** : Simulation d’un sinistre et validation de la procédure.
 - 📋 **Documentation des procédures de restauration** : Création de fiches pratiques.
 - 🔄 **Automatisation des sauvegardes planifiées** : Mise en place de scripts ou de tâches planifiées.
 - ✅ **Audit final de disponibilité et résilience** : Vérification globale de la tolérance aux pannes.
 
-### 📘 [Étape 7 : Documentation et finalisation](/Installations/Etape7/index.md)
+### 📘 [Étape 7 : Documentation et finalisation](/Installations/Etape7/0-index.md)
 - 🧾 **Rédaction du Guide Administrateur** : Procédures internes, configurations et dépannage.
 - 📗 **Rédaction du Guide Utilisateur** : Utilisation des services (mail, Nextcloud, Intranet, VoIP…).
 - 🏁 **Présentation finale du projet** : Rapport complet et captures d’écran des tests fonctionnels.

@@ -184,5 +184,5 @@ Cependant, sa présence est évoquée pour montrer la compréhension du concept 
 
 ---
 
-👉 Retour à la [page index de l'étape](/Installations/Etape1/index.md).  
+👉 Retour à la [page index de l'étape](/Installations/Etape1/0-index.md).  
 👉 Retour à la [page principale du projet](/README.md).  
