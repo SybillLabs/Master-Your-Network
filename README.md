@@ -129,13 +129,13 @@ L’environnement est basé sur une infrastructure hybride Linux/Windows :
 
 
 ## 📌 Avancement du projet
-- [x] Étape 1 : Préparation et planification
-- [ ] Étape 2 : Configuration du réseau et de la sécurité
-- [ ] Étape 3 : Services d’infrastructure de base
-- [ ] Étape 4 : Services de sécurité et supervision
-- [ ] Étape 5 : Services applicatifs et utilisateurs
-- [ ] Étape 6 : Sauvegarde, restauration et validation
-- [ ] Étape 7 : Documentation et finalisation
+- ⬜ Étape 1 : Préparation et planification
+- ⬜ Étape 2 : Configuration du réseau et de la sécurité
+- ⬜ Étape 3 : Services d’infrastructure de base
+- ⬜ Étape 4 : Services de sécurité et supervision
+- ⬜ Étape 5 : Services applicatifs et utilisateurs
+- ⬜ Étape 6 : Sauvegarde, restauration et validation
+- ⬜ Étape 7 : Documentation et finalisation
 
 ## 🛠️ Outils et technologies
 

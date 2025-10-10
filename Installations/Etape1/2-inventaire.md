@@ -73,25 +73,25 @@ Seuls les flux strictement nécessaires (HTTPS, SMTP, VPN) sont autorisés via l
 
 ### 🖥️ Nomenclature des VM
 
-| #  | 🏷️ Tag VM        | 🖥️ Hostname    | 🌐 Réseaux VMware                               | ⚙️ Fonctions & rôles principaux                                          |
-| -- | ---------------: | :------------: | ----------------------------------------------- | ------------------------------------------------------------------------ |
-|  1 | **ns-fw01**      | `igris`        | WAN (NAT), LAN (LAN Segment), DMZ (LAN Segment) | Routeur, Pare-feu, VLANs                                                 |
-|  2 | **ns-lnx01**     | `tusk`         | LAN (LAN Segment) - VLAN DSI Servers            | DHCP, DNS                                                                |
-|  3 | **ns-ad01**      | `sungjinwoo`   | LAN (LAN Segment) - VLAN DSI Servers            | Domain Controler, Active Directory, GPO, SMB                             |
-|  4 | **ns-wsus01**    | `woojinchul`   | LAN (LAN Segment) - VLAN DSI Servers            | Mises à jour Windows Updates WSUS pour les PC clients & Administrateurs  |
-|  5 | **ns-bkp01**     | `beru`         | LAN (LAN Segment) - VLAN DSI Servers            | Bareos Director/Storage, dépôt NAS/RAID logiciel                         |
-|  6 | **ns-log01**     | `iron`         | LAN (LAN Segment) - VLAN DSI Servers            | LogAnalyzer (web), Syslog                                                |
-|  7 | **ns-secrets01** | `kamish`       | LAN (LAN Segment) - VLAN DSI Servers            | Vaultwarden (coffre identifiants admin)                                  |
-|  8 | **ns-it01**      | `bellion`      | LAN (LAN Segment) - VLAN DSI Servers            | GLPI, Intranet (Apache)                                                  |
-|  9 | **ns-mon01**     | `baran`        | LAN (LAN Segment) - VLAN DSI Servers            | Serveur de supervision Zabbix                                            |
-| 10 | **ns-ntp01**     | `sillad`       | LAN (LAN Segment) - VLAN DSI Servers            | Serveur de temps Chrony                                                  |
-| 11 | **ns-voip01**    | `tank`         | LAN (LAN Segment) - VLAN DSI Servers            | 3CX (SIP/RTP), trunks opérateur                                          |
-| 12 | **ns-audit01**   | `greed`        | LAN (LAN Segment) - VLAN DSI Servers            | nsaudit de sécurité des différents serveurs                              |
-| 13 | **ns-admin01**   | `shadow-admin` | LAN (LAN Segment) - VLAN DSI Users              | Poste administrateur                                                     |
-| 14 | **ns-user01**    | `hunter`       | LAN (LAN Segment) - VLAN Users                  | Poste utilisateur type joint au domaine                                  |
-| 15 | **ns-web01**     | `kaisel`       | DMZ (LAN Segment)                               | Nginx RP (Extranet), Nextcloud (externe)                                 |
-| 16 | **ns-vpn01**     | `rakan`        | DMZ (LAN Segment)                               | Serveur de connexion à distance OpenVPN                                  |
-| 17 | **ns-mail01**    | `querehsha`    | DMZ (LAN Segment)                               | Serveur de messagerie iRedMail                                           |
+| #  | 🏷️ Tag VM        | 🖥️ Hostname    | ⚙️ Fonctions & rôles principaux                                          |
+| -- | ---------------: | :------------: | ------------------------------------------------------------------------ |
+|  1 | **ns-fw01**      | `igris`        | Routeur, Pare-feu, VLANs                                                 |
+|  2 | **ns-lnx01**     | `tusk`         | DHCP, DNS                                                                |
+|  3 | **ns-ad01**      | `sungjinwoo`   | Domain Controler, Active Directory, GPO, SMB                             |
+|  4 | **ns-wsus01**    | `woojinchul`   | Mises à jour Windows Updates WSUS pour les PC clients & Administrateurs  |
+|  5 | **ns-bkp01**     | `beru`         | Bareos Director/Storage, dépôt NAS/RAID logiciel                         |
+|  6 | **ns-log01**     | `iron`         | LogAnalyzer (web), Syslog                                                |
+|  7 | **ns-secrets01** | `kamish`       | Vaultwarden (coffre identifiants admin)                                  |
+|  8 | **ns-it01**      | `bellion`      | GLPI, Intranet (Apache)                                                  |
+|  9 | **ns-mon01**     | `baran`        | Serveur de supervision Zabbix                                            |
+| 10 | **ns-ntp01**     | `sillad`       | Serveur de temps Chrony                                                  |
+| 11 | **ns-voip01**    | `tank`         | 3CX (SIP/RTP), trunks opérateur                                          |
+| 12 | **ns-audit01**   | `greed`        | nsaudit de sécurité des différents serveurs                              |
+| 13 | **ns-admin01**   | `shadow-admin` | Poste administrateur                                                     |
+| 14 | **ns-user01**    | `hunter`       | Poste utilisateur type joint au domaine                                  |
+| 15 | **ns-web01**     | `kaisel`       | Nginx RP (Extranet), Nextcloud (externe)                                 |
+| 16 | **ns-vpn01**     | `rakan`        | Serveur de connexion à distance OpenVPN                                  |
+| 17 | **ns-mail01**    | `querehsha`    | Serveur de messagerie iRedMail                                           |
 
 > Les hôtes du système **NovaPlay Studio** utilisent des noms inspirés du manhwa *Solo Leveling*.  
 > Ce choix symbolique permet d’attribuer à chaque machine une identité cohérente avec son rôle au sein de l’infrastructure : chaque personnage ou ombre représente une fonction clé, une force ou une responsabilité technique.
