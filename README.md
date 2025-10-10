@@ -1,122 +1,202 @@
-# 🧠 Master Your Network
-_Master Your Network_ est un projet personnel de virtualisation que je réalise sous Linux. L’idée, c’est de concevoir, configurer et superviser une infrastructure réseau complète, sécurisée et fonctionnelle, pour apprendre concrètement les bases des métiers liés à l’administration système et réseau.
+# 🧠 Master your network — Projet complet d’infrastructure réseau virtualisée et sécurisée
 
-Ce projet reproduit un réseau d’entreprise modulaire, structuré et surveillé, entièrement virtualisé via ~~VirtualBox~~ -> **VMware Workstation Pro**. L’objectif, c’est d’avoir un environnement réaliste, pédagogique et surtout totalement maîtrisable.
-
-## 🔧 Objectifs finaux du projet :
-
-- 🔐 **Routeur sécurisé** : configuration d’un routeur virtuel avec un pare-feu intégré (pfSense).
-- 🌐 **Switchs & VLANs** : segmentation logique du réseau avec des VLANs pour isoler les différentes machines.
-- 📦 **Services réseau** : déploiement de serveurs DHCP et DNS sous Linux pour gérer les adresses IP et les noms de domaine.
-- 🪟 **Services Windows** : mise en place d’un Active Directory, WSUS, GPO, et configuration d’un système de partage de fichiers via les dossiers réseau.
-- 📊 **Supervision** : installation et configuration de Zabbix (ou équivalent) pour garder un œil sur l’état de toute l’infra.
-- 📜 **Journalisation** : centralisation et analyse des logs avec Syslog et Systemd journal.
-- 💾 **Stockage & sauvegarde** : solution de stockage sécurisée combinant, RAID et Bareos. Pour résumé, c'est le coffre-fort de l'entreprise.
-- 🌐 **Portail web & outils IT** : création d’un serveur web pour centraliser l’accès aux outils comme GLPI, Zabbix, iRedMail, etc.
-
-L’environnement est principalement basé sur Linux (Debian/Ubuntu), avec aussi des machines Windows pour simuler au mieux une vraie infrastructure d’entreprise hybride. Le but, c’est de développer une vraie maîtrise terrain de la gestion d’un réseau sécurisé.
-
----
-
-# 🎯 Les objectifs du projet
-
-## 🗂️ Objectif 1 : Préparation et planification
-- 🏢 [Présentation de l'entreprise](/Objectif_1/00-presentation-entreprise.md)
-- 🧾 [Inventaire des machines nécessaires](/Objectif_1/01-inventaire_machines.md)
-- 🏷️ [Nomenclature + plan d’adressage IP avec schéma](/Objectif_1/02-nomenclature.md)
-- 🗺️ [Arborescence de l’infrastructure](/Objectif_1/03-arborescence.md)
-- 🗓️ [Planning détaillé du projet](/Objectif_1/04-planning.md)
-
-## 🛠️ Objectif 2 : Mise en place de l’infrastructure réseau de base
-
-- 🔐 [Installation et configuration de pfSense](/Objectif_2/00-firewall.md)
-- 🧬 [Configuration du switch VLANs](/Objectif_2/01_VLANs.md)
-- 🐧 Déploiement d’un serveur Linux (DHCP + DNS)
-- 🪟 Déploiement du serveur Windows (AD, WSUS, GPO)
-- 💻 Ajout d’un poste client Windows + machine d’admin Linux intégrées au réseau
-
-## 🔧 Objectif 3 : Finalisation des services réseau critiques
-
-- ✅ Tests et ajustements du DHCP
-- 🧠 Ajustements du DNS
-- 🗃️ Config avancée d’Active Directory
-- 📥 Mise en place + gestion de WSUS
-
-## 🔐 Objectif 4 : Sécurisation du réseau
-
-- 🧱 Règles firewall sur pfSense
-- 🛡️ Déploiement des GPO de sécurité et de base
-
-## 📡 Objectif 5 : Supervision, journalisation, sauvegarde
-
-- 📊 Installation de Zabbix
-- 📜 Mise en place de la journalisation centralisée
-- 💾 Configuration de Bareos, RAID, NAS
-- 📁 Partage de fichiers via les dossiers réseau Windows (intégrés à l’AD)
-
-## 🌐 Objectif 6 : Portail web + outils IT
-
-- 🧭 Création d’un portail d’accès centralisé (dashboard web)
-- 📧 Installation de iRedMail
-- 🧰 Configuration de GLPI (gestion de parc et helpdesk)
-- ⏰ Serveur de temps NTP
-
-## ✅ Objectif 7 : Tests et validation
-
-- 📶 Vérif connectivité, DNS, VLAN
-- 🔒 Audit de sécurité du routeur, du serveur linux et du serveur Windows
-- ⚙️ Tests de tous les services installés
-- 📈 Tests de performance (bande passante, charge des serveurs)
-- 🗃️ Documentation + checklist de validation
-
----
-# 🏗️ Cadre et contexte du projet
-## 🗓️ Rythme et contexte de travail
-Ce projet est entièrement réalisé par mes soins, en autonomie, avec pour principaux appuis **Internet** et les **IA**.
-Même si l’avancement peut varier selon les périodes, je reste déterminé à aller jusqu’au bout afin de mener ce projet à terme et d’ouvrir la voie aux suivants.
-
-J’organise mon travail sur un rythme du lundi au vendredi, avec la flexibilité nécessaire pour prendre du recul lorsque certaines étapes demandent plus de réflexion. Cette approche me permet de revenir sur le projet avec un regard neuf et de continuer à progresser de manière durable.
-
-Pour suivre l’évolution, voici le lien vers le planning du projet :[Planning Trello](https://trello.com/b/GfEDKtpd/master-your-network).
-
-## 🖥️ Matériel utilisé (ordinateur hôte)
-Ce projet est fait sur ma machine personnelle, avec cette config :
-
-- **CPU** : AMD Ryzen 7 5800X – 8 cœurs / 16 threads à 3,8 GHz
-- **RAM** : 32 Go DDR4 3200 MHz
-- **GPU** : ASUS TUF GeForce RTX 3070 – 8 Go dédiés
-- **OS hôte** : Kubuntu 22.04
-- **Stockage** : SSD 250 Go pour le système + HDD 1 To pour les données
-- **Virtualisation** : ~~VirtualBox~~ VMware Workstation Pro
-- **Réseau** : Wi-Fi
-- **Périphériques** : setup multi-écrans, clavier, souris
-
-Cette configuration me permet de faire tourner plusieurs VM sans trop galérer, même en pleine supervision ou configuration lourde.
-
-## ⚖️ Contraintes et points forts
-
-| ⚠️ Contraintes potentielles                                                                                                                                                                         | ✅ Avantages du projet                                                                                                                                             |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ⏱️ **Temps limité quotidien** : 4 heures par jour, ce qui est un rythme soutenu mais limite les longues sessions de travail intensif ou imprévus.                                                   | 💪 **Configuration matérielle puissante** : CPU Ryzen 7 5800X avec 16 threads et 32 Go de RAM, largement suffisant pour plusieurs VMs et charges réseau modérées. |
-| 🧍‍♀️ **Travail en solo** : absence d’aide directe, donc toute difficulté technique ou bug doit être résolue seule, ce qui peut rallonger les délais.                                               | 🐧 **Environnement Linux stable** : Kubuntu 22.04 comme système hôte, réputé pour sa stabilité et performance dans la virtualisation.                             |
-| 🌐 **Connexion WiFi** : peut parfois être instable ou moins performante qu’une connexion filaire, impactant les tests réseau et téléchargements.                                                    | 📦 ~~**Virtualisation légère** : VirtualBox est simple à configurer et à utiliser, facilitant la gestion quotidienne des machines virtuelles.~~                   |
-| 🖥️ **Ressources matérielles partagées** : l’ordinateur personnel est utilisé à la fois pour la virtualisation et d’autres tâches, ce qui peut réduire les ressources disponibles selon les usages. | 🎛️ **Contrôle total** : projet personnel et solo, donc pleine liberté pour planifier, ajuster et expérimenter sans contraintes externes.                         |
-| 🔒 **Virtualisation sur un seul hôte** : limite le nombre et la complexité des machines virtuelles que tu peux faire tourner en même temps, impactant certains scénarios ou tests.                  | 🖥️ **Multi-écrans** : facilite le multitâche, la supervision et le suivi simultané de plusieurs consoles ou interfaces.                                          |
-| 📦 ~~**Dépendance logicielle** : usage exclusif de VirtualBox, qui peut avoir certaines limitations ou bugs propres comparé à d’autres solutions comme VMware ou Proxmox.~~                         | 🛠️ **Accès à une large palette de technologies** : Linux, Windows, pfSense, Zabbix, GLPI, etc. pour une expérience complète et diversifiée.                      |
-| 🔄 **Multitâche et interruptions** : gérer projet et vie personnelle sur le même poste peut entraîner des interruptions ou des baisses de concentration.                                            | 📆 **Rythme régulier** : travail du lundi au samedi, ce qui assure une progression continue et une bonne dynamique d’avancement.                                  |
-🔧 **Mise à jour** : J’ai finalement remplacé VirtualBox par **VMware Workstation Pro (version gratuite)**.  
-VirtualBox s’est révélé trop limité pour la complexité de mon infrastructure : problèmes de performance, gestion réseau plus rigide, et moins de flexibilité sur certains scénarios de test.
+🔹💼 **Informations de présentation du projet**  
+![Statut du projet](https://img.shields.io/badge/statut-en%20cours-yellow)
+![Licence](https://img.shields.io/badge/Licence-MIT-blue)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Sybill%20Gribonval-blue?logo=linkedin)](https://www.linkedin.com/in/sybill-gribonval)
+![Langue](https://img.shields.io/badge/langue-français-blue)
+![Contributions](https://img.shields.io/badge/contributions-bienvenues-brightgreen)
+[![Trello Board](https://img.shields.io/badge/Trello-Master%20Your%20Network-blue?logo=trello)](https://trello.com/b/GfEDKtpd/🧠-master-your-network-projet-complet-dinfrastructure-reseau-virtualisee-et-securisee)
 
 
----
+🔹🧭 **Badges de conception et de planification**  
+![Documentation](https://img.shields.io/badge/Documentation-Technique-blue)
+![Analyse](https://img.shields.io/badge/Analyse-Infrastructure-green)
+![Architecture](https://img.shields.io/badge/Architecture-Infrastructure-orange)
+![Topology](https://img.shields.io/badge/Topology-Schéma-blue)
+
+🔹🛠️ **Outils et composants principaux**  
+![VMware Workstation](https://img.shields.io/badge/VMware-Workstation-blue?logo=vmware)
+![VyOS](https://img.shields.io/badge/VyOS-Router-orange)
+![Debian](https://img.shields.io/badge/Debian-Linux-A81D33?logo=debian)
+![Windows Server](https://img.shields.io/badge/Windows%20Server-2022-0078D6?logo=windows)
+![Active Directory](https://img.shields.io/badge/AD--DS-Annuaire-0078D6?logo=windows)
+![Zabbix](https://img.shields.io/badge/Zabbix-Monitoring-red?logo=zabbix)
+![GLPI](https://img.shields.io/badge/GLPI-ITSM-yellow)
+![Bareos](https://img.shields.io/badge/Bareos-Backup-blue)
+![Nextcloud](https://img.shields.io/badge/Nextcloud-Cloud-blue?logo=nextcloud)
+![Apache](https://img.shields.io/badge/Apache-Web-red?logo=apache)
+![3CX](https://img.shields.io/badge/3CX-VoIP-blue)
+![PingCastle](https://img.shields.io/badge/PingCastle-Audit-blue)
+![Lynis](https://img.shields.io/badge/Lynis-Security-green)
+![Vaultwarden](https://img.shields.io/badge/Vaultwarden-Password%20Manager-yellow)
+![iRedMail](https://img.shields.io/badge/iRedMail-Mail-red)
+
+## 📝 Contexte
+**Master Your Network** est un projet **professionnel et personnel** visant à concevoir, configurer et administrer une **infrastructure réseau d’entreprise complète**, virtualisée et sécurisée.  
+Il s’agit d’une évolution individuelle du projet collaboratif « *Build Your Infrastructure* », réalisé dans le cadre de ma formation en **Technicien Supérieur Systèmes & Réseaux (Bac +2)**.
+
+Ce projet a pour but de mettre en pratique l’ensemble des compétences attendues d’un **TSSR**, tout en intégrant certaines notions avancées issues du niveau **Administrateur d’Infrastructure Sécurisée (Bac +3)**, sans pour autant dépasser ce périmètre.
+
+L’environnement reproduit une **entreprise de 50 utilisateurs**, avec une segmentation réseau complète (LAN, VLAN, DMZ) et des services essentiels tels que l’Active Directory, le DNS/DHCP, la supervision, la sauvegarde, la messagerie, la VoIP ou encore le partage de fichier interne.  
+L’ensemble est pensé pour être **réaliste, pédagogique et totalement maîtrisable**, afin de permettre une compréhension concrète des mécanismes d’un système d’information d’entreprise.
+
+L’infrastructure est entièrement virtualisée sous **VMware Workstation Pro**, sur un système hôte **Linux (Kubuntu)** disposant des ressources suivantes :
+- **Processeur** : 8 cœurs / 16 threads
+- **Mémoire vive** : 64 Go RAM
+- **Virtualisation** : VMware Workstation Pro (réseaux LAN Segments, VLANs, DMZ, NAT)
+
+Ce projet constitue à la fois une **mise en situation professionnelle** et un **laboratoire d’apprentissage personnel**, combinant rigueur technique, sécurité, documentation et méthodologie projet.
+
+## 🔧 Objectifs du projet
+L’environnement est basé sur une infrastructure hybride Linux/Windows :
+- **Linux (Debian/Ubuntu)** pour les services réseau, applicatifs et de supervision
+- **Windows Server** pour l’annuaire Active Directory, les politiques de groupe et la gestion des postes clients
+- **Windows 11 Pro** pour les ordinateurs clients & administrateurs
+
+👉 Le but du projet est de développer une maîtrise pratique et terrain de la mise en place, l’exploitation et la sécurisation d’un réseau d’entreprise complet.
+
+### 🧩 Réseau & Infrastructure
+- 🔐 **Routeur sécurisé** : configuration d'un routeur sécurisé avec pare-feu intégré pour filtrer et sécuriser le trafic
+- 🌐 **Réseau VLANs** : segmentation logique du réseau avec des VLANs pour isoler les différentes zones
+- 🔑 **Serveur VPN** : configuration d'un accès distant sécurisé pour les administrateurs et les collaborateurs
+- 📡 **Serveur NTP** : mise en place d'un serveur NTP pour la synchronisation horaire de toute l'infrastructure
+
+### 🧠 Services & Systèmes
+- 📦 **Serveur Linux** : déploiement de serveurs DHCP & DNS pour gérer les adresses IP et la résolution des noms
+- 🪟 **Serveur Windows** : mise en place d'un Active Directory avec GPO et un système de partage de fichiers SMB pour les utilisateurs
+- 🛰️ **Serveur Updates** : mise en place d'un système de mise à jour avec WSUS
+- 📧 **Serveur de messagerie** : installation d'un serveur de messagerie interne pour la communication entre utilisateurs
+- 🌍 **Serveur web** : création de serveur web pour l'intranet et l'extranet de l'entreprise
+- ☁️ **Plateforme de service Cloud** : déploiement d’un Cloud externe en DMZ pour les échanges sécurisés
+
+### 🔎 Supervision, Sécurité & Maintenance
+- 📊 **Supervision** : déploiement d'un outil de supervision pour surveiller l'état des serveurs et du réseau
+- 📜 **Serveur central de journalisation** : centralisation et analyse des logs système pour faciliter le diagnostic et les audits
+- 💾 **Stockage & sauvegarde** : mise en place d'un espace de stockage sécurisé avec RAID, sauvegardes automatiques et restauration pour les serveurs
+- 🧰 **Gestion d’incident** : déploiement d'une solution de gestion des tickets et d'assistance à distance selon les bonnes pratiques ITIL
+- 📞 **Serveur de VoIP** : déploiement d'un service de téléphonie IP pour les communications internes
+- 🔒 **Serveur de mot de passe** : intégration d'un coffre-fort numérique pour stocker et partager les identifiants de façon sécurisée
+- 🛡️ **Audit de l’infrastructure** : validation de la sécurité, de la disponibilité et des performances de l'ensemble du réseau
+
+## 🎯 Les étapes de conception
+### 🗂️ [Étape 1 : Préparation et planification](/Installations/Etape1/index.md)
+- 🏢 **Présentation de l'entreprise** : Définir le contexte, le secteur, les besoins métier et les enjeux IT.
+- 🧾 **Inventaire et nomenclature de l'infrastructure** : Lister les serveurs, postes, équipements réseau et services attendus ; traduire en machines virtuelles selon les ressources disponibles avec un nommage clair et logique.
+- 💽 **La virtualisation avec VMware Workstation** : Caractrériques des VMs, création des VMs par rapport aux étapes de conception et création d'une VM avec VMware Workstation
+- 🗺️ **Arborescence Windows de l'infrastructure** : Organisation de l’Active Directory (OU, groupes, GPO).
+- 🌐 **Plan réseau de l'infrastructure** : Définir les VLANs, LAN/DMZ et le plan d’interconnexion global.
+
+### 🌐 [Étape 2 : Configuration du réseau et de la sécurité](/Installations/Etape2/index.md)
+- 🚦 **Configuration du routeur VyOS** : Interfaces, VLANs, routage, NAT, pare-feu de base.
+- 🔐 **Mise en place des VLANs et interconnexions** : Attribution des sous-réseaux et tests de communication inter-VLANs.
+- 🧱 **Mise en place de la DMZ et filtrage** : Isolation du réseau externe et définition des règles d’accès.
+- 🧭 **Mise en place du serveur NTP (Chrony)** : Synchronisation temporelle des serveurs.
+- 🧪 **Tests de connectivité et de sécurité réseau de base** : Ping, traceroute, pare-feu, contrôle des flux LAN/DMZ.
+
+### 🖥️ [Étape 3 : Services d’infrastructure de base](/Installations/Etape3/index.md)
+- 🧾 **Installation du serveur DHCP/DNS (Linux)** : Attribution dynamique et résolution interne.
+- 🪟 **Installation du serveur Windows AD/DC** : Configuration du domaine, GPO, utilisateurs et groupes.
+- 💾 **Partage SMB et gestion des permissions** : Mise en place des dossiers partagés pour les services internes.
+- 🧩 **Mise en place du serveur WSUS** : Gestion des mises à jour internes.
+- 🧪 **Tests de jointure au domaine et de résolution DNS** : Vérification des services fondamentaux.
+
+### 🔒 [Étape 4 : Services de sécurité et supervision](/Installations/Etape4/index.md)
+- 🧠 **Installation du serveur Vaultwarden** : Gestion centralisée et sécurisée des mots de passe.
+- 📜 **Serveur Logs (Syslog + LogAnalyzer)** : Centralisation et analyse des journaux systèmes.
+- 🧍‍♂️ **Mise en place du serveur Audit (PingCastle + Lynis)** : Installation, première analyse intermédiaire et rapport de mi-parcours.
+- 📈 **Installation du serveur Monitoring (Zabbix)** : Suivi des performances et alertes.
+- 🔎 **Tests de supervision complète** : Vérification des alertes et du bon reporting.
+
+### 🧰 [Étape 5 : Services applicatifs et utilisateurs](/Installations/Etape5/index.md)
+- 🌐 **Serveur WebExterne (Nextcloud + Nginx)** : Mise à disposition d’un cloud et d’un extranet.
+- 📞 **Serveur VoIP (3CX)** : Installation et configuration du système téléphonique interne.
+- 💌 **Serveur Mail (iRedMail)** : Gestion du courrier électronique interne/externe.
+- 🧾 **Serveur IT (GLPI + Intranet)** : Gestion de parc et portail interne.
+- 👥 **Création des postes clients et du poste Tech DSI** : Configuration des environnements utilisateurs.
+
+### 💽 [Étape 6 : Sauvegarde, restauration et validation](/Installations/Etape6/index.md)
+- 🗄️ **Installation du serveur Backup (Bareos + NAS/RAID)** : Configuration des stratégies de sauvegarde.
+- 🧰 **Sauvegarde et restauration de test** : Simulation d’un sinistre et validation de la procédure.
+- 📋 **Documentation des procédures de restauration** : Création de fiches pratiques.
+- 🔄 **Automatisation des sauvegardes planifiées** : Mise en place de scripts ou de tâches planifiées.
+- ✅ **Audit final de disponibilité et résilience** : Vérification globale de la tolérance aux pannes.
+
+### 📘 [Étape 7 : Documentation et finalisation](/Installations/Etape7/index.md)
+- 🧾 **Rédaction du Guide Administrateur** : Procédures internes, configurations et dépannage.
+- 📗 **Rédaction du Guide Utilisateur** : Utilisation des services (mail, Nextcloud, Intranet, VoIP…).
+- 🏁 **Présentation finale du projet** : Rapport complet et captures d’écran des tests fonctionnels.
+
+
+## 📌 Avancement du projet
+- [x] Étape 1 : Préparation et planification
+- [ ] Étape 2 : Configuration du réseau et de la sécurité
+- [ ] Étape 3 : Services d’infrastructure de base
+- [ ] Étape 4 : Services de sécurité et supervision
+- [ ] Étape 5 : Services applicatifs et utilisateurs
+- [ ] Étape 6 : Sauvegarde, restauration et validation
+- [ ] Étape 7 : Documentation et finalisation
+
+## 🛠️ Outils et technologies
+
+| Catégorie                     | Outils / Logiciels / Rôles techniques |
+| ----------------------------- | ------------------------------------- |
+| **Hyperviseur**               | VMware Workstation                    |
+| **Pare-feu / Routeur**        | VyOS                                  |
+| **Serveur Linux**             | Debian/Ubuntu                         |
+| **Serveur Windows**           | Windows Server, AD-DS, WSUS, GPO, SMB |
+| **Sauvegarde & stockage**     | Bareos, NAS, RAID                     |
+| **Journalisation**            | LogAnalyzer, Syslog                   |
+| **Gestion des mots de passe** | Vaultwarden                           |
+| **Supervision**               | Zabbix                                |
+| **Gestion IT**                | GLPI, Apache                          |
+| **Serveur de temps**          | Chrony                                |
+| **Services externes**         | Nextcloud, Nginx                      |
+| **Serveur de messagerie**     | iRedMail                              |
+| **VoIP**                      | 3CX                                   |
+| **Audit de sécurité**         | PingCastle, Lynis, Nmap, Kaisen Linux |
+| **Poste administrateur**      | Windows 11 Pro                        |
+| **Poste utilisateur**         | Windows 11 Pro                        |
+
+## 🗂️  Organisation du dépôt
+Ce dépôt sera organisé comme suit :
+- Un dossier **Installations** où sera répertorié les fiches d'installations de chacune des étapes de conception de l'infrastructure
+- Un dossier **Guides** où sera répertorié les fiches **Guide de l'utilisateur** & **Guide de l'administrateur**
+
+Pour une meilleure lisibilité, voici un visuel de la structure du dépôt :
+```text
+/
+├── README.md
+├── Installations
+│   └── Etape1
+│       └── Ressources
+│           └── Files
+│       └── index.md
+│       └── task1.md
+│       └── task2.md
+│       └── task3.md
+│       └── task4.md
+│       └── task5.md
+│   └── Etape2
+│       └── ...
+│   └── Etape7
+│       └── Ressources
+│           └── Files
+│       └── index.md
+│       └── task1.md
+│       └── task2.md
+│       └── task3.md
+│       └── task4.md
+│       └── task5.md
+├── Guides
+│   └── USER_GUIDE.md
+│   └── ADMIN_GUIDE.md
+```
+
+## 👤 Auteur
+Projet réalisé par **Sybill Gribonval**  
+🔗 [LinkedIn](https://www.linkedin.com/in/sybill-gribonval) | 📧 sybillgribonval@gmail.com
 
 ## ⚠️ Disclaimer
-Ce projet est **purement pédagogique**, réalisé sur mon PC personnel dans un environnement virtualisé et sécurisé.  
-Il me permet de progresser dans mes compétences en administration système, réseau et cybersécurité, **dans un cadre 100 % légal**.
-
-📌 **Si vous reprenez ce projet**, vous le faites **à vos risques** :
-- Chaque environnement matériel est différent.
-- Certaines configs peuvent causer des problèmes si elles sont mal adaptées.
-- Je ne pourrai pas être tenue responsable en cas de perte de données ou mauvaise utilisation.
-
-Aucune partie de ce projet n’est destinée à des fins illégales ou malveillantes.
+> Ce projet est un **laboratoire personnel** : il a pour but de me former aux infrastructures réseau hybrides (Linux/Windows), de documenter mes pratiques, et de constituer un support concret dans mon portfolio.  
+> Il ne représente pas une infrastructure de production, mais une maquette réaliste et reproductible en environnement virtualisé.
