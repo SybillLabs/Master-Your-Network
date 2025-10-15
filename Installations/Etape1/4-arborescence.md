@@ -1,7 +1,11 @@
 # 🗺️ Arborescence Windows de l'infrastructure
 
+🔹🛠️ **Outils et services utilisés**  
+![ChatGPT](https://img.shields.io/badge/ChatGPT-Assistant%20IA-4B9CD3?logo=openai)
+![GitHub Copilot](https://img.shields.io/badge/GitHub%20Copilot-Assistant%20code-181717?logo=github)
+
 ## 📝 Contexte
-Maintenant que l'infrastructure est bien finalisé, je peux concevoir **l'arborescence Windows** de l'infrastructure [NovaPlay Studio](./entreprise.md).  
+Maintenant que l'infrastructure est bien finalisé, je peux concevoir **l'arborescence Windows** de l'infrastructure [NovaPlay Studio](/Installations/Etape1/1-entreprise.md).  
 
 🎯 **Pourquoi structurer une arborescence ?**  
 Une arborescence bien pensée permet de :

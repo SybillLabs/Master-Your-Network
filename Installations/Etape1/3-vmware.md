@@ -1,4 +1,10 @@
 # 💽 La virtualisation avec VMware Workstation
+
+🔹🛠️ **Outils et services utilisés**  
+![ChatGPT](https://img.shields.io/badge/ChatGPT-Assistant%20IA-4B9CD3?logo=openai)
+![GitHub Copilot](https://img.shields.io/badge/GitHub%20Copilot-Assistant%20code-181717?logo=github)
+![VMware Workstation](https://img.shields.io/badge/VMware-Workstation-blue?logo=vmware)
+
 ## 📝 Contexte
 Avant de concevoir et déployer une infrastructure réseau complète, il est essentiel de disposer d'un **environnement de test flexible et isolé**.  
 C'est dans ce cadre que la **virtualisation** entre en jeu : elle permet de **simuler une entreprise fictive** et de **reproduire une architecture réseau professionnelle** sur une seule machine physique.
@@ -77,3 +83,10 @@ Les listes ci-dessous détaillent, pour chaque phase, les **VMs en service**, ce
 | 19 | **ns-audit02** | `Kaisel`        | 🔴      | 🔴      | 🔴      | 🔴      | 🔴      | 🔴      | 🟠      |
 
 ## 🖥️ Création d'une machine virtuelle VMware Workstation
+
+
+
+---
+
+👉 Retour à la [page index de l'étape](/Installations/Etape1/0-index.md).  
+👉 Retour à la [page principale du projet](/README.md).  
