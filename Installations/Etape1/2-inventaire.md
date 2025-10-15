@@ -1,5 +1,9 @@
 # 🧾 Inventaire et nomenclature de l'infrastructure
 
+🔹🛠️ **Outils et services utilisés**  
+![ChatGPT](https://img.shields.io/badge/ChatGPT-Assistant%20IA-4B9CD3?logo=openai)
+![GitHub Copilot](https://img.shields.io/badge/GitHub%20Copilot-Assistant%20code-181717?logo=github)
+
 ## 📝 Contexte
 Avant de concevoir une **infrastructure réseau**, il faut réaliser un inventaire complet de toutes les machines nécessaires à cette infrastructure :
 - Serveurs 
@@ -14,152 +18,88 @@ Une infrastructure comprend généralement :
 - 🧱 **DMZ (zone démilitarisée)** : zone tampon entre **Internet et le réseau interne**, isolée par un pare-feu. Elle héberge les **services accessibles depuis l’extérieur**, tout en protégeant le LAN.
 - 🏠 **LAN (réseau interne)** : zone interne, protégée, qui héberge les **services métiers, d’administration et de stockage**. Le LAN est segmenté en **VLANs** pour séparer les utilisateurs, les administrateurs DSI et les serveurs.
 
-## Inventaire des équipements par zone
-### 🔐 Routeur / Pare-feu central
+## 📦 Inventaire des équipements par zone
+| #  | Nom de l'équipement           | Zone | Fonctions                                                                       |
+| -- | ----------------------------- | ---- | ------------------------------------------------------------------------------- |
+| 01 | 🛜 Routeur / Pare-feu (VyOS)  | —    | Point central d'interconnexion et de sécurité entre le WAN, le LAN et la DMZ    |
+|    |                               |      | Assure le routage inter-zones, le NAT et le filtrage des flux réseaux           |
+| 02 | 🐧 Serveur Linux primaire     | LAN  | Attribution des adresses IP et résolution des noms                              |
+| 03 | 🪟 Serveur Windows primaire   | LAN  | Gestion de l'Active Directory, des GPO et des partages de fichier SMB           |
+| 04 | 🪟 Serveur Windows secondaire | LAN  | Réplication du serveur Windows primaire                                         |
+| 05 | 🖥️ Poste utilisateur DSI      | LAN  | Poste client pour les employés de la DSI (Windows 11 Pro)                       |
+| 06 | 🖥️ Poste utilisateur          | LAN  | Poste client pour les employés hors DSI (Windows 11 Pro)                        |
+| 07 | 🛰️ Serveur Windows update     | LAN  | Gestion des mises à jour Windows avec WSUS pour les PC clients                  |
+| 08 | 📞 Serveur de téléphonie IP   | LAN  | Téléphonie IP interne                                                           |
+| 09 | 🧍‍♂️ Ordinateur d'audit Windows | LAN  | Tests, vérification, maintenance avec PingCastle                                |
+| 10 | 🗄️ Serveur de backup          | LAN  | Sauvegarde Bareos, RAID et stockage NAS                                         |
+| 11 | 🧰 Serveur gestion IT         | LAN  | Gestion d'incident avec GLPI, intranet (Apache) & cloud interne (Seafile)       |
+| 12 | 🌐 Serveur web externe        | DMZ  | Extranet (Nginx) & cloud externe (Nextcloud)                                    |
+| 13 | 🕳️ Serveur d'accès à distance | DMZ  | Serveur OpenVPN pour une connexion par tunnel sécurisée                         |
+| 14 | 🧭 Serveur de temps           | LAN  | Serveur de temps (Chrony) pour une synchronisation horaire sur l'infrastructure |
+| 15 | 📈 Serveur de monitoring      | LAN  | Serveur de supervision Zabbix pour surveiller l'état de l'infrastructure        |
+| 16 | 🔐 Serveur de coffre fort     | LAN  | Serveur de coffre fort (Vaulwarden) des mots de passe de l'infrastructure       |
+| 17 | 🔎 Serveur de journalisation  | LAN  | Journalisation centralisée avec Graylogs pour les serveurs Windows & Linux      |
+| 18 | 💌 Serveur de messagerie      | DMZ  | Gère les mails internes et la réception depuis l'extérieur                      |
+| 19 | 🧍 Ordinateur d'audit Linux   | LAN  | Tests, vérification, maintenance avec Lynis                                     |
 
-| Équipement                       | Fonction                                                            | Remarques                                                                    |
-| -------------------------------- | ------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| 🛜 **Routeur / Pare-feu (VyOS)** | Point central d’interconnexion et de sécurité entre WAN, DMZ et LAN | Assure le routage inter-zones, le NAT, le VPN et le filtrage des flux réseau |
+## 🖥️ Nomenclature des équipements
+> 🔠 **Convention de nommage**  
+> Le choix des **tags VM** est effectué sur la base du *nom de l’entreprise*, du *nom* et de la *fonction de l’équipement*.  
+> Ces tags sont uniquement visibles par moi, car ils correspondent aux noms attribués à mes machines virtuelles dans **VMware Workstation**.  
+>  
+> Le choix des **hostnames** est quant à lui motivé par des considérations de sécurité : il vise à éviter que toute personne extérieure à l’entreprise ne puisse deviner la fonction d’un équipement à partir de son nom.  
+> Je me suis donc inspiré du manhwa **_Solo Leveling_**, l’une de mes œuvres préférées, pour nommer les différents systèmes de l’infrastructure.
+> 
+> Bien évidemment, les justifications de ces choix sont présentées ici à titre explicatif pour le portfolio, mais dans un contexte réel de DSI, il n’est pas recommandé de divulguer publiquement la signification des hostnames choisis.
 
-### 🧱 DMZ (zone démilitarisée)
-> Les services hébergés dans la DMZ sont isolés du LAN.  
-Seuls les flux strictement nécessaires (HTTPS, SMTP, VPN) sont autorisés via le pare-feu VyOS.
-
-| Service                                  | Fonction                                                                        | Remarques                                                         |
-| ---------------------------------------- | ------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| 🔑 **Serveur VPN (OpenVPN)**             | Permet un accès distant sécurisé aux administrateurs et collaborateurs externes | Accès contrôlé vers le LAN (authentification + filtrage pare-feu) |
-| 📧 **Serveur de messagerie (iRedMail)**  | Gère les mails internes et la réception depuis l’extérieur                      | Filtrage anti-spam et relais SMTP sécurisé                        |
-| 🌍☁️ **Serveur Web Externe**             | Portail externe pour les clients et partenaires (Nginx)                         | HTTPS uniquement (443), proxifié si besoin                        |
-|                                          | Espace de partage pour clients et partenaires (Nextcloud)                       | Accès HTTPS, synchronisation restreinte vers le Cloud interne     |
-
-## 🏠 LAN (réseau interne d’entreprise)
-🔹 VLAN DSI Servers
->Serveurs critiques et infrastructure centrale
-
-| Service                                                  | Fonction                                                                   |
-| -------------------------------------------------------- | -------------------------------------------------------------------------- |
-| 📦 **Serveur Linux (DHCP, DNS)**                         | Attribution des adresses IP et résolution des noms                         |
-| 🪟 **Serveur Windows (AD-DS, GPO, SMB)**                 | Gestion des comptes, des stratégies de groupe et des fichiers partagés SMB |
-| 🛰️ **Serveur Updates (WSUS)**                            | Gestion des mises à jour Windows pour les PC Clients & Administrateurs    |
-| 📊 **Serveur de supervision (Zabbix)**                   | Surveillance de l’état du réseau et des serveurs                           |
-| 📜 **Serveur de journalisation (Syslog et LogAnalyzer)** | Centralisation des logs (pare-feu, serveurs, postes)                       |
-| 💾 **Serveur de stockage et sauvegarde (Bareos / NAS)**  | Sauvegarde RAID et restauration des données critiques                      |
-| 🌍🧰 **Serveur IT (Intranet : Apache & GLPI)**           | Portail interne (documentation, applications internes)                     |
-|                                                          | Gestion du parc informatique, des incidents et des tickets IT              |
-| 📡 **Serveur NTP (Chrony)**                              | Synchronisation horaire sur tout le réseau                                 |
-| 📞 **Serveur VoIP (3CX)**                                | Téléphonie IP interne                                                      |
-| 🔒 **Serveur de mot de passe (Vaultwarden)**             | Stockage sécurisé des identifiants et accès administratifs                 |
-| 🧪 **Serveur d’audit / administration**                  | Tests, vérifications, maintenance et scripts d’automatisation              |
-
-🔹 VLAN Users
-> Postes utilisateurs standards (employés)
-
-| Poste                                     | Fonction                                                |
-| ----------------------------------------- | ------------------------------------------------------- |
-| 💻 **Postes utilisateurs Windows 11 Pro** | Machines du personnel, jointes au domaine AD            |
-| 🌐 **Accès restreint aux services**       | Accès aux partages, messagerie, intranet, cloud interne |
-
-🔹 VLAN DSI Users
-> Postes d’administration et de maintenance (équipe Infrastructure & IT)
-
-| Poste                                                                 | Fonction                                                                                                         |
-| --------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| 🖥️ **PC administrateurs (Windows 11 Pro)**                            | Postes de travail de l’équipe DSI,                                                                               |
-|                                                                       | Intégrés au domaine Active Directory et préconfigurés avec des machines virtuelles Ubuntu / Kaisen / Kali        |
-|                                                                       | Pour la supervision, la configuration et les tests d’administration système et réseau                            |
-| 🔧 **Outils d’exploitation (AnyDesk, scripts, SSH, Hyper-V, VMware)** | Utilisés pour la maintenance à distance, l’automatisation et le support technique des serveurs et postes clients |
-
-## 🔠 Convention de nommage
-
-### 🖥️ Nomenclature des VM
-
-| #  | 🏷️ Tag VM        | 🖥️ Hostname    | ⚙️ Fonctions & rôles principaux                                          |
-| -- | ---------------: | :------------: | ------------------------------------------------------------------------ |
-|  1 | **ns-fw01**      | `igris`        | Routeur, Pare-feu, VLANs                                                 |
-|  2 | **ns-lnx01**     | `tusk`         | DHCP, DNS                                                                |
-|  3 | **ns-ad01**      | `sungjinwoo`   | Domain Controler, Active Directory, GPO, SMB                             |
-|  4 | **ns-wsus01**    | `woojinchul`   | Mises à jour Windows Updates WSUS pour les PC clients & Administrateurs  |
-|  5 | **ns-bkp01**     | `beru`         | Bareos Director/Storage, dépôt NAS/RAID logiciel                         |
-|  6 | **ns-log01**     | `iron`         | LogAnalyzer (web), Syslog                                                |
-|  7 | **ns-secrets01** | `kamish`       | Vaultwarden (coffre identifiants admin)                                  |
-|  8 | **ns-it01**      | `bellion`      | GLPI, Intranet (Apache)                                                  |
-|  9 | **ns-mon01**     | `baran`        | Serveur de supervision Zabbix                                            |
-| 10 | **ns-ntp01**     | `sillad`       | Serveur de temps Chrony                                                  |
-| 11 | **ns-voip01**    | `tank`         | 3CX (SIP/RTP), trunks opérateur                                          |
-| 12 | **ns-audit01**   | `greed`        | nsaudit de sécurité des différents serveurs                              |
-| 13 | **ns-admin01**   | `shadow-admin` | Poste administrateur                                                     |
-| 14 | **ns-user01**    | `hunter`       | Poste utilisateur type joint au domaine                                  |
-| 15 | **ns-web01**     | `kaisel`       | Nginx RP (Extranet), Nextcloud (externe)                                 |
-| 16 | **ns-vpn01**     | `rakan`        | Serveur de connexion à distance OpenVPN                                  |
-| 17 | **ns-mail01**    | `querehsha`    | Serveur de messagerie iRedMail                                           |
-
-> Les hôtes du système **NovaPlay Studio** utilisent des noms inspirés du manhwa *Solo Leveling*.  
-> Ce choix symbolique permet d’attribuer à chaque machine une identité cohérente avec son rôle au sein de l’infrastructure : chaque personnage ou ombre représente une fonction clé, une force ou une responsabilité technique.
-
-🔹**Pourquoi ce nommage pour les `Hostname` ?**  
-Le choix des **noms d’hôtes** est directement inspiré de l’univers du manhwa *Solo Leveling*, où chaque personnage, ombre ou monarque incarne un rôle bien défini au sein d’une hiérarchie de puissance et de responsabilités.  
-De la même manière, chaque serveur de l’infrastructure **NovaPlay Studio** se voit attribuer un nom reflétant sa **fonction technique**, son **importance dans le réseau** et son **degré de criticité**.
-
-Cette approche a trois objectifs :
-- 🎯 **Donner du sens aux machines** : chaque nom évoque immédiatement le rôle du serveur (ex. igris → protecteur du domaine, comme un pare-feu).
-- 🧠 **Créer une cohérence thématique** : le thème des ombres et des monarques renforce la logique d’une architecture hiérarchisée et maîtrisée.
-- 💼 **Allier technique et identité** : le réseau devient un écosystème vivant, où chaque composant a sa personnalité et sa mission.
-
-| Exemple          | Référence Solo Leveling                  | Symbolique réseau                               |
-| :--------------- | :--------------------------------------- | :---------------------------------------------- |
-| **`igris`**      | Ombre loyale et chevalier protecteur     | Pare-feu, défense du périmètre réseau           |
-| **`tusk`**       | Mage orc, stratège puissant              | DNS/DHCP, intelligence et coordination          |
-| **`sungjinwoo`** | Protagoniste, Monarque des Ombres        | Contrôleur de domaine, cœur de l’infrastructure |
-| **`woojinchul`** | Chef du département de surveillance      | WSUS, supervision des mises à jour              |
-| **`beru`**       | Commandant des ombres, fidèle exécutant  | Sauvegarde et stockage                          |
-| **`iron`**       | Ombre puissante et robuste               | Collecte et archivage de logs                   |
-| **`kamish`**     | Dragon légendaire, rare et précieux      | Coffre-fort des identifiants administratifs     |
-| **`bellion`**    | Premier général d’Ashborn                | Serveur central DSI (GLPI, intranet)            |
-| **`baran`**      | Monarque des flammes blanches            | Supervision (Zabbix), vigilance constante       |
-| **`sillad`**     | Monarque du givre                        | Stabilité et régularité du temps (NTP)          |
-| **`kaisel`**     | Wyvern du roi des ombres                 | Reverse Proxy, lien entre interne et externe    |
-| **`rakan`**      | Monarque des crocs, roi des bêtes        | VPN, gardien des connexions sécurisées          |
-| **`querehsha`**  | Reine des insectes, souveraine du réseau | Messagerie, communication et diffusion          |
-
-> 💬 Ainsi, la nomenclature ne se limite pas à une convention technique : elle raconte une histoire cohérente entre la sécurité, la hiérarchie et la maîtrise du réseau, à l’image du royaume des ombres dans Solo Leveling.
+| #  | Tag VM         | Hostname        | Justification                                                                                                          |
+| -- | -------------- | --------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| 01 | **ns-router**  | `GoGunHee`      | Comme **Go Gun-Hee qui** veille sur les chasseurs, ce serveur contrôle et protège tout le trafic du réseau             |
+| 02 | **ns-lnx**     | `Tank`          | Fidèle et solide comme **Tank**, il assure les fondations du réseau en distribuant adresses IP et noms DNS             |
+| 03 | **ns-ad01**    | `SungJinwoo`    | Centre du pouvoir comme **Sung Jinwoo**, il gère utilisateurs, groupes et politiques du domaine                        |
+| 04 | **ns-ad02**    | `YooJinho`      | Loyal et dévoué à **Sung Jinwoo**, **Yoo Jinho** réplique et soutient le premier contrôleur de domaine                 |
+| 05 | **ns-user01**  | `Monarch`       | Poste DSI représentant l’autorité technique, tel le **Monarque** dominant son royaume                                  |
+| 06 | **ns-user02**  | `Hunter`        | Poste utilisateur standard, **chasseur actif** au sein du réseau d’entreprise                                          |
+| 07 | **ns-wsus**    | `NormaSelner`   | À l’image de **Norma Selner** qui upgrade les chasseurs, il améliore les systèmes via les mises à jour                 |
+| 08 | **ns-voip**    | `BaekYoonHo`    | Chaleureux et fiable comme **Baek Yoon-Ho**, il relie les équipes par la voix et la communication interne              |
+| 09 | **ns-audit01** | `Igris`         | Rigoureux et discipliné, **Igris** reflète ce serveur qui contrôle et audite les environnements Windows                |
+| 10 | **ns-backup**  | `Beru`          | Protecteur absolu comme **Beru**, il sauvegarde et restaure les données essentielles du royaume numérique              |
+| 11 | **ns-it**      | `Bellion`       | Chef d’organisation de l’armée des ombres, **Bellion** coordonne ici la gestion IT, GLPI et l’intranet                 |
+| 12 | **ns-web**     | `EsilRadiru`    | Médiatrice entre mondes, **Esil Radiru** incarne ce serveur exposé en DMZ reliant Internet et extranet                 |
+| 13 | **ns-vpn**     | `AdamWhite`     | Tel un diplomate entre nations, **Adam White** établit un canal sécurisé entre utilisateurs externes et réseau interne |
+| 14 | **ns-ntp**     | `Rulers`        | Les **Rulers** maintiennent l’équilibre du monde, tout comme ce serveur synchronise le temps du réseau                 |
+| 15 | **ns-moni**    | `Kandiaru`      | L’**Architecte du Système** observe et évalue, à l’image de Zabbix qui supervise toute l’infrastructure                |
+| 16 | **ns-safe**    | `Kamish`        | Tel le cœur scellé du dragon, **Kamish** protège et enferme les secrets dans le coffre-fort numérique                  |
+| 17 | **ns-logs**    | `AbsoluteBeing` | Comme l’**Être Suprême** qui voit tout, il enregistre chaque action pour garder la mémoire du système                  |
+| 18 | **ns-mail**    | `Tusk`          | **Tusk**, shaman communicateur, incarne ce serveur qui transmet fidèlement les messages internes et externes           |
+| 19 | **ns-audit02** | `Kaisel`        | Monture rapide et vigilante, **Kaisel** survole l’infrastructure Linux pour en analyser la sécurité                    |
 
 ## ⚙️ Priorités des équipements
-### 🔺 Priorité haute
-> Services essentiels au fonctionnement, à la sécurité et à l’identité du réseau.
-> Leur indisponibilité provoque une panne globale ou un arrêt du SI.
-
-1. 🧱 **Routeur / Pare-feu (VyOS)** — point d’interconnexion WAN / DMZ / LAN, sécurité réseau, NAT, filtrage
-2. 📦 **Serveur Linux (DHCP, DNS)** — attribution d’adresses IP et résolution des noms (dépendance pour tous les postes)
-3. 🪟 **Serveur Windows (AD-DS, GPO, WSUS, partage)** — authentification centralisée et gestion du domaine
-4. 📡 **Serveur NTP (Chrony)** — synchronisation horaire (important pour cohérence, mais tolère une panne temporaire)
-5. 💾 **Serveur de stockage et sauvegarde (Bareos / NAS)** — protection et restauration des données critiques
-6. 📜 **Serveur de journalisation (Rsyslog & LogAnalyzer)** — centralisation des logs, indispensable pour diagnostic et sécurité
-7. 🔒 **Serveur de mot de passe (Vaultwarden)** — sécurité des identifiants administratifs (accès à l’infrastructure)
-
-💡 Ces services constituent la “colonne vertébrale” du réseau NovaStudios.
+### 🔴 Priorité haute 
+- **ns-router** : 🛜 Routeur / Pare-feu (VyOS)
+- **ns-lnx** : 🐧 Serveur Linux primaire
+- **ns-ad01** : 🪟 Serveur Windows primaire
+- **ns-backup** : 🗄️ Serveur de backup
+- **ns-safe** : 🔐 Serveur de coffre fort
+- **ns-logs** : 🔎 Serveur de journalisation
+- **ns-mail** : 💌 Serveur de messagerie
 
 ### 🟠 Priorité moyenne
-> Services d’administration, de communication et de production.  
-> Leur panne n’empêche pas le fonctionnement de base, mais dégrade fortement l’efficacité du SI.
+- **ns-ad02** : 🪟 Serveur Windows secondaire
+- **ns-wsus** : 🛰️ Serveur Windows update
+- **ns-voip** : 📞 Serveur de téléphonie IP
+- **ns-audit01** : 🧍‍♂️ Ordinateur d'audit Windows
+- **ns-it** : 🧰 Serveur gestion IT
+- **ns-web** : 🌐 Serveur web externe
+- **ns-vpn** : 🕳️ Serveur d'accès à distance
+- **ns-ntp** : 🧭 Serveur de temps
+- **ns-moni** : 📈 Serveur de monitoring
 
-1. 🧰 **Serveur GLPI** — gestion des incidents et du parc informatique
-2. 🧪 **Serveur d’audit / administration** — maintenance, scripts et vérifications régulières
-3. 🔑 **Serveur VPN (OpenVPN)** — accès distant pour les administrateurs ou collaborateurs
-4. ☁️ **Serveur Web Externe (Nextcloud & Extranet Nginx)** — échanges de fichiers avec l’extérieur & portail externe clients/partenaires
-5. 📧 **Serveur de messagerie (iRedMail)** — communication interne/externe (important mais non vital au cœur du réseau)
-6. 🌍 **Serveur Web Intranet (Apache)** — portail interne et documentation
-7. 📞 **Serveur VoIP (3CX)** — téléphonie interne (confort utilisateur, non critique)
-8. 📊 **Serveur de supervision (Zabbix)** — détection des pannes et surveillance des services vitaux
+- **ns-audit02** : 🧍 Ordinateur d'audit Linux
 
-💡 Ces services soutiennent l’activité, la collaboration et la supervision du réseau sans en être vitaux.
-
-## 🟢 Priorité basse
-> Éléments périphériques sans impact direct sur la disponibilité du SI.
-
-1. 🖥️ **PC administrateur (Windows 11 Pro)** — postes d’administration de la DSI, équipés d’outils de gestion, supervision et maintenance (VM Ubuntu / Kaisen / Kali selon le rôle)
-2. 💻 **Postes utilisateurs (Windows 11 Pro)** — postes de travail standard, non critiques pour l’infrastructure
-
-💡 Les postes administrateurs conservent la base Windows 11 Pro pour l’intégration au domaine, tout en embarquant un environnement Linux virtualisé pour les tâches techniques.
+### 🟢 Priorité basse
+- **ns-user01** : 🖥️ Poste utilisateur DSI
+- **ns-user02** : 🖥️ Poste utilisateur
 
 ## 🕵️ Serveur Bastion (sécurité d’administration)
 Le **serveur Bastion** est un équipement de sécurité permettant de **centraliser, tracer et contrôler** les connexions d'administration vers les serveurs internes et ceux situés en DMZ. Il agit comme un **point d'accès unique pour les administrateurs**, en enregistrant leurs connexions et en limitant les accès directs au reste du réseau.

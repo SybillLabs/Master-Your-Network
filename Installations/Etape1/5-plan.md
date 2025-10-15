@@ -78,30 +78,32 @@ Dans mon projet, je vais avoir 3 cas :
 💡 Le serveur **DHCP** sera configuré pour **travailler conjointement avec le routeur VyOS**, notamment pour la gestion des **VLANs** et des **plages d’adresses associées**.
 
 🔹 **Plage d'adressage réseau**  
-| Nom de l'équipement    | Rôle & Fonctionnalité                                                                  | VLANs ID         | NAT / Dynamique / Statique / Manuelle | Adresse IP                                      | Gateway        |
-| ---------------------: | -------------------------------------------------------------------------------------- | ---------------- | ------------------------------------- | ----------------------------------------------- | -------------- |
-| **Routeur VyOS**       | Routeur, Pare-feu, VLANs                                                               | —                | NAT                                   | eth0 (WAN) - NAT                                | —              |
-|                        |                                                                                        | —                | Manuelle                              | eth1 (LAN Trunk 10/20/30) - 192.168.1.254       | —              |
-|                        |                                                                                        | VLAN Users       | Manuelle                              | eth1.10 - 192.168.10.254                        | —              |
-|                        |                                                                                        | VLAN DSI Users   | Manuelle                              | eth1.20 - 192.168.20.254                        | —              |
-|                        |                                                                                        | VLAN DSI Servers | Manuelle                              | eth1.30 - 192.168.30.254                        | —              |
-|                        |                                                                                        | —                | Manuelle                              | eth2 (DMZ) - 192.168.0.254                      | —              |
-| **Serveur Linux**      | DHCP & DNS                                                                             | VLAN DSI Servers | Manuelle                              | 192.168.30.1/24                                 | 192.168.30.254 |
-| **Serveur Windows**    | Domain Controler, Active Directory (AD-DS), DNS intégré, GPO, SMB (partage de fichier) | VLAN DSI Servers | Manuelle                              | 192.168.30.2/24                                 | 192.168.30.254 |
-| **Serveur Updates**    | WSUS                                                                                   | VLAN DSI Servers | Manuelle                              | 192.168.30.3/24                                 | 192.168.30.254 |
-| **Serveur Backup**     | Bareos Director/Storage, dépôt NAS/RAID logiciel                                       | VLAN DSI Servers | Manuelle                              | 192.168.30.4/24                                 | 192.168.30.254 |
-| **Serveur Logs**       | LogAnalyzer (web), relais/archivage syslog                                             | VLAN DSI Servers | Manuelle                              | 192.168.30.5/24                                 | 192.168.30.254 |
-| **Serveur Secrets**    | Vaultwarden (coffre identifiants admin)                                                | VLAN DSI Servers | Manuelle                              | 192.168.30.6/24                                 | 192.168.30.254 |
-| **Serveur IT**         | GLPI, Intranet (Apache)                                                                | VLAN DSI Servers | Manuelle                              | 192.168.30.7/24                                 | 192.168.30.254 |
-| **Serveur Monitoring** | Supervision Zabbix                                                                     | VLAN DSI Servers | Manuelle                              | 192.168.30.8/24                                 | 192.168.30.254 |
-| **Serveur NTP**        | Chrony                                                                                 | VLAN DSI Servers | Manuelle                              | 192.168.30.9/24                                 | 192.168.30.254 |
-| **Serveur VoIP**       | 3CX                                                                                    | VLAN DSI Servers | Manuelle                              | 192.168.30.10/24                                | 192.168.30.254 |
-| **Serveur Audit**      | PingCastle, Lynis                                                                      | VLAN DSI Servers | Manuelle                              | 192.168.30.11/24                                | 192.168.30.254 |
-| **PC Admin**           | Windows 11 Pro                                                                         | VLAN DSI Users   | Statique                              | 192.168.20.1/24                                 | 192.168.20.254 |
-| **PC Client**          | Windows 11 Pro                                                                         | VLAN Users       | Dynamique                             | DHCP Pool : 192.168.10.1/24 à 192.168.10.253/24 | 192.168.10.254 |
-| **Serveur WebExterne** | Extranet (Nginx), Cloud (NextCloud)                                                    | —                | Manuelle                              | 192.168.0.1/24                                  | 192.168.0.254  |
-| **Serveur VPN**        | OpenVPN                                                                                | —                | Manuelle                              | 192.168.0.2/24                                  | 192.168.0.254  |
-| **Serveur Mail**       | iRedMail                                                                               | —                | Manuelle                              | 192.168.0.3/24                                  | 192.168.0.254  |
+| #  | Tag VM         | Hostname        | VLANs ID    | DHCP      | Adresse IP                                      | Gateway        |
+| -- | -------------- | --------------- |------------ | --------- | ----------------------------------------------- | -------------- |
+| 01 | **ns-router**  | `GoGunHee`      | —           | NAT       | eth0 (WAN) - NAT                                | —              |
+|    |                |                 | —           | Manuelle  | eth1 (LAN Trunk 10/20/30) - 192.168.1.254       | —              |
+|    |                |                 | Users       | Dynamique | eth1.10 - 192.168.10.254                        | —              |
+|    |                |                 | DSI Users   | Statique  | eth1.20 - 192.168.20.254                        | —              |
+|    |                |                 | DSI Servers | Manuelle  | eth1.30 - 192.168.30.254                        | —              |
+|    |                |                 | —           | Manuelle  | eth2 (DMZ) - 192.168.0.254                      | —              |
+| 02 | **ns-lnx**     | `Tank`          | DSI Servers | Manuelle  | 192.168.30.1/24                                 | 192.168.30.254 |
+| 03 | **ns-ad01**    | `SungJinwoo`    | DSI Servers | Manuelle  | 192.168.30.2/24                                 | 192.168.30.254 |
+| 04 | **ns-ad02**    | `YooJinho`      | DSI Servers | Manuelle  | 192.168.30.3/24                                 | 192.168.30.254 |
+| 05 | **ns-user01**  | `Monarch`       | DSI Users   | Statique  | 192.168.20.1/24                                 | 192.168.20.254 |
+| 06 | **ns-user02**  | `Hunter`        | Users       | Dynamique | DHCP Pool : 192.168.10.1/24 à 192.168.10.253/24 | 192.168.10.254 |
+| 07 | **ns-wsus**    | `NormaSelner`   | DSI Servers | Manuelle  | 192.168.30.4/24                                 | 192.168.30.254 |
+| 08 | **ns-voip**    | `BaekYoonHo`    | DSI Servers | Manuelle  | 192.168.30.5/24                                 | 192.168.30.254 |
+| 09 | **ns-audit01** | `Igris`         | DSI Servers | Manuelle  | 192.168.30.6/24                                 | 192.168.30.254 |
+| 10 | **ns-backup**  | `Beru`          | DSI Servers | Manuelle  | 192.168.30.7/24                                 | 192.168.30.254 |
+| 11 | **ns-it**      | `Bellion`       | DSI Servers | Manuelle  | 192.168.30.8/24                                 | 192.168.30.254 |
+| 12 | **ns-web**     | `EsilRadiru`    | —           | Manuelle  | 192.168.0.1/24                                  | 192.168.0.254  |
+| 13 | **ns-vpn**     | `AdamWhite`     | —           | Manuelle  | 192.168.0.2/24                                  | 192.168.0.254  |
+| 14 | **ns-ntp**     | `Rulers`        | DSI Servers | Manuelle  | 192.168.30.9/24                                 | 192.168.30.254 |
+| 15 | **ns-moni**    | `Kandiaru`      | DSI Servers | Manuelle  | 192.168.30.10/24                                | 192.168.30.254 |
+| 16 | **ns-safe**    | `Kamish`        | DSI Servers | Manuelle  | 192.168.30.11/24                                | 192.168.30.254 |
+| 17 | **ns-logs**    | `AbsoluteBeing` | DSI Servers | Manuelle  | 192.168.30.12/24                                | 192.168.30.254 |
+| 18 | **ns-mail**    | `Tusk`          | —           | Manuelle  | 192.168.0.3/24                                  | 192.168.0.254  |
+| 19 | **ns-audit02** | `Kaisel`        | DSI Servers | Manuelle  | 192.168.30.13/24                                | 192.168.30.254 |
 
 > Le plan d’adressage a été conçu pour assurer une gestion claire et segmentée des adresses IP selon les rôles et VLANs. Les serveurs critiques utilisent des adresses fixes pour garantir la stabilité, tandis que les postes utilisateurs bénéficient d’une attribution automatique via DHCP.
 
@@ -112,8 +114,3 @@ Dans mon projet, je vais avoir 3 cas :
 
 👉 Retour à la [page index de l'étape](/Installations/Etape1/0-index.md).   
 👉 Retour à la [page principale du projet](/README.md).  
-
-
-
-
-

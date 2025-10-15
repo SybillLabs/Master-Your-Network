@@ -1,5 +1,9 @@
 # 🏢 Présentation de l'entreprise
 
+🔹🛠️ **Outils et services utilisés**  
+![ChatGPT](https://img.shields.io/badge/ChatGPT-Assistant%20IA-4B9CD3?logo=openai)
+![GitHub Copilot](https://img.shields.io/badge/GitHub%20Copilot-Assistant%20code-181717?logo=github)
+
 ## 📝 Contexte
 > ⚠️ Remarque importante  
 Cette entreprise est totalement fictive, créée avec l’aide de ChatGPT dans le cadre d’un projet personnel. Elle n’existe pas dans la réalité.
@@ -11,6 +15,7 @@ C'est pourquoi avec l'aide de **ChatGPT**, j'ai simulé une entreprise de 50 emp
 ## ✨ Description de l'entreprise
 ### 🏢 NovaPlay Studios
 👉 Un studio de création de jeux vidéo indépendant qui mise aussi sur le streaming (YouTube/Twitch) pour sa communication et son marketing.
+
 ![logo](./Ressources/logo.png)
 
 ### 🎮 Que fait l’entreprise ?

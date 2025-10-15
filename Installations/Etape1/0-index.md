@@ -1,22 +1,17 @@
 # 🗂️ Etape 1 : Préparation et planification
 
 🔹💼 **Informations de présentation du projet**  
-![Statut du projet](https://img.shields.io/badge/statut-en%20cours-yellow)
-![Licence](https://img.shields.io/badge/Licence-MIT-blue)
-![Langue](https://img.shields.io/badge/langue-français-blue)
+![Statut de l'étape](https://img.shields.io/badge/statut%20de%20l'étape-terminée-brightgreen)
 
-🔹🧭 **Badges de conception et de planification**  
-![Documentation](https://img.shields.io/badge/Documentation-Technique-blue)
-![Analyse](https://img.shields.io/badge/Analyse-Infrastructure-green)
-![Architecture](https://img.shields.io/badge/Architecture-Infrastructure-orange)
-![Topology](https://img.shields.io/badge/Topology-Schéma-blue)
-
-🔹🛠️ **Outils et composants principaux**  
-![Draw.io](https://img.shields.io/badge/Draw.io-Design%20d'infrastructure-orange?logo=diagramsdotnet)
-![Domain Controller](https://img.shields.io/badge/Domain%20Controller-DC-0078D6?logo=windows)
-![Organizational Unit](https://img.shields.io/badge/Organizational%20Unit-OU-1E90FF?logo=windows)
-![Common Name](https://img.shields.io/badge/Common%20Name-CN-4682B4?logo=windows)
-![AD Group](https://img.shields.io/badge/AD%20Group-Groupe-005A9C?logo=windows)
+🔹🧭 **Concepts abordés**
+![Virtualisation](https://img.shields.io/badge/Virtualisation%20%26%20infrastructure-🧩-blue)
+![Planification réseau](https://img.shields.io/badge/Planification%20%26%20conception%20réseau-🗂️-blue)
+![Segmentation VLANs](https://img.shields.io/badge/Segmentation%20réseau%20%26%20VLANs-🧱-blue)
+![Architecture LAN/DMZ](https://img.shields.io/badge/Architecture%20LAN%20%2F%20DMZ-🌐-blue)
+![Inventaire serveurs](https://img.shields.io/badge/Inventaire%20%26%20nomenclature%20serveurs-🧾-blue)
+![Active Directory](https://img.shields.io/badge/Administration%20AD%20%2F%20Domain%20Controler-🪟-blue)
+![Gestion utilisateurs](https://img.shields.io/badge/Gestion%20utilisateurs%20%2F%20groupes%20%2F%20OU-🧍-blue)
+![Documentation](https://img.shields.io/badge/Documentation%20technique-🧾-blue)
 
 ## 📝 Contexte
 Cette étape permet de concevoir l'infrastructure système et réseau sous deux points de vue :
