@@ -60,9 +60,10 @@ Ce projet constitue à la fois une **mise en situation professionnelle** et un *
 
 ## 🎯 Les étapes de conception
 ### 🗂️ [Étape 1 – Planification et Préparation](/Installations/Etape1/0-index.md)
-#### 🎯 Objectif :
+🔹 🎯 **Objectif**  
 Définir la base du projet et concevoir l’architecture complète.
-#### 🧠 Contenu :
+
+🔹 🧠 **Contenu**
 - 🏢 **Présentation de l'entreprise** : Définir le contexte, le secteur, les besoins métier et les enjeux IT. 
 - 🧾 **Inventaire et nomenclature de l'infrastructure** : Lister les serveurs, postes, équipements réseau et services attendus ; traduire en machines virtuelles avec un nommage clair et logique.
 - 💽 **La virtualisation avec VMware Workstation** : Caractéristiques des VMs, création des VMs par rapport aux étapes de conception et création d'une VM avec VMware Workstation
@@ -70,72 +71,80 @@ Définir la base du projet et concevoir l’architecture complète.
 - 🌐 **Plan réseau de l'infrastructure** : Définir les VLANs, LAN/DMZ et le plan d’interconnexion global avec draw.io.
 
 ### 🌐 Étape 2 – Réseau et Socle Système
-#### 🎯 Objectif :
+🔹 🎯 **Objectif**  
 Mettre en place l’infrastructure réseau et les services de base.
-#### 🧠 Contenu :
+
+🔹 🧠 **Contenu**
 - 🛜 **Mise en place du routeur VyOS** : Configuration initial du WAN/LAN/DMZ et des règles de pare-feu de base.
 - 🖧 **Mise en place des VLANs** : Configuration de trois VLANs dans le LAN via et géré par le routeur VyOS.
 - 🐧 **Mise en place du serveur Linux primaire** : Configuration d'un serveur debian non graphique pour les services DHCP (isc-dhcp-server) & DNS (bind9).
 - 🪟 **Mise en place des serveurs Windows primaire et secondaire** : Configuration d'un Windows Serveur *GUI* en tant que *Domain Controller 1* (Rôle : Active Directory, DNS intégré, GPO, SMB) et d'un Windows Serveur *Core* en tant que *Domain Controller 2* (Réplication du DC1).
 
 ### 🖥️ Étape 3 – Active Directory, GPO et Partages
-#### 🎯 Objectif :
+🔹 🎯 **Objectif**  
 Structurer et sécuriser le domaine d’entreprise.
-#### 🧠 Contenu :
+
+🔹 🧠 **Contenu**
 - 👥 **Configuration de l'Active Directory** : Création des unités d'organisations (OU), des groupes, et des utilisateurs.
 - 🖥️ **Mise en place des postes utilisateurs** : Intégration au domaine de deux postes clients, l'un pour les employés de la DSI et l'autre pour le reste des employés.
 - 📜 **Mise en place des GPO** : Configuration des GPO standard et de sécurité.
 - 💾 **Mise en place des partages de fichier SMB** : Configuration du rôle SMB (droits NTFS & groupes AD).
 
 ### 🔒 Étape 4 – Maintenance, Mises à jour et Audit
-#### 🎯 Objectif :
+🔹 🎯 **Objectif**  
 Automatiser la maintenance et évaluer la sécurité du domaine Windows.
-#### 🧠 Contenu :
+
+🔹 🧠 **Contenu**
 - 📡 **Mise en place de GPO de télémétrie** : Configuration de la collecte de données de diagnostic Windows au niveau du domaine.
 - 🛰️ **Mise en place d'un service de mise à  Windows** : Installation et configuration d'un serveur WSUS distinct des serveurs DC1 & DC2.
 - 📞 **Mise en place de la téléphonie VoIP** : Installation et configuration de 3CX, et tests d'appels.
 - 🧍‍♂️ **Audit de sécurité Windows** : Installation et configuration du PC d'audit Windows avec PingCastle, et tests d'audit des serveurs Windows.
 
 ### 💾 Étape 5 – Stockage, Sauvegarde et Cloud
-#### 🎯 Objectif :
+🔹 🎯 **Objectif**  
 Assurer la sauvegarde et la résilience selon la règle **3-2-2-1-0**.
-#### 🧠 Contenu :
+
+🔹 🧠 **Contenu**
 - 🗄️ **Mise en place du serveur de sauvegarde** : Installation et configuration de Bareos avec NAS & RAID, avec test de restauration de fichier.
 - 📀 **Mise en place RAID miroir sur serveur Windows** : Installation et configuration d'un RAID sur le serveur DC1.
 - ☁️ **Mise en place du cloud interne** : Installation et configuration de Seafile dans le LAN
 - ☁️ **Mise en place du cloud externe** : Installation et configuration de NextCloud dans la DMZ.
 
 ### 🛡️ Étape 6 – Accès distant, Synchronisation, Supervision et Sécurité
-#### 🎯 Objectif :
+🔹 🎯 **Objectif**  
 Garantir la sécurité, la supervision et l’administration distante.
-#### 🧠 Contenu :
+
+🔹 🧠 **Contenu**
 - 🕳️ **Mise en place d'un serveur VPN** : Installation et configuration d'un accès distant sécurisé avec OpenVPN.
 - 🧭 **Mise en place d'un serveur de temps** : Installation et configuration d'un serveur NTP Chrony.
 - 📈 **Mise en place d'un serveur de monitoring** : Installation et configuration d'un serveur Zabbix qui surveille le LAN et la DMZ.
 - 🔐 **Mise en place d'un serveur coffre-fort de mot de passe** : Installation et configuration de Vaulwarden.
 
 ### 🌍 Étape 7 – Services Web, Logs, Support et Messagerie
-#### 🎯 Objectif :
+🔹 🎯 **Objectif**  
 Finaliser les services internes, externes et de support utilisateur.
-#### 🧠 Contenu :
+
+🔹 🧠 **Contenu**
 - 🧰 **Mise en place d'un serveur de gestion d'incident** : Installation et configuration de GLPI (LDAP, Helpdesk, ITIL).
 - 🔎 **Mise en place d'un serveur central de journalisation** : Installation et configuration de Graylogs pour récupérer les logs de serveur Windows, Linux & VyOS.
 - 🌐 **Mise en place de l'intranet et de l'extranet** : Installation et configuration d'Apache pour l'intranet et de Nginx pour l'extranet.
 - 💌 **Mise en place d'un serveur de messagerie** : Installation et configuration d'iRedMail.
 
 ### 🔐 Étape 8 – Renforcement de la Sécurité et Audits
-#### 🎯 Objectif :
+🔹 🎯 **Objectif**  
 Auditer, corriger et renforcer la sécurité globale du SI.
-#### 🧠 Contenu :
+
+🔹 🧠 **Contenu**
 - 🧱 **Configuration avancée du routeur VyOS** : Amélioration des règles de sécurité du pare-feu VyOS (filtrage, flux DMZ/LAN, journalisation).
 - 🧩 **Configuration des rôles FSMO des Domain Controler Windows** : Répartition des cinq rôles FSMO entre le Domain Controller 1 et 2.
 - 🧍‍♂️ **Audit de sécurité Windows** : Seconde analyse avec PingCastle et correctifs.
 - 🧍 **Audit de sécurité Linux** : Installation et configuration du PC d'audit Linux avec Lynis, et tests d'audit des serveurs Linux (Debian/Ubuntu).
 
 ### 📘 Étape 9 – Documentation et Bilan de Projet
-#### 🎯 Objectif :
+🔹 🎯 **Objectif**  
 Clôturer le projet, documenter et transmettre les connaissances.
-#### 🧠 Contenu :
+
+🔹 🧠 **Contenu**
 - 🧾 **Guide administrateur** : architecture, procédures, maintenance, supervision.  
 - 📗 **Guide utilisateur** : accès aux services (mail, cloud, VPN, intranet).  
 - 🏁 **Compte-rendu du projet** : remarques, difficultés, réussites, apprentissages et améliorations futures.
