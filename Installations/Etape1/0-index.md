@@ -3,7 +3,7 @@
 🔹💼 **Informations de présentation du projet**  
 ![Statut de l'étape](https://img.shields.io/badge/statut%20de%20l'étape-terminée-brightgreen)
 
-🔹🧭 **Concepts abordés**
+🔹🧭 **Concepts abordés**  
 ![Virtualisation](https://img.shields.io/badge/Virtualisation%20%26%20infrastructure-🧩-blue)
 ![Planification réseau](https://img.shields.io/badge/Planification%20%26%20conception%20réseau-🗂️-blue)
 ![Segmentation VLANs](https://img.shields.io/badge/Segmentation%20réseau%20%26%20VLANs-🧱-blue)
