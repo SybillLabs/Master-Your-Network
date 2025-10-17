@@ -70,6 +70,8 @@ Définir la base du projet et concevoir l’architecture complète.
 - 🗺️ **Arborescence Windows de l'infrastructure** : Organisation de l’Active Directory (OU, groupes, GPO).
 - 🌐 **Plan réseau de l'infrastructure** : Définir les VLANs, LAN/DMZ et le plan d’interconnexion global avec draw.io.
 
+---
+
 ### 🌐 Étape 2 – Réseau et Socle Système
 🔹 🎯 **Objectif**  
 Mettre en place l’infrastructure réseau et les services de base.
@@ -79,6 +81,8 @@ Mettre en place l’infrastructure réseau et les services de base.
 - 🖧 **Mise en place des VLANs** : Configuration de trois VLANs dans le LAN via et géré par le routeur VyOS.
 - 🐧 **Mise en place du serveur Linux primaire** : Configuration d'un serveur debian non graphique pour les services DHCP (isc-dhcp-server) & DNS (bind9).
 - 🪟 **Mise en place des serveurs Windows primaire et secondaire** : Configuration d'un Windows Serveur *GUI* en tant que *Domain Controller 1* (Rôle : Active Directory, DNS intégré, GPO, SMB) et d'un Windows Serveur *Core* en tant que *Domain Controller 2* (Réplication du DC1).
+
+---
 
 ### 🖥️ Étape 3 – Active Directory, GPO et Partages
 🔹 🎯 **Objectif**  
@@ -90,6 +94,8 @@ Structurer et sécuriser le domaine d’entreprise.
 - 📜 **Mise en place des GPO** : Configuration des GPO standard et de sécurité.
 - 💾 **Mise en place des partages de fichier SMB** : Configuration du rôle SMB (droits NTFS & groupes AD).
 
+---
+
 ### 🔒 Étape 4 – Maintenance, Mises à jour et Audit
 🔹 🎯 **Objectif**  
 Automatiser la maintenance et évaluer la sécurité du domaine Windows.
@@ -99,6 +105,8 @@ Automatiser la maintenance et évaluer la sécurité du domaine Windows.
 - 🛰️ **Mise en place d'un service de mise à  Windows** : Installation et configuration d'un serveur WSUS distinct des serveurs DC1 & DC2.
 - 📞 **Mise en place de la téléphonie VoIP** : Installation et configuration de 3CX, et tests d'appels.
 - 🧍‍♂️ **Audit de sécurité Windows** : Installation et configuration du PC d'audit Windows avec PingCastle, et tests d'audit des serveurs Windows.
+
+---
 
 ### 💾 Étape 5 – Stockage, Sauvegarde et Cloud
 🔹 🎯 **Objectif**  
@@ -110,6 +118,8 @@ Assurer la sauvegarde et la résilience selon la règle **3-2-2-1-0**.
 - ☁️ **Mise en place du cloud interne** : Installation et configuration de Seafile dans le LAN
 - ☁️ **Mise en place du cloud externe** : Installation et configuration de NextCloud dans la DMZ.
 
+---
+
 ### 🛡️ Étape 6 – Accès distant, Synchronisation, Supervision et Sécurité
 🔹 🎯 **Objectif**  
 Garantir la sécurité, la supervision et l’administration distante.
@@ -119,6 +129,8 @@ Garantir la sécurité, la supervision et l’administration distante.
 - 🧭 **Mise en place d'un serveur de temps** : Installation et configuration d'un serveur NTP Chrony.
 - 📈 **Mise en place d'un serveur de monitoring** : Installation et configuration d'un serveur Zabbix qui surveille le LAN et la DMZ.
 - 🔐 **Mise en place d'un serveur coffre-fort de mot de passe** : Installation et configuration de Vaulwarden.
+
+---
 
 ### 🌍 Étape 7 – Services Web, Logs, Support et Messagerie
 🔹 🎯 **Objectif**  
@@ -130,6 +142,8 @@ Finaliser les services internes, externes et de support utilisateur.
 - 🌐 **Mise en place de l'intranet et de l'extranet** : Installation et configuration d'Apache pour l'intranet et de Nginx pour l'extranet.
 - 💌 **Mise en place d'un serveur de messagerie** : Installation et configuration d'iRedMail.
 
+---
+
 ### 🔐 Étape 8 – Renforcement de la Sécurité et Audits
 🔹 🎯 **Objectif**  
 Auditer, corriger et renforcer la sécurité globale du SI.
@@ -139,6 +153,8 @@ Auditer, corriger et renforcer la sécurité globale du SI.
 - 🧩 **Configuration des rôles FSMO des Domain Controler Windows** : Répartition des cinq rôles FSMO entre le Domain Controller 1 et 2.
 - 🧍‍♂️ **Audit de sécurité Windows** : Seconde analyse avec PingCastle et correctifs.
 - 🧍 **Audit de sécurité Linux** : Installation et configuration du PC d'audit Linux avec Lynis, et tests d'audit des serveurs Linux (Debian/Ubuntu).
+
+---
 
 ### 📘 Étape 9 – Documentation et Bilan de Projet
 🔹 🎯 **Objectif**  
