@@ -82,9 +82,81 @@ Les listes ci-dessous détaillent, pour chaque phase, les **VMs en service**, ce
 | 18 | **ns-mail**    | `Tusk`          | 🔴      | 🔴      | 🔴      | 🔴      | 🔴      | 🟠      | 🔴      |
 | 19 | **ns-audit02** | `Kaisel`        | 🔴      | 🔴      | 🔴      | 🔴      | 🔴      | 🔴      | 🟠      |
 
-## 🖥️ Création d'une machine virtuelle VMware Workstation
+## 🌐 Simulation des VLANs sous VMware Workstation
+Dans le projet collaboratif *Build Your Infrastructure*, l’environnement d’hypervision reposait sur **Proxmox VE**, qui permettait d’activer ou non le **mode trunk VLAN (802.1q)** directement au niveau des interfaces virtuelles.  
+
+Dans **Master Your Network**, l’environnement repose sur **VMware Workstation**, qui **ne prend pas en charge nativement la gestion des VLANs 802.1q** au niveau de l’hyperviseur.  
+
+Ainsi :
+- Les **LAN Segments** utilisés dans VMware ne sont pas des ports “access” ou “trunk” : ils servent simplement de **liens Ethernet non filtrés** entre les VMs.  
+- Le **trunk VLAN** est donc **entièrement simulé dans VyOS**, via des sous-interfaces (`vif`) correspondant à chaque VLAN logique :  
+  - VLAN 10 → Users  
+  - VLAN 20 → DSI Users  
+  - VLAN 30 → DSI Servers  
+
+Toutes les VMs internes (serveurs et clients) sont connectées au même **LAN Segment nommé “LAN”**, ce qui permet à VyOS de gérer :
+- le **routage inter-VLAN**,  
+- le **tagging/detagging VLAN**,  
+- et la **segmentation logique** du réseau.  
+
+⚙️ Cette approche reproduit fidèlement la logique d’un réseau d’entreprise, tout en restant **compatible avec les contraintes d’un laboratoire VMware Workstation**.  
+Elle permet donc de simuler un **trunk VLAN réaliste**, même sans infrastructure d’hypervision avancée comme Proxmox ou ESXi.  
+
+> 💡 **C’est quoi le mode trunk VLAN 802.1Q ?**  
+> - Le **VLAN** (*Virtual Local Area Network*) est un **réseau logique** à l'intérieur d'un **réseau physique**. Il permet de **segmenter** un réseau local en plusieurs *sous-réseaux* sans ajouter de matériel supplémentaire.  
+> - Chaque **VLAN** peut exister sur le même **switch physique**, mais ils ne peuvent **pas communiquer entre eux** sans passer par un **routeur**.  
+> - Le **mode trunk** est un type de port de switch qui permet de transporter **plusieurs VLANs simultanément** sur **un seul lien physique**.  
+>   👉 Contrairement au **mode access**, qui ne transporte **qu’un seul VLAN** à la fois.  
+> - Pour que les équipements différencient les trames de chaque VLAN, le mode trunk utilise un système de **tag VLAN**, défini par la norme **IEEE 802.1Q**.  
+>   Ce tag identifie chaque trame réseau selon son VLAN d’origine — c’est ce qu’on appelle le **VLAN tagging**.
+
+> 💡 **C’est quoi une sous-interface `vif` ?**  
+> - Le routeur **VyOS** possède une **interface physique `eth1`** pour le réseau LAN.  
+> - Pour gérer plusieurs VLANs sur cette même interface, on crée des **sous-interfaces `vif` (Virtual Interface)**, chacune associée à un VLAN.  
+> - Chaque sous-interface correspond à un VLAN distinct et transporte uniquement le trafic de ce VLAN.  
+> - Leur nom suit la convention **`eth1.X`**, où **X** correspond au numéro du VLAN (par ex. `eth1.10`, `eth1.20`, `eth1.30`).  
+> - Ces sous-interfaces permettent à VyOS de **faire du routage inter-VLAN** et de **simuler un véritable trunk VLAN** dans un environnement virtualisé.
 
 
+## 🧷 Les snapshots
+
+🔹🧠 **À quoi servent les snapshots et pourquoi c’est utile ?**  
+- Un **snapshot** est une **photo instantanée de l’état d’une machine virtuelle** à un moment donné.  
+- Cela permet de :  
+  - 🔙 Revenir en arrière après une erreur de configuration ou une mauvaise manipulation.  
+  - 🧪 Tester des changements sans risques.  
+  - 🧾 Documenter les étapes d’un projet.  
+  - 💾 Sauvegarder une VM avant une mise à jour critique.  
+  - 🧩 Travailler par version (comme un “Git” de VM).  
+- ⚠️ Trop de snapshots peuvent **ralentir la VM** et **occuper beaucoup d’espace disque**, il est donc conseillé de **faire le ménage régulièrement**.
+
+🔹🧰 **Comment faire des snapshots sur VMware Workstation ?**
+
+### 🖼️ Créer un snapshot
+1. Démarrer la **VM cible**.  
+2. Dans la barre de menu : `VM` → `Snapshot` → `Take Snapshot...`  
+3. Une fenêtre s’ouvre :  
+   - Donner un **nom** et une **description**.  
+     > Exemple : `Avant_AD_Config` – VM avant la configuration de l’Active Directory.  
+4. Cliquer sur **Take Snapshot**.  
+5. Si la VM est allumée, VMware propose d’inclure **l’état de la mémoire** :  
+   - ✅ **Oui** : la VM sera restaurée exactement dans son état actuel (fenêtres ouvertes, sessions connectées, etc.).  
+   - 🚫 **Non** : seul l’état du disque est sauvegardé (la VM redémarrera proprement).  
+
+### 🔁 Restaurer un snapshot
+1. Sélectionner la **VM** dans VMware.  
+2. Aller dans : `VM` → `Snapshot` → `Snapshot Manager...`  
+3. Sélectionner le snapshot souhaité → cliquer sur **Go To** → confirmer.  
+
+### 🧹 Supprimer un snapshot
+1. Ouvrir le **Snapshot Manager**.  
+2. Sélectionner le snapshot à supprimer.  
+3. Cliquer sur **Delete**.  
+   > ⚠️ “Delete” ne supprime pas les données : cela **fusionne les changements** dans le disque principal et **libère de l’espace**.  
+
+> 💡 **Astuce :**  
+> Il existe des **icônes raccourcis** (petit appareil photo 📸) dans la barre d’outils supérieure de VMware,  
+> ce qui permet de **créer, restaurer ou supprimer un snapshot rapidement** sans passer par les menus.
 
 ---
 
