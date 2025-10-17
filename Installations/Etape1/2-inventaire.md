@@ -76,30 +76,35 @@ Une infrastructure comprend généralement :
 
 ## ⚙️ Priorités des équipements
 ### 🔴 Priorité haute 
-- **ns-router** : 🛜 Routeur / Pare-feu (VyOS)
-- **ns-lnx** : 🐧 Serveur Linux primaire
-- **ns-ad01** : 🪟 Serveur Windows primaire
-- **ns-backup** : 🗄️ Serveur de backup
-- **ns-safe** : 🔐 Serveur de coffre fort
-- **ns-logs** : 🔎 Serveur de journalisation
-- **ns-mail** : 💌 Serveur de messagerie
+| #  | Tag VM         | Nom de l'équipement           |
+| -- | -------------- | ----------------------------- |
+| 01 | **ns-router**  | 🛜 Routeur / Pare-feu (VyOS)  |
+| 02 | **ns-lnx**     | 🐧 Serveur Linux primaire     |
+| 03 | **ns-ad01**    | 🪟 Serveur Windows primaire   |
+| 10 | **ns-backup**  | 🗄️ Serveur de backup          |
+| 16 | **ns-safe**    | 🔐 Serveur de coffre fort     |
+| 17 | **ns-logs**    | 🔎 Serveur de journalisation  |
+| 18 | **ns-mail**    | 💌 Serveur de messagerie      |
 
 ### 🟠 Priorité moyenne
-- **ns-ad02** : 🪟 Serveur Windows secondaire
-- **ns-wsus** : 🛰️ Serveur Windows update
-- **ns-voip** : 📞 Serveur de téléphonie IP
-- **ns-audit01** : 🧍‍♂️ Ordinateur d'audit Windows
-- **ns-it** : 🧰 Serveur gestion IT
-- **ns-web** : 🌐 Serveur web externe
-- **ns-vpn** : 🕳️ Serveur d'accès à distance
-- **ns-ntp** : 🧭 Serveur de temps
-- **ns-moni** : 📈 Serveur de monitoring
-
-- **ns-audit02** : 🧍 Ordinateur d'audit Linux
+| #  | Tag VM         | Nom de l'équipement           |
+| -- | -------------- | ----------------------------- |
+| 04 | **ns-ad02**    | 🪟 Serveur Windows secondaire |
+| 07 | **ns-wsus**    | 🛰️ Serveur Windows update     |
+| 08 | **ns-voip**    | 📞 Serveur de téléphonie IP   |
+| 09 | **ns-audit01** | 🧍‍♂️ Ordinateur d'audit Windows |
+| 11 | **ns-it**      | 🧰 Serveur gestion IT         |
+| 12 | **ns-web**     | 🌐 Serveur web externe        |
+| 13 | **ns-vpn**     | 🕳️ Serveur d'accès à distance |
+| 14 | **ns-ntp**     | 🧭 Serveur de temps           |
+| 15 | **ns-moni**    | 📈 Serveur de monitoring      |
+| 19 | **ns-audit02** | 🧍 Ordinateur d'audit Linux   |
 
 ### 🟢 Priorité basse
-- **ns-user01** : 🖥️ Poste utilisateur DSI
-- **ns-user02** : 🖥️ Poste utilisateur
+| #  | Tag VM         | Nom de l'équipement           |
+| -- | -------------- | ----------------------------- |
+| 05 | **ns-user01**  | 🖥️ Poste utilisateur DSI      |
+| 06 | **ns-user02**  | 🖥️ Poste utilisateur          |
 
 ## 🕵️ Serveur Bastion (sécurité d’administration)
 Le **serveur Bastion** est un équipement de sécurité permettant de **centraliser, tracer et contrôler** les connexions d'administration vers les serveurs internes et ceux situés en DMZ. Il agit comme un **point d'accès unique pour les administrateurs**, en enregistrant leurs connexions et en limitant les accès directs au reste du réseau.
