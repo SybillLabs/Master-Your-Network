@@ -42,7 +42,7 @@ L’ensemble est pensé pour être **réaliste, pédagogique et totalement maît
 
 L’infrastructure est entièrement virtualisée sous **VMware Workstation Pro**, sur un système hôte **Linux (Kubuntu)** disposant des ressources suivantes :
 - **Processeur** : 8 cœurs / 16 threads
-- **Mémoire vive** : 64 Go RAM
+- **Mémoire vive** : 32 Go RAM
 - **Virtualisation** : VMware Workstation Pro (réseaux LAN Segments, VLANs, DMZ, NAT)
 
 Ce projet constitue à la fois une **mise en situation professionnelle** et un **laboratoire d’apprentissage personnel**, combinant rigueur technique, sécurité, documentation et méthodologie projet.

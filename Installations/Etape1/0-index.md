@@ -32,7 +32,7 @@ Cette étape permet de concevoir l'infrastructure système et réseau sous deux 
 5. 🌐 **[Plan réseau de l'infrastructure](./5-plan.md)** : Segmentation des différents réseaux , schéma des VLANs, LAN/DMZ et plan d'interconnexion
 
 ## ⚠️ Contraintes
-- Ressources limitées (PC hôte avec 64Go de RAM, 8 cœurs & 16 threads CPU)
+- Ressources limitées (PC hôte avec 32Go de RAM, 8 cœurs & 16 threads CPU)
 - Environnement virtualisé (VMware Workstation)
 - Respect d'une logique de documentation
 
