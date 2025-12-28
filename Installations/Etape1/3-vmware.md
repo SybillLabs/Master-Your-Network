@@ -51,7 +51,11 @@ Cette approche séquentielle permet de **reproduire une montée en complexité r
 Les listes ci-dessous détaillent, pour chaque phase, les **VMs en service**, celles à l’arrêt, ainsi que la **répartition des ressources** (vCPU et RAM) utilisées.
 
 > Les ressources de la machine hôte (8 cœurs / 16 threads – 32 Go RAM DDR4) sont partagées avec les machines virtuelles.  
-> Une réserve fixe de **2 vCPU** et **8 Go RAM** est conservée pour **Kubuntu** et **VMware Workstation** afin de garantir la stabilité.
+> 
+> Le système hôte dispose d’un espace de swap de 16 Go, configuré comme une soupape de sécurité mémoire.
+Cet espace n’est pas destiné à se substituer à la mémoire vive, mais à absorber les pics temporaires de consommation afin de préserver la stabilité du système hôte et des machines virtuelles, notamment lors des phases de démarrage, de snapshot ou de charges ponctuelles.  
+>
+> Une réserve fonctionnelle équivalente à 2 vCPU et 8 Go de RAM est implicitement préservée pour le système hôte (Kubuntu) et VMware Workstation, grâce à un dimensionnement maîtrisé des machines virtuelles et à une activation séquencée des services.
 
 ### 🧩 Matrice d’activité des machines virtuelles selon les étapes de conception
 > - 🟢 : La VM reste **allumée en continu** pendant toute l'étape.
