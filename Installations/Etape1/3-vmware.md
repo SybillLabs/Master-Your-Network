@@ -18,30 +18,30 @@ Cette approche offre un **laboratoire d'expérimentation idéal** pour la concep
 
 ## 📦 Caractéristiques des VMs
 
-| #  | Tag VM         | Hostname        | Réseaux VMWare                                  | vCPU | RAM (Go) | Système (Go) / Data (Go)  | Système d’exploitation  |
+| #  | Tag VM         | Hostname        | Réseaux VMWare                                  | vCPU | RAM      | Système (Go) / Data (Go)  | Système d’exploitation  |
 | -- | -------------- | --------------- | ----------------------------------------------- | ---- | -------- | ------------------------- | ----------------------- |
-| 01 | **ns-router**  | `GoGunHee`      | WAN (NAT), LAN (LAN Segment), DMZ (LAN Segment) | 2    | 1        | Système : 8  / Data : 2   | **VyOS - Debian**       |
-| 02 | **ns-lnx**     | `Tank`          | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 2        | Système : 20 / Data : 5   | **Debian Server Core**  |
-| 03 | **ns-ad01**    | `SungJinwoo`    | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 4        | Système : 60 / Data : 20  | **Windows Server GUI**  |
-| 04 | **ns-ad02**    | `YooJinho`      | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 3        | Système : 40 / Data : 10  | **Windows Server Core** |
-| 05 | **ns-user01**  | `Monarch`       | LAN (LAN Segment) – VLAN DSI Users              | 2    | 4        | Système : 64 / Data : 20  | **Windows 11 Pro**      |
-| 06 | **ns-user02**  | `Hunter`        | LAN (LAN Segment) – VLAN Users                  | 2    | 4        | Système : 64 / Data : 20  | **Windows 11 Pro**      |
-| 07 | **ns-wsus**    | `NormaSelner`   | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 4        | Système : 60 / Data : 120 | **Windows Server GUI**  |
-| 08 | **ns-voip**    | `BaekYoonHo`    | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 2        | Système : 20 / Data : 10  | **3CX - Debian**        |
-| 09 | **ns-audit01** | `Igris`         | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 4        | Système : 50 / Data : 10  | **Windows Server GUI**  |
-| 10 | **ns-backup**  | `Beru`          | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 4        | Système : 30 / Data : 100 | **Debian Server Core**  |
-| 11 | **ns-it**      | `Bellion`       | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 3        | Système : 30 / Data : 20  | **Ubuntu Server Core**  |
-| 12 | **ns-web**     | `EsilRadiru`    | DMZ (LAN Segment)                               | 2    | 2        | Système : 20 / Data : 10  | **Ubuntu Server Core**  |
-| 13 | **ns-vpn**     | `AdamWhite`     | DMZ (LAN Segment)                               | 2    | 1.5      | Système : 15 / Data : 5   | **Debian Server Core**  |
-| 14 | **ns-ntp**     | `Rulers`        | LAN (LAN Segment) – VLAN DSI Servers            | 1    | 1        | Système : 8  / Data : 2   | **Debian Server Core**  |
-| 15 | **ns-moni**    | `Kandiaru`      | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 4        | Système : 30 / Data : 30  | **Debian Server Core**  |
-| 16 | **ns-safe**    | `Kamish`        | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 2        | Système : 20 / Data : 5   | **Debian Server Core**  |
-| 17 | **ns-logs**    | `AbsoluteBeing` | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 4        | Système : 30 / Data : 40  | **Ubuntu Server Core**  |
-| 18 | **ns-mail**    | `Tusk`          | DMZ (LAN Segment)                               | 2    | 4        | Système : 40 / Data : 40  | **Ubuntu Server Core**  |
-| 19 | **ns-audit02** | `Kaisel`        | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 2        | Système : 30 / Data : 10  | **Kaisen Linux**        |
+| 01 | **ns-router**  | `GoGunHee`      | WAN (NAT), LAN (LAN Segment), DMZ (LAN Segment) | 2    | 1 Go     | Système : 8  / Data : 2   | **VyOS - Debian**       |
+| 02 | **ns-lnx**     | `Tank`          | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 2 Go     | Système : 20 / Data : 5   | **Debian Server Core**  |
+| 03 | **ns-ad01**    | `SungJinwoo`    | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 4 Go     | Système : 60 / Data : 20  | **Windows Server GUI**  |
+| 04 | **ns-ad02**    | `YooJinho`      | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 3 Go     | Système : 40 / Data : 10  | **Windows Server Core** |
+| 05 | **ns-user01**  | `Monarch`       | LAN (LAN Segment) – VLAN DSI Users              | 2    | 4 Go     | Système : 64 / Data : 20  | **Windows 11 Pro**      |
+| 06 | **ns-user02**  | `Hunter`        | LAN (LAN Segment) – VLAN Users                  | 2    | 4 Go     | Système : 64 / Data : 20  | **Windows 11 Pro**      |
+| 07 | **ns-wsus**    | `NormaSelner`   | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 4 Go     | Système : 60 / Data : 120 | **Windows Server GUI**  |
+| 08 | **ns-voip**    | `BaekYoonHo`    | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 2 Go     | Système : 20 / Data : 10  | **3CX - Debian**        |
+| 09 | **ns-audit01** | `Igris`         | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 4 Go     | Système : 50 / Data : 10  | **Windows Server GUI**  |
+| 10 | **ns-backup**  | `Beru`          | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 4 Go     | Système : 30 / Data : 100 | **Debian Server Core**  |
+| 11 | **ns-it**      | `Bellion`       | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 3 Go     | Système : 30 / Data : 20  | **Ubuntu Server Core**  |
+| 12 | **ns-web**     | `EsilRadiru`    | DMZ (LAN Segment)                               | 2    | 1 Go     | Système : 20 / Data : 10  | **Ubuntu Server Core**  |
+| 13 | **ns-vpn**     | `AdamWhite`     | DMZ (LAN Segment)                               | 2    | 2 Go     | Système : 15 / Data : 5   | **Debian Server Core**  |
+| 14 | **ns-ntp**     | `Rulers`        | LAN (LAN Segment) – VLAN DSI Servers            | 1    | 1 Go     | Système : 8  / Data : 2   | **Debian Server Core**  |
+| 15 | **ns-moni**    | `Kandiaru`      | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 4 Go     | Système : 30 / Data : 30  | **Debian Server Core**  |
+| 16 | **ns-safe**    | `Kamish`        | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 1 Go     | Système : 20 / Data : 5   | **Debian Server Core**  |
+| 17 | **ns-logs**    | `AbsoluteBeing` | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 4 Go     | Système : 30 / Data : 40  | **Ubuntu Server Core**  |
+| 18 | **ns-mail**    | `Tusk`          | DMZ (LAN Segment)                               | 2    | 4 Go     | Système : 40 / Data : 40  | **Ubuntu Server Core**  |
+| 19 | **ns-audit02** | `Kaisel`        | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 2 Go     | Système : 30 / Data : 10  | **Kaisen Linux**        |
 
 
-> La machine hôte utilisée pour ce projet repose sur **un processeur 8 cœurs / 16 threads** et **64 Go de mémoire DDR4**.  
+> La machine hôte utilisée pour ce projet repose sur **un processeur 8 cœurs / 16 threads** et **32 Go de mémoire DDR4**.  
 > Bien que le total des ressources allouées aux machines virtuelles dépasse théoriquement ces valeurs, **toutes les VMs ne sont pas destinées à fonctionner simultanément**. Certaines, comme les serveurs de mise à jour ou d’audit, ne seront démarrées que ponctuellement.  
 > Cette approche permet de **simuler une infrastructure complète** tout en **préservant la stabilité et les performances du système hôte**. Les ressources nécessaires à Kubuntu et à VMware Workstation sont également **prises en compte** dans la planification, garantissant ainsi un équilibre optimal entre réalisme et efficacité
 
@@ -50,7 +50,7 @@ Chaque étape de conception active uniquement les machines virtuelles nécessair
 Cette approche séquentielle permet de **reproduire une montée en complexité réaliste**, tout en garantissant la **stabilité et les performances** de l’environnement de virtualisation sous VMware Workstation.  
 Les listes ci-dessous détaillent, pour chaque phase, les **VMs en service**, celles à l’arrêt, ainsi que la **répartition des ressources** (vCPU et RAM) utilisées.
 
-> Les ressources de la machine hôte (8 cœurs / 16 threads – 64 Go RAM DDR4) sont partagées avec les machines virtuelles.  
+> Les ressources de la machine hôte (8 cœurs / 16 threads – 32 Go RAM DDR4) sont partagées avec les machines virtuelles.  
 > Une réserve fixe de **2 vCPU** et **8 Go RAM** est conservée pour **Kubuntu** et **VMware Workstation** afin de garantir la stabilité.
 
 ### 🧩 Matrice d’activité des machines virtuelles selon les étapes de conception
