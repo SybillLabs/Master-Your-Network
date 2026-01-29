@@ -1,35 +1,25 @@
 # 🧠 Master your network — Projet complet d’infrastructure réseau virtualisée et sécurisée
 
-🔹💼 **Informations de présentation du projet**  
-![Statut du projet](https://img.shields.io/badge/statut-en%20cours-yellow)
-![Licence](https://img.shields.io/badge/Licence-MIT-blue)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Sybill%20Gribonval-blue?logo=linkedin)](https://www.linkedin.com/in/sybill-gribonval)
-![Langue](https://img.shields.io/badge/langue-français-blue)
+![statut](https://img.shields.io/badge/Statut-En%20cours-yellow?style=flat-square&logo=github)
+![FR](https://img.shields.io/badge/Langue-Fran%C3%A7ais-blue?style=flat-square&logo=github)
 
-🔹🧭 **Concepts abordés**  
-![Virtualisation](https://img.shields.io/badge/Virtualisation%20%26%20infrastructure-🧩-blue)
-![Planification réseau](https://img.shields.io/badge/Planification%20%26%20conception%20réseau-🗂️-blue)
-![Segmentation VLANs](https://img.shields.io/badge/Segmentation%20réseau%20%26%20VLANs-🧱-blue)
-![Architecture LAN/DMZ](https://img.shields.io/badge/Architecture%20LAN%20%2F%20DMZ-🌐-blue)
-![Inventaire serveurs](https://img.shields.io/badge/Inventaire%20%26%20nomenclature%20serveurs-🧾-blue)
-![Active Directory](https://img.shields.io/badge/Administration%20AD%20%2F%20Domain%20Controler-🪟-blue)
-![Gestion utilisateurs](https://img.shields.io/badge/Gestion%20utilisateurs%20%2F%20groupes%20%2F%20OU-🧍-blue)
-![GPO](https://img.shields.io/badge/Déploiement%20GPO-⚙️-blue)
-![Partage fichiers](https://img.shields.io/badge/Partage%20de%20fichiers%20%2F%20NTFS-💾-blue)
-![Maintenance automatisée](https://img.shields.io/badge/Maintenance%20%26%20MAJ%20automatisées-🧰-blue)
-![Télémétrie](https://img.shields.io/badge/Télémétrie%20%26%20diagnostic-📡-blue)
-![Audit sécurité](https://img.shields.io/badge/Audit%20%26%20sécurité%20SI-🔍-blue)
-![Sauvegarde 3-2-2-1-0](https://img.shields.io/badge/Sauvegarde%20%26%20résilience%203--2--2--1--0-☁️-blue)
-![RAID logiciel](https://img.shields.io/badge/RAID%20logiciel%20%26%20tolérance%20pannes-🗄️-blue)
-![Sécurité accès](https://img.shields.io/badge/Sécurité%20des%20accès%20%26%20mots%20de%20passe-🔐-blue)
-![NTP](https://img.shields.io/badge/Synchronisation%20horaire%20(NTP)-🧭-blue)
-![Supervision réseau](https://img.shields.io/badge/Supervision%20%26%20surveillance%20réseau-🧩-blue)
-![VPN](https://img.shields.io/badge/Accès%20distant%20sécurisé%20(VPN)-🕳️-blue)
-![Services internes/externes](https://img.shields.io/badge/Services%20internes%20%2F%20externes-🌍-blue)
-![Messagerie](https://img.shields.io/badge/Communication%20%26%20messagerie-💌-blue)
-![Support ITIL](https://img.shields.io/badge/Support%20IT%20%26%20ITIL-🧰-blue)
-![Pare-feu & durcissement](https://img.shields.io/badge/Pare--feu%20%26%20durcissement%20SI-🔒-blue)
-![Documentation](https://img.shields.io/badge/Documentation%20technique-🧾-blue)
+![VyOS](https://img.shields.io/badge/Routeur-VyOS-red?style=flat-square&logo=debian)
+![Linux](https://img.shields.io/badge/Linux-DHCP%20--%20DNS%20(Bind9)-red?style=flat-square&logo=linux)
+![Windows](https://img.shields.io/badge/Windows-DC%20--%20AD--DS%20--%20WSUS%20--%20GPO%20--%20R%C3%A9plication-blue?style=flat-square&logo=github)
+![Téléphonie](https://img.shields.io/badge/T%C3%A9l%C3%A9phonie-VoIP%20--%203CX-green?style=flat-square&logo=github)
+![Audit](https://img.shields.io/badge/Audit%20de%20s%C3%A9curit%C3%A9-PingCastle%20--%20Lynis-purple?style=flat-square&logo=github)
+
+![Sauvegarde](https://img.shields.io/badge/Sauvegarde-Bareos%20--%20RAID%20--%20NAS-pink?style=flat-square&logo=github)
+![GestionIT](https://img.shields.io/badge/Gestion%20IT-GLPI%20--%20Apache%20--%20Nginx-orange?style=flat-square&logo=github)
+![Cloud](https://img.shields.io/badge/Cloud-Seafile%20--%20Nextcloud-green?style=flat-square&logo=nextcloud)
+![VPN](https://img.shields.io/badge/VPN-OpenVPN-red?style=flat-square&logo=openvpn)
+![NTP](https://img.shields.io/badge/NTP-Chrony-red?style=flat-square&logo=github)
+
+![Monitoring](https://img.shields.io/badge/Monitoring-Zabbix-pink?style=flat-square&logo=github)
+![Coffre](https://img.shields.io/badge/Coffre%20fort-Vaultwarden-purple?style=flat-square&logo=vaultwarden)
+![Journalisation](https://img.shields.io/badge/Journalisation-Graylogs-pink?style=flat-square&logo=graylog)
+![Messagerie](https://img.shields.io/badge/Messagerie-iRedmail-green?style=flat-square&logo=github)
+![Virtualisation](https://img.shields.io/badge/Virtualisation-VMware-white?style=flat-square&logo=vmware)
 
 ## 📝 Contexte
 **Master Your Network** est un projet **professionnel et personnel** visant à concevoir, configurer et administrer une **infrastructure réseau d’entreprise complète**, virtualisée et sécurisée.  
@@ -40,16 +30,17 @@ Ce projet a pour but de mettre en pratique l’ensemble des compétences attendu
 L’environnement reproduit une **entreprise de 50 utilisateurs**, avec une segmentation réseau complète (LAN, VLAN, DMZ) et des services essentiels tels que l’Active Directory, le DNS/DHCP, la supervision, la sauvegarde, la messagerie, la VoIP ou encore le partage de fichier interne.  
 L’ensemble est pensé pour être **réaliste, pédagogique et totalement maîtrisable**, afin de permettre une compréhension concrète des mécanismes d’un système d’information d’entreprise.
 
-L’infrastructure est entièrement virtualisée sous **VMware Workstation Pro**, sur un système hôte **Linux (Kubuntu)** disposant des ressources suivantes :
-- **Processeur** : 8 cœurs / 16 threads
+L’infrastructure est entièrement virtualisée sous **VMware Workstation Pro**, sur un système hôte **Windows 11 Professionnel** disposant des ressources suivantes :
+- **Processeur** : 10 cœurs / 16 threads
 - **Mémoire vive** : 32 Go RAM
-- **Virtualisation** : VMware Workstation Pro (réseaux LAN Segments, VLANs, DMZ, NAT)
+- **Virtualisation** : VMware Workstation Pro
 
 Ce projet constitue à la fois une **mise en situation professionnelle** et un **laboratoire d’apprentissage personnel**, combinant rigueur technique, sécurité, documentation et méthodologie projet.
 
 ## 🔧 **Objectifs du projet**
 > 🎯 Déployer une infrastructure d’entreprise complète sous environnement virtualisé (VMware), mêlant systèmes Windows et Linux.  
-> L’objectif est d’acquérir une maîtrise pratique des domaines suivants :
+
+L’objectif est d’acquérir une maîtrise pratique des domaines suivants :
 
 - 🧩 **Réseau & Infrastructure** : routage, VLANs, pare-feu, VPN, NTP.  
 - 🧠 **Systèmes & Services** : Active Directory, DNS/DHCP, WSUS, Cloud, Web, VoIP, messagerie.  
@@ -208,10 +199,6 @@ Pour une meilleure lisibilité, voici un visuel de la structure du dépôt :
 │   └── AdminGuide.md
 │   └── CompteRendu.md
 ```
-
-## 👤 Auteur
-Projet réalisé par **Sybill Gribonval**  
-🔗 [LinkedIn](https://www.linkedin.com/in/sybill-gribonval) | 📧 sybillgribonval@gmail.com
 
 ## ⚠️ Disclaimer
 > Ce projet est un **laboratoire personnel** : il a pour but de me former aux infrastructures réseau hybrides (Linux/Windows), de documenter mes pratiques, et de constituer un support concret dans mon portfolio.  
