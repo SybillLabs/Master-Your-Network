@@ -1,9 +1,8 @@
 # 💽 La virtualisation avec VMware Workstation
 
-🔹🛠️ **Outils et services utilisés**  
-![ChatGPT](https://img.shields.io/badge/ChatGPT-Assistant%20IA-4B9CD3?logo=openai)
-![GitHub Copilot](https://img.shields.io/badge/GitHub%20Copilot-Assistant%20code-181717?logo=github)
-![VMware Workstation](https://img.shields.io/badge/VMware-Workstation-blue?logo=vmware)
+![](https://img.shields.io/badge/Etape%201%20-Pr%C3%A9paration%20et%20planification-blue?style=social&logo=github)
+
+![Virtualisation](https://img.shields.io/badge/Virtualisation-VMware-white?style=flat-square&logo=vmware)
 
 ## 📝 Contexte
 Avant de concevoir et déployer une infrastructure réseau complète, il est essentiel de disposer d'un **environnement de test flexible et isolé**.  
@@ -41,7 +40,7 @@ Cette approche offre un **laboratoire d'expérimentation idéal** pour la concep
 | 19 | **ns-audit02** | `Kaisel`        | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 2 Go     | Système : 30 / Data : 10  | **Kaisen Linux**        |
 
 
-> La machine hôte utilisée pour ce projet repose sur **un processeur 8 cœurs / 16 threads** et **32 Go de mémoire DDR4**.  
+> La machine hôte utilisée pour ce projet repose sur **un processeur 10 cœurs / 16 threads** et **32 Go de mémoire**.  
 > Bien que le total des ressources allouées aux machines virtuelles dépasse théoriquement ces valeurs, **toutes les VMs ne sont pas destinées à fonctionner simultanément**. Certaines, comme les serveurs de mise à jour ou d’audit, ne seront démarrées que ponctuellement.  
 > Cette approche permet de **simuler une infrastructure complète** tout en **préservant la stabilité et les performances du système hôte**. Les ressources nécessaires à Kubuntu et à VMware Workstation sont également **prises en compte** dans la planification, garantissant ainsi un équilibre optimal entre réalisme et efficacité
 
@@ -50,7 +49,7 @@ Chaque étape de conception active uniquement les machines virtuelles nécessair
 Cette approche séquentielle permet de **reproduire une montée en complexité réaliste**, tout en garantissant la **stabilité et les performances** de l’environnement de virtualisation sous VMware Workstation.  
 Les listes ci-dessous détaillent, pour chaque phase, les **VMs en service**, celles à l’arrêt, ainsi que la **répartition des ressources** (vCPU et RAM) utilisées.
 
-> Les ressources de la machine hôte (8 cœurs / 16 threads – 32 Go RAM DDR4) sont partagées avec les machines virtuelles.  
+> Les ressources de la machine hôte (10 cœurs / 16 threads – 32 Go RAM) sont partagées avec les machines virtuelles.  
 > 
 > Le système hôte dispose d’un espace de swap de 16 Go, configuré comme une soupape de sécurité mémoire.
 Cet espace n’est pas destiné à se substituer à la mémoire vive, mais à absorber les pics temporaires de consommation afin de préserver la stabilité du système hôte et des machines virtuelles, notamment lors des phases de démarrage, de snapshot ou de charges ponctuelles.  

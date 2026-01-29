@@ -31,7 +31,7 @@ L’environnement reproduit une **entreprise de 50 utilisateurs**, avec une segm
 L’ensemble est pensé pour être **réaliste, pédagogique et totalement maîtrisable**, afin de permettre une compréhension concrète des mécanismes d’un système d’information d’entreprise.
 
 L’infrastructure est entièrement virtualisée sous **VMware Workstation Pro**, sur un système hôte **Windows 11 Professionnel** disposant des ressources suivantes :
-- **Processeur** : 10 cœurs / 16 threads
+- **Processeur** : 13th Gen Intel(R) Core(TM) i7-13620H (2.40 GHz) - 10 cœurs / 16 threads
 - **Mémoire vive** : 32 Go RAM
 - **Virtualisation** : VMware Workstation Pro
 

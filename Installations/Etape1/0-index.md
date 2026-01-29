@@ -1,17 +1,6 @@
 # 🗂️ Etape 1 : Préparation et planification
 
-🔹💼 **Informations de présentation du projet**  
-![Statut de l'étape](https://img.shields.io/badge/statut%20de%20l'étape-terminée-brightgreen)
-
-🔹🧭 **Concepts abordés**  
-![Virtualisation](https://img.shields.io/badge/Virtualisation%20%26%20infrastructure-🧩-blue)
-![Planification réseau](https://img.shields.io/badge/Planification%20%26%20conception%20réseau-🗂️-blue)
-![Segmentation VLANs](https://img.shields.io/badge/Segmentation%20réseau%20%26%20VLANs-🧱-blue)
-![Architecture LAN/DMZ](https://img.shields.io/badge/Architecture%20LAN%20%2F%20DMZ-🌐-blue)
-![Inventaire serveurs](https://img.shields.io/badge/Inventaire%20%26%20nomenclature%20serveurs-🧾-blue)
-![Active Directory](https://img.shields.io/badge/Administration%20AD%20%2F%20Domain%20Controler-🪟-blue)
-![Gestion utilisateurs](https://img.shields.io/badge/Gestion%20utilisateurs%20%2F%20groupes%20%2F%20OU-🧍-blue)
-![Documentation](https://img.shields.io/badge/Documentation%20technique-🧾-blue)
+![Statut](https://img.shields.io/badge/Statut-Termin%C3%A9e-green?style=flat-square&logo=github)
 
 ## 📝 Contexte
 Cette étape permet de concevoir l'infrastructure système et réseau sous deux points de vue :

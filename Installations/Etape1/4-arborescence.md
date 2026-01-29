@@ -1,8 +1,8 @@
 # 🗺️ Arborescence Windows de l'infrastructure
 
-🔹🛠️ **Outils et services utilisés**  
-![ChatGPT](https://img.shields.io/badge/ChatGPT-Assistant%20IA-4B9CD3?logo=openai)
-![GitHub Copilot](https://img.shields.io/badge/GitHub%20Copilot-Assistant%20code-181717?logo=github)
+![](https://img.shields.io/badge/Etape%201%20-Pr%C3%A9paration%20et%20planification-blue?style=social&logo=github)
+
+![](https://img.shields.io/badge/Windows-Active%20Directory%20--%20OU%20--%20CN%20--%20GRP-blue?style=flat-square&logo=github)
 
 ## 📝 Contexte
 Maintenant que l'infrastructure est bien finalisé, je peux concevoir **l'arborescence Windows** de l'infrastructure [NovaPlay Studio](/Installations/Etape1/1-entreprise.md).  

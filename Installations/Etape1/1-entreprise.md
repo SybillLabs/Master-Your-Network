@@ -1,8 +1,6 @@
 # 🏢 Présentation de l'entreprise
 
-🔹🛠️ **Outils et services utilisés**  
-![ChatGPT](https://img.shields.io/badge/ChatGPT-Assistant%20IA-4B9CD3?logo=openai)
-![GitHub Copilot](https://img.shields.io/badge/GitHub%20Copilot-Assistant%20code-181717?logo=github)
+![](https://img.shields.io/badge/Etape%201%20-Pr%C3%A9paration%20et%20planification-blue?style=social&logo=github)
 
 ## 📝 Contexte
 > ⚠️ Remarque importante  
@@ -47,7 +45,7 @@ La liste complète des employés est disponible ici :
 Actuellement, **NovaPlay Studios** fonctionne avec une infrastructure très basique :  
 - une simple connexion fournie par le **FAI**,  
 - des **PC portables en session locale** pour les employés,  
-- une **messagerie standard** (type Gmail/Outlook) pour la communication,  
+- une **messagerie standard** pour la communication,  
 - aucun annuaire centralisé, aucun firewall dédié, ni serveurs internes.  
 
 Cette configuration, bien qu’utile au démarrage, n’est **pas adaptée** à la croissance de l’entreprise ni à ses activités critiques (développement de jeux multijoueur, streaming, support communautaire).  
