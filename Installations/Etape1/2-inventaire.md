@@ -127,5 +127,6 @@ Cependant, sa présence est évoquée pour montrer la compréhension du concept 
 
 ---
 
-👉 Retour à la [page index de l'étape](/Installations/Etape1/0-index.md).  
-👉 Retour à la [page principale du projet](/README.md).  
+[![STEP1](https://img.shields.io/badge/Back%20to-Etape%201%20%3A%20Pr%C3%A9paration%20et%20planification-blue?style=social&logo=github)](/Installations/Etape1/0-index.md)
+  
+[![README](https://img.shields.io/badge/Back%20to-Master%20your%20network-blue?style=social&logo=github)](/README.md) 
