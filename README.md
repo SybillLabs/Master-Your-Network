@@ -203,3 +203,7 @@ Pour une meilleure lisibilité, voici un visuel de la structure du dépôt :
 ## ⚠️ Disclaimer
 > Ce projet est un **laboratoire personnel** : il a pour but de me former aux infrastructures réseau hybrides (Linux/Windows), de documenter mes pratiques, et de constituer un support concret dans mon portfolio.  
 > Il ne représente pas une infrastructure de production, mais une maquette réaliste et reproductible en environnement virtualisé.
+
+---
+
+[![Profil](https://img.shields.io/badge/Back%20to-SybillLabs%20(Profil)-blue?style=social&logo=github)](https://github.com/SybillLabs)
