@@ -1,7 +1,5 @@
 # 💽 La virtualisation avec VMware Workstation
 
-![](https://img.shields.io/badge/Etape%201%20-Pr%C3%A9paration%20et%20planification-blue?style=social&logo=github)
-
 ![Virtualisation](https://img.shields.io/badge/Virtualisation-VMware-white?style=flat-square&logo=vmware)
 
 ## 📝 Contexte

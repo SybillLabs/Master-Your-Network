@@ -1,8 +1,6 @@
 # 🌐 Plan réseau de l'infrastructure
 
-![](https://img.shields.io/badge/Etape%201%20-Pr%C3%A9paration%20et%20planification-blue?style=social&logo=github)
-
-![](https://img.shields.io/badge/Sch%C3%A9matisation-Draw.io-white?style=flat-square&logo=github)
+![Schématisation](https://img.shields.io/badge/Sch%C3%A9matisation-Draw.io-white?style=flat-square&logo=github)
 
 ## 📝 Contexte
 Après avoir défini l’infrastructure globale de **NovaPlay Studio** (inventaire, nomenclature et arborescence Active Directory), il est maintenant essentiel de concevoir un plan réseau clair et structuré.

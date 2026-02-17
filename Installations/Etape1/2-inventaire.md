@@ -1,7 +1,5 @@
 # 🧾 Inventaire et nomenclature de l'infrastructure
 
-![](https://img.shields.io/badge/Etape%201%20-Pr%C3%A9paration%20et%20planification-blue?style=social&logo=github)
-
 ## 📝 Contexte
 Avant de concevoir une **infrastructure réseau**, il faut réaliser un inventaire complet de toutes les machines nécessaires à cette infrastructure :
 - Serveurs 

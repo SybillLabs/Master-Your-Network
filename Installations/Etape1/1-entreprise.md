@@ -1,7 +1,5 @@
 # 🏢 Présentation de l'entreprise
 
-![](https://img.shields.io/badge/Etape%201%20-Pr%C3%A9paration%20et%20planification-blue?style=social&logo=github)
-
 ## 📝 Contexte
 > ⚠️ Remarque importante  
 Cette entreprise est totalement fictive, créée avec l’aide de ChatGPT dans le cadre d’un projet personnel. Elle n’existe pas dans la réalité.
