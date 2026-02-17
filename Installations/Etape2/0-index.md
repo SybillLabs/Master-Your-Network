@@ -18,7 +18,7 @@ Cette étape se concentre sur la mise en place du coeur de l’infrastructure r�
 - Documenter les configurations et les étapes réalisées pour une maintenance future.
 
 # 📦 Livrables et actions de l’étape
-1. 🛜 [Mise en place du routeur VyOS](/Installations/Etape2/1-VyOS.md) : Configuration initial du WAN/LAN/DMZ et des règles de pare-feu de base.
+1. 🛜 [Mise en place du routeur VyOS](/Installations/Etape2/1-routeur.md) : Configuration initial du WAN/LAN/DMZ et des règles de pare-feu de base.
 2. 🖧 [Mise en place des VLANs](/Installations/Etape2/2-VLANs.md) : Configuration de trois VLANs dans le LAN via et géré par le routeur VyOS.
 3. 🐧 [Mise en place du serveur Linux primaire](/Installations/Etape2/3-Linux.md) : Configuration d'un serveur debian non graphique pour les services DHCP (isc-dhcp-server) & DNS (bind9).
 4. 🪟 [Mise en place des serveurs Windows primaire et secondaire](/Installations/Etape2/4-Windows.md) : Configuration d'un Windows Serveur *GUI* en tant que *Domain Controller 1* (Rôle : Active Directory, DNS intégré, GPO, SMB) et d'un Windows Serveur *Core* en tant que *Domain Controller 2* (Réplication du DC1).
