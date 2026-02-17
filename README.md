@@ -25,7 +25,7 @@
 **Master Your Network** est un projet **professionnel et personnel** visant à concevoir, configurer et administrer une **infrastructure réseau d’entreprise complète**, virtualisée et sécurisée.  
 Il s’agit d’une évolution individuelle du projet collaboratif « *Build Your Infrastructure* », réalisé dans le cadre de ma formation en **Technicien Supérieur Systèmes & Réseaux (Bac +2)**.
 
-Ce projet a pour but de mettre en pratique l’ensemble des compétences attendues d’un **TSSR**, tout en intégrant certaines notions avancées issues du niveau **Administrateur d’Infrastructure Sécurisée (Bac +3)**, sans pour autant dépasser ce périmètre.
+Ce projet a pour but de mettre en pratique l’ensemble des compétences attendues d’un **TSSR**, tout en intégrant certaines notions avancées, sans pour autant dépasser le niveau attendu pour un TSSR.
 
 L’environnement reproduit une **entreprise de 50 utilisateurs**, avec une segmentation réseau complète (LAN, VLAN, DMZ) et des services essentiels tels que l’Active Directory, le DNS/DHCP, la supervision, la sauvegarde, la messagerie, la VoIP ou encore le partage de fichier interne.  
 L’ensemble est pensé pour être **réaliste, pédagogique et totalement maîtrisable**, afin de permettre une compréhension concrète des mécanismes d’un système d’information d’entreprise.
