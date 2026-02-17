@@ -17,7 +17,7 @@ Cette approche offre un **laboratoire d'expérimentation idéal** pour la concep
 
 | #  | Tag VM         | Hostname        | Réseaux VMWare                                  | vCPU | RAM      | Système (Go) / Data (Go)  | Système d’exploitation  |
 | -- | -------------- | --------------- | ----------------------------------------------- | ---- | -------- | ------------------------- | ----------------------- |
-| 01 | **ns-router**  | `GoGunHee`      | WAN (NAT), LAN (LAN Segment), DMZ (LAN Segment) | 2    | 1 Go     | Système : 8  / Data : 2   | **VyOS - Debian**       |
+| 01 | **ns-router**  | `GoGunHee`      | WAN (NAT), LAN (LAN Segment), DMZ (LAN Segment) | 2    | 1 Go     | Système : 8  / Data : 2   | **pfSense - Debian**       |
 | 02 | **ns-lnx**     | `Tank`          | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 2 Go     | Système : 20 / Data : 5   | **Debian Server Core**  |
 | 03 | **ns-ad01**    | `SungJinwoo`    | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 4 Go     | Système : 60 / Data : 20  | **Windows Server GUI**  |
 | 04 | **ns-ad02**    | `YooJinho`      | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 3 Go     | Système : 40 / Data : 10  | **Windows Server Core** |
@@ -90,12 +90,12 @@ Dans **Master Your Network**, l’environnement repose sur **VMware Workstation*
 
 Ainsi :
 - Les **LAN Segments** utilisés dans VMware ne sont pas des ports “access” ou “trunk” : ils servent simplement de **liens Ethernet non filtrés** entre les VMs.  
-- Le **trunk VLAN** est donc **entièrement simulé dans VyOS**, via des sous-interfaces (`vif`) correspondant à chaque VLAN logique :  
+- Le **trunk VLAN** est donc **entièrement simulé dans pfSense**, via des sous-interfaces (`vif`) correspondant à chaque VLAN logique :  
   - VLAN 10 → Users  
   - VLAN 20 → DSI Users  
   - VLAN 30 → DSI Servers  
 
-Toutes les VMs internes (serveurs et clients) sont connectées au même **LAN Segment nommé “LAN”**, ce qui permet à VyOS de gérer :
+Toutes les VMs internes (serveurs et clients) sont connectées au même **LAN Segment nommé “LAN”**, ce qui permet à pfSense de gérer :
 - le **routage inter-VLAN**,  
 - le **tagging/detagging VLAN**,  
 - et la **segmentation logique** du réseau.  
@@ -112,11 +112,11 @@ Elle permet donc de simuler un **trunk VLAN réaliste**, même sans infrastructu
 >   Ce tag identifie chaque trame réseau selon son VLAN d’origine — c’est ce qu’on appelle le **VLAN tagging**.
 
 > 💡 **C’est quoi une sous-interface `vif` ?**  
-> - Le routeur **VyOS** possède une **interface physique `eth1`** pour le réseau LAN.  
+> - Le routeur **pfSense** possède une **interface physique `eth1`** pour le réseau LAN.  
 > - Pour gérer plusieurs VLANs sur cette même interface, on crée des **sous-interfaces `vif` (Virtual Interface)**, chacune associée à un VLAN.  
 > - Chaque sous-interface correspond à un VLAN distinct et transporte uniquement le trafic de ce VLAN.  
 > - Leur nom suit la convention **`eth1.X`**, où **X** correspond au numéro du VLAN (par ex. `eth1.10`, `eth1.20`, `eth1.30`).  
-> - Ces sous-interfaces permettent à VyOS de **faire du routage inter-VLAN** et de **simuler un véritable trunk VLAN** dans un environnement virtualisé.
+> - Ces sous-interfaces permettent à pfSense de **faire du routage inter-VLAN** et de **simuler un véritable trunk VLAN** dans un environnement virtualisé.
 
 
 ## 🧷 Les snapshots

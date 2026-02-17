@@ -17,7 +17,7 @@ Une infrastructure comprend généralement :
 ## 📦 Inventaire des équipements par zone
 | #  | Nom de l'équipement           | Zone | Fonctions                                                                       |
 | -- | ----------------------------- | ---- | ------------------------------------------------------------------------------- |
-| 01 | 🛜 Routeur / Pare-feu (VyOS)  | —    | Point central d'interconnexion et de sécurité entre le WAN, le LAN et la DMZ    |
+| 01 | 🛜 Routeur / Pare-feu (pfSense)  | —    | Point central d'interconnexion et de sécurité entre le WAN, le LAN et la DMZ    |
 |    |                               |      | Assure le routage inter-zones, le NAT et le filtrage des flux réseaux           |
 | 02 | 🐧 Serveur Linux primaire     | LAN  | Attribution des adresses IP et résolution des noms                              |
 | 03 | 🪟 Serveur Windows primaire   | LAN  | Gestion de l'Active Directory, des GPO et des partages de fichier SMB           |
@@ -74,7 +74,7 @@ Une infrastructure comprend généralement :
 ### 🔴 Priorité haute 
 | #  | Tag VM         | Nom de l'équipement           |
 | -- | -------------- | ----------------------------- |
-| 01 | **ns-router**  | 🛜 Routeur / Pare-feu (VyOS)  |
+| 01 | **ns-router**  | 🛜 Routeur / Pare-feu (pfSense)  |
 | 02 | **ns-lnx**     | 🐧 Serveur Linux primaire     |
 | 03 | **ns-ad01**    | 🪟 Serveur Windows primaire   |
 | 10 | **ns-backup**  | 🗄️ Serveur de backup          |
@@ -111,7 +111,7 @@ Le **serveur Bastion** est un équipement de sécurité permettant de **centrali
 - Limiter les risques d’accès non autorisés ou de compromission d’un poste administrateur
 
 ### ⚙️ Emplacement théorique 
-Dans une infrastructure réelle, il serait positionné dans le **VLAN DSI Servers (LAN)**, avec un accès restreint depuis les **postes DSI Users**, et un accès autorisé vers les **serveurs LAN et DMZ** via le pare-feu VyOS.
+Dans une infrastructure réelle, il serait positionné dans le **VLAN DSI Servers (LAN)**, avec un accès restreint depuis les **postes DSI Users**, et un accès autorisé vers les **serveurs LAN et DMZ** via le pare-feu pfSense.
 
 ### 🔁 Analogie : le Collège
 Le **serveur Bastion** est l'équivalent du **surveillant** dans un collège, il surveille les entrées, les sorties et les actions des intervenants en notant tout dans son calepin. Le jour d'une inspection (par exemple un audit de sécurité), il ressort son calepin pour dire qui a fait quoi et à quelle heure sur tel jour.  

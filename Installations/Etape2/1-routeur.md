@@ -1,6 +1,11 @@
-# 🛜 Mise en place du routeur VyOS
+# 🛜 Mise en place du routeur pfSense
 
 ![Statut](https://img.shields.io/badge/Statut-En%20cours-yellow?style=flat-square&logo=github)  
+
+---
+
+Source :  
+- [Tutoriel pfSense IT-Connect](https://www.it-connect.fr/tuto-vmware-workstation-lab-virtuel-pfsense/#A_Telecharger_le_fichier_dinstallation_de_pfSense)
 
 ---
 

@@ -3,7 +3,7 @@
 ![statut](https://img.shields.io/badge/Statut-En%20cours-yellow?style=flat-square&logo=github)
 ![FR](https://img.shields.io/badge/Langue-Fran%C3%A7ais-blue?style=flat-square&logo=github)
 
-![VyOS](https://img.shields.io/badge/Routeur-VyOS-red?style=flat-square&logo=debian)
+![pfSense](https://img.shields.io/badge/Routeur-pfSense-red?style=flat-square&logo=pfsense)
 ![Linux](https://img.shields.io/badge/Linux-DHCP%20--%20DNS%20(Bind9)-red?style=flat-square&logo=linux)
 ![Windows](https://img.shields.io/badge/Windows-DC%20--%20AD--DS%20--%20WSUS%20--%20GPO%20--%20R%C3%A9plication-blue?style=flat-square&logo=github)
 ![Téléphonie](https://img.shields.io/badge/T%C3%A9l%C3%A9phonie-VoIP%20--%203CX-green?style=flat-square&logo=github)
@@ -68,8 +68,8 @@ Définir la base du projet et concevoir l’architecture complète.
 Mettre en place l’infrastructure réseau et les services de base.
 
 🧠 **Contenu**
-- 🛜 **Mise en place du routeur VyOS** : Configuration initial du WAN/LAN/DMZ et des règles de pare-feu de base.
-- 🖧 **Mise en place des VLANs** : Configuration de trois VLANs dans le LAN via et géré par le routeur VyOS.
+- 🛜 **Mise en place du routeur pfSense** : Configuration initial du WAN/LAN/DMZ et des règles de pare-feu de base.
+- 🖧 **Mise en place des VLANs** : Configuration de trois VLANs dans le LAN via et géré par le routeur pfSense.
 - 🐧 **Mise en place du serveur Linux primaire** : Configuration d'un serveur debian non graphique pour les services DHCP (isc-dhcp-server) & DNS (bind9).
 - 🪟 **Mise en place des serveurs Windows primaire et secondaire** : Configuration d'un Windows Serveur *GUI* en tant que *Domain Controller 1* (Rôle : Active Directory, DNS intégré, GPO, SMB) et d'un Windows Serveur *Core* en tant que *Domain Controller 2* (Réplication du DC1).
 
@@ -129,7 +129,7 @@ Finaliser les services internes, externes et de support utilisateur.
 
 🧠 **Contenu**
 - 🧰 **Mise en place d'un serveur de gestion d'incident** : Installation et configuration de GLPI (LDAP, Helpdesk, ITIL).
-- 🔎 **Mise en place d'un serveur central de journalisation** : Installation et configuration de Graylogs pour récupérer les logs de serveur Windows, Linux & VyOS.
+- 🔎 **Mise en place d'un serveur central de journalisation** : Installation et configuration de Graylogs pour récupérer les logs de serveur Windows, Linux & pfSense.
 - 🌐 **Mise en place de l'intranet et de l'extranet** : Installation et configuration d'Apache pour l'intranet et de Nginx pour l'extranet.
 - 💌 **Mise en place d'un serveur de messagerie** : Installation et configuration d'iRedMail.
 
@@ -140,7 +140,7 @@ Finaliser les services internes, externes et de support utilisateur.
 Auditer, corriger et renforcer la sécurité globale du SI.
 
 🧠 **Contenu**
-- 🧱 **Configuration avancée du routeur VyOS** : Amélioration des règles de sécurité du pare-feu VyOS (filtrage, flux DMZ/LAN, journalisation).
+- 🧱 **Configuration avancée du routeur pfSense** : Amélioration des règles de sécurité du pare-feu pfSense (filtrage, flux DMZ/LAN, journalisation).
 - 🧩 **Configuration des rôles FSMO des Domain Controler Windows** : Répartition des cinq rôles FSMO entre le Domain Controller 1 et 2.
 - 🧍‍♂️ **Audit de sécurité Windows** : Seconde analyse avec PingCastle et correctifs.
 - 🧍 **Audit de sécurité Linux** : Installation et configuration du PC d'audit Linux avec Lynis, et tests d'audit des serveurs Linux (Debian/Ubuntu).

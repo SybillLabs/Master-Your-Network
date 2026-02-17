@@ -18,7 +18,7 @@ Jusqu’à présent, le réseau était basique — un simple accès internet et 
 
 Dans le cadre de ce projet, je mets en place une nouvelle architecture réseau complète, pensée pour :
 - Séparer les flux selon leur nature (utilisateurs, serveurs, DMZ, administration),
-- Introduire une couche de sécurité via le routeur VyOS,
+- Introduire une couche de sécurité via le routeur pfSense,
 - Optimiser la gestion des adresses IP grâce à un plan d’adressage clair et dynamique (DHCP),
 - Et poser les bases des futures configurations réseau lors de la mise en œuvre.
 
@@ -36,13 +36,13 @@ Dans mon projet, je configure le réseau **LAN** sur le sous-réseau suivant : `
 C’est une **zone intermédiaire** entre le **LAN** et le **WAN**, utilisée pour héberger des serveurs accessibles depuis Internet (ex : site web, serveur mail) sans exposer directement le réseau interne.  
 Dans mon projet, je configure le réseau **DMZ** sur le sous-réseau suivant : `192.168.0.0/24`.
 
-## 🛜 Le routeur VyOS
+## 🛜 Le routeur pfSense
 Un **routeur** est un **équipement de niveau 3** du modèle OSI (*couche Réseau*).  
 Il permet de **faire transiter (routage)**, **filtrer** et **sécuriser** les flux de données entre **différents réseaux ou sous-réseaux**.  
 
-Dans mon projet, le routeur **VyOS** assure la communication entre le LAN, la DMZ et le WAN, tout en appliquant les **règles de sécurité** nécessaires.  
+Dans mon projet, le routeur **pfSense** assure la communication entre le LAN, la DMZ et le WAN, tout en appliquant les **règles de sécurité** nécessaires.  
 
-Le routeur **VyOS** a 3 interfaces : 
+Le routeur **pfSense** a 3 interfaces : 
 - 🌍 **WAN** : Adresse IP de la **passerelle** simulé par le **NAT** de VMware Workstation
 - 🏢 **LAN** : Adresse IP de la **passerelle** : `192.168.1.254/24`
 - 🛡️ **DMZ** : Adresse IP de la **passerelle** : `192.168.0.254/24`
@@ -67,7 +67,7 @@ Elle offre plusieurs avantages :
 | 20       | VLAN DSI Users   | 192.168.20.0/24 | 255.255.255.0         | 192.168.20.254        |
 | 30       | VLAN DSI Servers | 192.168.30.0/24 | 255.255.255.0         | 192.168.30.254        |
 
-> Chaque VLAN dispose de sa propre passerelle configurée sur le routeur VyOS, afin de permettre l’accès à Internet via le WAN tout en maintenant une isolation stricte entre les différents réseaux internes.
+> Chaque VLAN dispose de sa propre passerelle configurée sur le routeur pfSense, afin de permettre l’accès à Internet via le WAN tout en maintenant une isolation stricte entre les différents réseaux internes.
 
 ## 🧭 Le DHCP : Plan d'adressage réseau
 🔹 **Le DHCP**  
@@ -77,7 +77,7 @@ Dans mon projet, je vais avoir 3 cas :
 - 📘 **Statique (réservation)** : Le serveur DHCP attribue toujours **la même adresse IP** à une machine spécifique, basée sur son **adresse MAC**.
 - 🖥️ **Manuelle** : L’adresse IP est **configurée directement sur la machine**. Elle n’est donc **pas dépendante du serveur DHCP**, ce qui est essentiel pour les **serveurs critiques** (afin qu’ils conservent leur IP même si le DHCP tombe).
 
-💡 Le serveur **DHCP** sera configuré pour **travailler conjointement avec le routeur VyOS**, notamment pour la gestion des **VLANs** et des **plages d’adresses associées**.
+💡 Le serveur **DHCP** sera configuré pour **travailler conjointement avec le routeur pfSense**, notamment pour la gestion des **VLANs** et des **plages d’adresses associées**.
 
 🔹 **Plage d'adressage réseau**  
 | #  | Tag VM         | Hostname        | VLANs ID    | DHCP      | Adresse IP                                      | Gateway        |
