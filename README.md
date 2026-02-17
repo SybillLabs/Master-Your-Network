@@ -45,7 +45,7 @@ L’objectif est d’acquérir une maîtrise pratique des domaines suivants :
 - 🧩 **Réseau & Infrastructure** : routage, VLANs, pare-feu, VPN, NTP.  
 - 🧠 **Systèmes & Services** : Active Directory, DNS/DHCP, WSUS, Cloud, Web, VoIP, messagerie.  
 - 🔎 **Sécurité & Supervision** : Zabbix, Graylog, Vaultwarden, Bareos, audits PingCastle/Lynis.  
-- 📘 **Documentation & Maintenance** : GLPI, guides d’exploitation, règles ITIL, sauvegardes 3-2-2-1-0.
+- 📘 **Documentation & Maintenance** : GLPI, guides d’exploitation, règles ITIL, sauvegardes.
 
 > L’ensemble du projet est réalisé en neuf étapes, de la planification initiale à la documentation finale.
 
@@ -57,13 +57,13 @@ Définir la base du projet et concevoir l’architecture complète.
 🧠 **Contenu**
 - 🏢 **Présentation de l'entreprise** : Définir le contexte, le secteur, les besoins métier et les enjeux IT. 
 - 🧾 **Inventaire et nomenclature de l'infrastructure** : Lister les serveurs, postes, équipements réseau et services attendus ; traduire en machines virtuelles avec un nommage clair et logique.
-- 💽 **La virtualisation avec VMware Workstation** : Caractéristiques des VMs, création des VMs par rapport aux étapes de conception et création d'une VM avec VMware Workstation
+- 💽 **La virtualisation avec VMware Workstation** : Caractéristiques des VMs, création des VMs par rapport aux étapes de conception et création d'une VM avec VMware Workstation.
 - 🗺️ **Arborescence Windows de l'infrastructure** : Organisation de l’Active Directory (OU, groupes, GPO).
-- 🌐 **Plan réseau de l'infrastructure** : Définir les VLANs, LAN/DMZ et le plan d’interconnexion global avec draw.io.
+- 🌐 **Plan réseau de l'infrastructure** : Segmentation des différents réseaux , schéma des VLANs, LAN/DMZ et plan d'interconnexion.
 
 ---
 
-### 🌐 Étape 2 – Réseau et Socle Système
+### 🌐 [Étape 2 – Réseau et Socle Système](/Installations/Etape2/0-index.md)
 🎯 **Objectif**  
 Mettre en place l’infrastructure réseau et les services de base.
 
