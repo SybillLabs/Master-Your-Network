@@ -17,25 +17,25 @@ Cette approche offre un **laboratoire d'expérimentation idéal** pour la concep
 
 | #  | Tag VM         | Hostname        | Réseaux VMWare                                  | vCPU | RAM      | Système (Go) / Data (Go)  | Système d’exploitation  |
 | -- | -------------- | --------------- | ----------------------------------------------- | ---- | -------- | ------------------------- | ----------------------- |
-| 01 | **ns-router**  | `GoGunHee`      | WAN (NAT), LAN (LAN Segment), DMZ (LAN Segment) | 2    | 1 Go     | Système : 8  / Data : 2   | **pfSense - Debian**       |
-| 02 | **ns-lnx**     | `Tank`          | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 2 Go     | Système : 20 / Data : 5   | **Debian Server Core**  |
-| 03 | **ns-ad01**    | `SungJinwoo`    | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 4 Go     | Système : 60 / Data : 20  | **Windows Server GUI**  |
-| 04 | **ns-ad02**    | `YooJinho`      | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 3 Go     | Système : 40 / Data : 10  | **Windows Server Core** |
-| 05 | **ns-user01**  | `Monarch`       | LAN (LAN Segment) – VLAN DSI Users              | 2    | 4 Go     | Système : 64 / Data : 20  | **Windows 11 Pro**      |
-| 06 | **ns-user02**  | `Hunter`        | LAN (LAN Segment) – VLAN Users                  | 2    | 4 Go     | Système : 64 / Data : 20  | **Windows 11 Pro**      |
-| 07 | **ns-wsus**    | `NormaSelner`   | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 4 Go     | Système : 60 / Data : 120 | **Windows Server GUI**  |
-| 08 | **ns-voip**    | `BaekYoonHo`    | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 2 Go     | Système : 20 / Data : 10  | **3CX - Debian**        |
-| 09 | **ns-audit01** | `Igris`         | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 4 Go     | Système : 50 / Data : 10  | **Windows Server GUI**  |
-| 10 | **ns-backup**  | `Beru`          | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 4 Go     | Système : 30 / Data : 100 | **Debian Server Core**  |
-| 11 | **ns-it**      | `Bellion`       | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 3 Go     | Système : 30 / Data : 20  | **Ubuntu Server Core**  |
-| 12 | **ns-web**     | `EsilRadiru`    | DMZ (LAN Segment)                               | 2    | 1 Go     | Système : 20 / Data : 10  | **Ubuntu Server Core**  |
-| 13 | **ns-vpn**     | `AdamWhite`     | DMZ (LAN Segment)                               | 2    | 2 Go     | Système : 15 / Data : 5   | **Debian Server Core**  |
-| 14 | **ns-ntp**     | `Rulers`        | LAN (LAN Segment) – VLAN DSI Servers            | 1    | 1 Go     | Système : 8  / Data : 2   | **Debian Server Core**  |
-| 15 | **ns-moni**    | `Kandiaru`      | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 4 Go     | Système : 30 / Data : 30  | **Debian Server Core**  |
-| 16 | **ns-safe**    | `Kamish`        | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 1 Go     | Système : 20 / Data : 5   | **Debian Server Core**  |
-| 17 | **ns-logs**    | `AbsoluteBeing` | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 4 Go     | Système : 30 / Data : 40  | **Ubuntu Server Core**  |
-| 18 | **ns-mail**    | `Tusk`          | DMZ (LAN Segment)                               | 2    | 4 Go     | Système : 40 / Data : 40  | **Ubuntu Server Core**  |
-| 19 | **ns-audit02** | `Kaisel`        | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 2 Go     | Système : 30 / Data : 10  | **Kaisen Linux**        |
+| 01 | **ns-router**  | `GoGunHee`      | WAN (NAT), LAN (LAN Segment), DMZ (LAN Segment) | 1    | 1 Go     | Système : 16 / Data : 0   | **pfSense - FreeBSD**   |
+| 02 | **ns-lnx**     | `Tank`          | LAN (LAN Segment) – VLAN DSI Servers            | 1    | 1 Go     | Système : 30 / Data : 0   | **Debian Server Core**  |
+| 03 | **ns-ad01**    | `SungJinwoo`    | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 4 Go     | Système : 50 / Data : 30  | **Windows Server GUI**  |
+| 04 | **ns-ad02**    | `YooJinho`      | LAN (LAN Segment) – VLAN DSI Servers            | 1    | 2 Go     | Système : 50 / Data : 30  | **Windows Server Core** |
+| 05 | **ns-user01**  | `Monarch`       | LAN (LAN Segment) – VLAN DSI Users              | 2    | 3 Go     | Système : 80 / Data : 0   | **Windows 11 Pro**      |
+| 06 | **ns-user02**  | `Hunter`        | LAN (LAN Segment) – VLAN Users                  | 2    | 3 Go     | Système : 80 / Data : 0   | **Windows 11 Pro**      |
+| 07 | **ns-wsus**    | `NormaSelner`   | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 3 Go     | Système : 60 / Data : 120 | **Windows Server GUI**  |
+| 08 | **ns-voip**    | `BaekYoonHo`    | LAN (LAN Segment) – VLAN DSI Servers            | 1    | 1.5 Go   | Système : 30 / Data : 0   | **3CX - Debian**        |
+| 09 | **ns-audit01** | `Igris`         | LAN (LAN Segment) – VLAN DSI Servers            | 1    | 2 Go     | Système : 50 / Data : 0   | **Windows Server Core** |
+| 10 | **ns-backup**  | `Beru`          | LAN (LAN Segment) – VLAN DSI Servers            | 1    | 2 Go     | Système : 30 / Data : 100 | **Debian Server Core**  |
+| 11 | **ns-it**      | `Bellion`       | LAN (LAN Segment) – VLAN DSI Servers            | 1    | 2 Go     | Système : 30 / Data : 10  | **Ubuntu Server Core**  |
+| 12 | **ns-web**     | `EsilRadiru`    | DMZ (LAN Segment)                               | 1    | 1 Go     | Système : 30 / Data : 0   | **Ubuntu Server Core**  |
+| 13 | **ns-vpn**     | `AdamWhite`     | DMZ (LAN Segment)                               | 1    | 1 Go     | Système : 30 / Data : 0   | **Debian Server Core**  |
+| 14 | **ns-ntp**     | `Rulers`        | LAN (LAN Segment) – VLAN DSI Servers            | 1    | 512 Mo   | Système : 30 / Data : 0   | **Debian Server Core**  |
+| 15 | **ns-moni**    | `Kandiaru`      | LAN (LAN Segment) – VLAN DSI Servers            | 1    | 2 Go     | Système : 30 / Data : 20  | **Debian Server Core**  |
+| 16 | **ns-safe**    | `Kamish`        | LAN (LAN Segment) – VLAN DSI Servers            | 1    | 1 Go     | Système : 30 / Data : 0   | **Debian Server Core**  |
+| 17 | **ns-logs**    | `AbsoluteBeing` | LAN (LAN Segment) – VLAN DSI Servers            | 2    | 3 Go     | Système : 30 / Data : 50  | **Ubuntu Server Core**  |
+| 18 | **ns-mail**    | `Tusk`          | DMZ (LAN Segment)                               | 2    | 3 Go     | Système : 30 / Data : 50  | **Ubuntu Server Core**  |
+| 19 | **ns-audit02** | `Kaisel`        | LAN (LAN Segment) – VLAN DSI Servers            | 1    | 1 Go     | Système : 30 / Data : 0   | **Debian Server Core**  |
 
 
 > La machine hôte utilisée pour ce projet repose sur **un processeur 10 cœurs / 16 threads** et **32 Go de mémoire**.  
