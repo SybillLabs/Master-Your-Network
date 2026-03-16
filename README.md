@@ -19,7 +19,7 @@
 ![Coffre](https://img.shields.io/badge/Coffre%20fort-Vaultwarden-purple?style=flat-square&logo=vaultwarden)
 ![Journalisation](https://img.shields.io/badge/Journalisation-Graylogs-pink?style=flat-square&logo=graylog)
 ![Messagerie](https://img.shields.io/badge/Messagerie-iRedmail-green?style=flat-square&logo=github)
-![Virtualisation](https://img.shields.io/badge/Virtualisation-VMware-white?style=flat-square&logo=vmware)
+![Virtualisation](https://img.shields.io/badge/Virtualisation-VirtualBox-white?style=flat-square&logo=virtualbox)
 
 ## 📝 Contexte
 **Master Your Network** est un projet **professionnel et personnel** visant à concevoir, configurer et administrer une **infrastructure réseau d’entreprise complète**, virtualisée et sécurisée.  
@@ -30,15 +30,15 @@ Ce projet a pour but de mettre en pratique l’ensemble des compétences attendu
 L’environnement reproduit une **entreprise de 50 utilisateurs**, avec une segmentation réseau complète (LAN, VLAN, DMZ) et des services essentiels tels que l’Active Directory, le DNS/DHCP, la supervision, la sauvegarde, la messagerie, la VoIP ou encore le partage de fichier interne.  
 L’ensemble est pensé pour être **réaliste, pédagogique et totalement maîtrisable**, afin de permettre une compréhension concrète des mécanismes d’un système d’information d’entreprise.
 
-L’infrastructure est entièrement virtualisée sous **VMware Workstation Pro**, sur un système hôte **Windows 11 Professionnel** disposant des ressources suivantes :
+L’infrastructure est entièrement virtualisée sous **VirtualBox**, sur un système hôte **Windows 11 Professionnel** disposant des ressources suivantes :
 - **Processeur** : 13th Gen Intel(R) Core(TM) i7-13620H (2.40 GHz) - 10 cœurs / 16 threads
 - **Mémoire vive** : 32 Go RAM
-- **Virtualisation** : VMware Workstation Pro
+- **Virtualisation** : VirtualBox
 
 Ce projet constitue à la fois une **mise en situation professionnelle** et un **laboratoire d’apprentissage personnel**, combinant rigueur technique, sécurité, documentation et méthodologie projet.
 
 ## 🔧 **Objectifs du projet**
-> 🎯 Déployer une infrastructure d’entreprise complète sous environnement virtualisé (VMware), mêlant systèmes Windows et Linux.  
+> 🎯 Déployer une infrastructure d’entreprise complète sous environnement virtualisé (VirtualBox), mêlant systèmes Windows et Linux.  
 
 L’objectif est d’acquérir une maîtrise pratique des domaines suivants :
 
@@ -57,7 +57,7 @@ Définir la base du projet et concevoir l’architecture complète.
 🧠 **Contenu**
 - 🏢 **Présentation de l'entreprise** : Définir le contexte, le secteur, les besoins métier et les enjeux IT. 
 - 🧾 **Inventaire et nomenclature de l'infrastructure** : Lister les serveurs, postes, équipements réseau et services attendus ; traduire en machines virtuelles avec un nommage clair et logique.
-- 💽 **La virtualisation avec VMware Workstation** : Caractéristiques des VMs, création des VMs par rapport aux étapes de conception et création d'une VM avec VMware Workstation.
+- 💽 **La virtualisation avec VirtualBox** : Caractéristiques des VMs, création des VMs par rapport aux étapes de conception et création d'une VM avec VirtualBox.
 - 🗺️ **Arborescence Windows de l'infrastructure** : Organisation de l’Active Directory (OU, groupes, GPO).
 - 🌐 **Plan réseau de l'infrastructure** : Segmentation des différents réseaux , schéma des VLANs, LAN/DMZ et plan d'interconnexion.
 
