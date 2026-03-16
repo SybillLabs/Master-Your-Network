@@ -26,7 +26,7 @@ Dans le cadre de ce projet, je mets en place une nouvelle architecture réseau c
 
 🔹 🌍 **WAN** : Wide Area Network  
 C’est le **réseau étendu** fourni par le **Fournisseur d’Accès Internet (FAI)** de l’entreprise. Il représente la **partie publique** du réseau, permettant la communication avec l’extérieur.  
-Dans mon projet, le réseau **WAN** est simulé par le **NAT** de VMware Workstation. Son adresse IP est attribuée dynamiquement au démarrage de la machine virtuelle.
+Dans mon projet, le réseau **WAN** est simulé par le **NAT** de VirtualBox. Son adresse IP est attribuée dynamiquement au démarrage de la machine virtuelle.
 
 🔹 🏢 **LAN** : Local Area Network  
 C’est le **réseau local interne** à l’entreprise. Il constitue la **partie privée**, dédiée aux postes de travail, serveurs internes et imprimantes.  
@@ -43,7 +43,7 @@ Il permet de **faire transiter (routage)**, **filtrer** et **sécuriser** les fl
 Dans mon projet, le routeur **pfSense** assure la communication entre le LAN, la DMZ et le WAN, tout en appliquant les **règles de sécurité** nécessaires.  
 
 Le routeur **pfSense** a 3 interfaces : 
-- 🌍 **WAN** : Adresse IP de la **passerelle** simulé par le **NAT** de VMware Workstation
+- 🌍 **WAN** : Adresse IP de la **passerelle** simulé par le **NAT** de VirtualBox
 - 🏢 **LAN** : Adresse IP de la **passerelle** : `192.168.1.254/24`
 - 🛡️ **DMZ** : Adresse IP de la **passerelle** : `192.168.0.254/24`
 

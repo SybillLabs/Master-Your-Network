@@ -16,13 +16,13 @@ Cette étape permet de concevoir l'infrastructure système et réseau sous deux 
 ## 📦 Livrables et actions de l’étape
 1. 🏢 **[Présentation de l'entreprise](./1-entreprise.md)** : Définir le contexte, le secteur, les besoins métier et les enjeux IT.
 2. 🧾 **[Inventaire et nomenclature de l'infrastructure](./2-inventaire.md)** : Lister les serveurs, postes, équipements réseau et services attendus ; traduire en machines virtuelles avec un nommage clair et logique.
-3. 💽 **[La virtualisation avec VMware Workstation](./3-vmware.md)** : Caractrériques des VMs, création des VMs par rapport aux étapes de conception et création d'une VM avec VMware Workstation.
+3. 💽 **[La virtualisation avec VirtualBox](./3-virtual.md)** : Caractrériques des VMs, création des VMs par rapport aux étapes de conception et création d'une VM avec VirtualBox.
 4. 🗺️ **[Arborescence Windows de l'infrastructure](./4-arborescence.md)** : Organisation de l’Active Directory (OU, groupes, GPO).
 5. 🌐 **[Plan réseau de l'infrastructure](./5-plan.md)** : Segmentation des différents réseaux , schéma des VLANs, LAN/DMZ et plan d'interconnexion.
 
 ## ⚠️ Contraintes
 - Ressources limitées (PC hôte avec 32Go de RAM, 8 cœurs & 16 threads CPU)
-- Environnement virtualisé (VMware Workstation)
+- Environnement virtualisé (VirtualBox)
 - Respect d'une logique de documentation
 
 ---

@@ -41,7 +41,7 @@ Une infrastructure comprend généralement :
 ## 🖥️ Nomenclature des équipements
 > 🔠 **Convention de nommage**  
 > Le choix des **tags VM** est effectué sur la base du *nom de l’entreprise*, du *nom* et de la *fonction de l’équipement*.  
-> Ces tags sont uniquement visibles par moi, car ils correspondent aux noms attribués à mes machines virtuelles dans **VMware Workstation**.  
+> Ces tags sont uniquement visibles par moi, car ils correspondent aux noms attribués à mes machines virtuelles dans **VirtualBox**.  
 >  
 > Le choix des **hostnames** est quant à lui motivé par des considérations de sécurité : il vise à éviter que toute personne extérieure à l’entreprise ne puisse deviner la fonction d’un équipement à partir de son nom.  
 > Je me suis donc inspiré du manhwa **_Solo Leveling_**, l’une de mes œuvres préférées, pour nommer les différents systèmes de l’infrastructure.
