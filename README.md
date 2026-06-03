@@ -1,3 +1,12 @@
+# 🗃️ Dépôt archivé
+
+Ce projet a été archivé car ma méthode d’apprentissage a évolué.
+Je le conserve pour historique et progression personnelle.
+
+📌 Statut : Archivé – non maintenu
+
+---
+
 # 🧠 Master your network : Conception d’une infrastructure réseau virtualisée et sécurisée
 
 ![statut](https://img.shields.io/badge/Statut-En%20cours-yellow?style=flat-square&logo=github)
